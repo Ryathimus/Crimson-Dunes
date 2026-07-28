@@ -1,0 +1,1586 @@
+[
+  {
+    "path": "build-bundle.py",
+    "type": "binary",
+    "sha1": "c725a5306b12edcf90d607b8a9628942655bd59b",
+    "size": 9988
+  },
+  {
+    "path": "Crimson Dunes/aboriginal symbols.jpg",
+    "type": "binary",
+    "sha1": "cc4f3e61cdd5eab59558fe6159c27a6932142c93",
+    "size": 48291
+  },
+  {
+    "path": "Crimson Dunes/Almanac.xlsx",
+    "type": "binary",
+    "sha1": "a365a14a4c1a572e19ac53a4608da8d8e5e4269b",
+    "size": 971134
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 1.jpg",
+    "type": "binary",
+    "sha1": "2ef00b95ba362228f89651ba1c624eec96208ec4",
+    "size": 10734
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 2.jpg",
+    "type": "binary",
+    "sha1": "9a47e70307b9290a6f5e26433bd1f13afb1da151",
+    "size": 13544
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 3.jpg",
+    "type": "binary",
+    "sha1": "a01124a6ada46e4b54638d5ce16474a9efaaf31c",
+    "size": 10325
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 4.jpg",
+    "type": "binary",
+    "sha1": "248d00f12bebfe2f443e2502672ab44f750c8bab",
+    "size": 12488
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 5.jpg",
+    "type": "binary",
+    "sha1": "244a0dcd51ba7bcd0c4d423e1ad1cb9e0b88333f",
+    "size": 9646
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 6.jpg",
+    "type": "binary",
+    "sha1": "11b1a75f59410fb7c586e72a4204a7915080fdd5",
+    "size": 12708
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 7.jpg",
+    "type": "binary",
+    "sha1": "d3214af4c2395ad64aa23e2ef60d1dea4bbe6e75",
+    "size": 215588
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 8.jpg",
+    "type": "binary",
+    "sha1": "ee061dd385613a87488b8a6fd879ff332a1224d2",
+    "size": 14739
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 1.jpg",
+    "type": "binary",
+    "sha1": "a4e5bc1a5ef487c140b57d75f20326a6012aaa7d",
+    "size": 41634
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 2.jpg",
+    "type": "binary",
+    "sha1": "7651e729f3829fd761767cb1ac313dd278f496eb",
+    "size": 7092
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 3.jpg",
+    "type": "binary",
+    "sha1": "145af361bd57c0c043580551235313ce62398979",
+    "size": 12430
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 4.png",
+    "type": "binary",
+    "sha1": "78c761f4f0873bf5e857bac9ca92a0a4dbc24605",
+    "size": 312574
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 5.jpg",
+    "type": "binary",
+    "sha1": "d27060b7b072c82edccebcce5bcb41850560a240",
+    "size": 188516
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 6.jpg",
+    "type": "binary",
+    "sha1": "5293e81c46018287089c8757821ec8f03c14200c",
+    "size": 8048
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 1.jpg",
+    "type": "binary",
+    "sha1": "0e0a1cea8a89e007dbc5893cae25981799e6d063",
+    "size": 126722
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 10.jpg",
+    "type": "binary",
+    "sha1": "698f65ec8e89f96d2836e8c0275bc0a50f9da56b",
+    "size": 95245
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 2.jpg",
+    "type": "binary",
+    "sha1": "22aefb2dd2bb178a24e3e78163b2d6dad3ad7bda",
+    "size": 69414
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 3.jpg",
+    "type": "binary",
+    "sha1": "dc80cdc242ad97af7658fffb200ba40c98ff0d4c",
+    "size": 63094
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 4.jpg",
+    "type": "binary",
+    "sha1": "540fee4bea446b4826ab120e82eaa888cea32fec",
+    "size": 191828
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 5.jpg",
+    "type": "binary",
+    "sha1": "a9770f88c10c93960a8f46cb106e3245d4b781a8",
+    "size": 114392
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 6.jpg",
+    "type": "binary",
+    "sha1": "b5c2585588315b775f583d55a71981164d9f68f3",
+    "size": 483040
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 7.jpg",
+    "type": "binary",
+    "sha1": "317734dc7f3c071d547203db9ed8b8890950e64c",
+    "size": 278585
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 8.jpg",
+    "type": "binary",
+    "sha1": "041d49e5b64f851fce5658f0715ce1e9529cb9d3",
+    "size": 45845
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 9.jpg",
+    "type": "binary",
+    "sha1": "73ca4f6a38bd6bf1c7b26746abd5fdf2fd386dbd",
+    "size": 252311
+  },
+  {
+    "path": "Crimson Dunes/Character Design/female 1.jpg",
+    "type": "binary",
+    "sha1": "00e76cb87c412722719f852cb89b773685f06262",
+    "size": 140716
+  },
+  {
+    "path": "Crimson Dunes/Character Design/female 2.jpg",
+    "type": "binary",
+    "sha1": "955f56362a2e761b7b3204319cfc6c6e3a1feb35",
+    "size": 275232
+  },
+  {
+    "path": "Crimson Dunes/Character Design/female 3.jpg",
+    "type": "binary",
+    "sha1": "dbf2ecba0962939b8b18a6028808bcfba1af161f",
+    "size": 79975
+  },
+  {
+    "path": "Crimson Dunes/Character Design/female 4.jpg",
+    "type": "binary",
+    "sha1": "8cc43715d3d67e431e60dc2c0493cf3511728a41",
+    "size": 208262
+  },
+  {
+    "path": "Crimson Dunes/Character Design/sun wukong silhouette.jpg",
+    "type": "binary",
+    "sha1": "f75269c5219a4d48ebc89efa34501494f9d7b4fd",
+    "size": 44444
+  },
+  {
+    "path": "Crimson Dunes/Character Design/sun wukong.webp",
+    "type": "binary",
+    "sha1": "168bfb243a06ef41cf8e949b2340a608284fef64",
+    "size": 17402
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/8-HxqHB6Mkx7RkdRG.png",
+    "type": "binary",
+    "sha1": "cb26e0f05cdd15be36a2b91f92d7a4a65480c766",
+    "size": 414026
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/8-ORwv6P5HSMMoky3.png",
+    "type": "binary",
+    "sha1": "f3cbe622d96fa24e769e0a8c207029e95c7f0018",
+    "size": 447842
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/8486963318da220631f0cf2424cdf0f2.jpg",
+    "type": "binary",
+    "sha1": "3bfd081674f024634c70dd0ac77fd2c7f313ada8",
+    "size": 99850
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/8dJ3WD86XSV1kBEZ_640x331.jpg",
+    "type": "binary",
+    "sha1": "e72f33395d6ffb7387195e2e8e6e1db589ecf991",
+    "size": 148704
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/aboriginal-rock-art-chillagoe-ca-19319_1280x853 (1).jpg",
+    "type": "binary",
+    "sha1": "cfb4ebfa4ccbef6acaed081f2af8b1cb8bab2dc2",
+    "size": 266065
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/ATDW - Jenolan Caves - The Pool of Reflections - Credit Timeless Creations - Jenolan Caves Reserve Trust_0.jpg",
+    "type": "binary",
+    "sha1": "08d688b35dc41d136542fcaa53ff92529312808f",
+    "size": 220571
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/chillagoeslider.jpg",
+    "type": "binary",
+    "sha1": "9b5ac10588ec944788e8d56d91f0bf166ea52d70",
+    "size": 31715
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Damien_Yilpi_Marks_Aboriginal_Symbols.001.jpg",
+    "type": "binary",
+    "sha1": "c847f46f94714aab92fd316f0a749ae4b4b6b4a9",
+    "size": 189963
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/elevation-east-kimberley-western-australia_1200x.webp",
+    "type": "binary",
+    "sha1": "275d50893a62554f5f3ea4a2c8f8991afbb14706",
+    "size": 249286
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Kata Tjuta 1.jpg",
+    "type": "binary",
+    "sha1": "e717b8c7e5ea64b57724004389bb2ca801b3c24c",
+    "size": 571697
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Kata Tjuta 2.jpg",
+    "type": "binary",
+    "sha1": "884b832e81a4ddf09b875e2dbbd33e121fc59da4",
+    "size": 256117
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Kata Tjuta 3.jpg",
+    "type": "binary",
+    "sha1": "5788fa3df2e1f333d5b9fbb84fea8465bbc0508b",
+    "size": 989054
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Kata Tjuta 4.jpg",
+    "type": "binary",
+    "sha1": "c994e796176d47378a1a6dcde8115263d285f819",
+    "size": 223772
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/LBP1011-Revolver-Falls-Copyright-Landi-Bradshaw-Photography-Landscape-Print-The-Kimberley-Waterfalls-Revolver-Falls-Carr-Boyd-Range-Lake-Argyle-Wet-Season-Aerial-Ranges-River-768x576.jpg",
+    "type": "binary",
+    "sha1": "a7978d8705b7e8906005fffe04f6bfaa8e37a225",
+    "size": 141231
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/mt-mulligan-from-the-air-29580_1280x853-1260x700.jpg",
+    "type": "binary",
+    "sha1": "66cf27479bd7d68ddfde779204e50a103826e888",
+    "size": 240220
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/natural caverns.webp",
+    "type": "binary",
+    "sha1": "0a722ec90ecb07aa823fd4f1cc997d41ef2c6b94",
+    "size": 59470
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/NEW_Caves_Nullarbor_2.jpg",
+    "type": "binary",
+    "sha1": "d4db25e5f0fdeee077a000d4408208eee1ec8228",
+    "size": 106328
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/photo-1510256506868-484d0db06ee2.webp",
+    "type": "binary",
+    "sha1": "abe7d90d39f67a1f1e351f4b81fab03eaaee922a",
+    "size": 130196
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/revolver-falls-helispirit-scotty-connell.jfif",
+    "type": "binary",
+    "sha1": "630ee2ce1388da2bd5a79672267265341bf3ea9a",
+    "size": 1726675
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Sahara Desert.jpg",
+    "type": "binary",
+    "sha1": "76d29db7db58ec7c3a54a37795622c491e82a474",
+    "size": 108066
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Terra Australia 1644.jpg",
+    "type": "binary",
+    "sha1": "3069c0e52e04dcd2ec9066e610b7cd81dbe3ac3a",
+    "size": 192869
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/wombeyan-karst-landscape-geology-01.jpg",
+    "type": "binary",
+    "sha1": "588d938cd36435feb3ba43537f18eb661586129a",
+    "size": 115014
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Character Sheets bc78266535c7470ab9b5b9094efedc2b.md",
+    "type": "text",
+    "sha1": "7066706e400e18829d77a9d484f8a59a746a778d",
+    "size": 678
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Crimson Dunes Academy becc15c1e6d848ef918c68742043e03b.md",
+    "type": "text",
+    "sha1": "f3da799db7e55cc535cb5612fb722c6a3c6ee519",
+    "size": 2934
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Foundational Concepts of Australian Fusion Magic f b9a16adfca1347df807b4bebfdf3fa60.md",
+    "type": "text",
+    "sha1": "2a43beb3178c686e48ceba8a0066e7b2ebd68ddd",
+    "size": 10103
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Game Adaptation fb7f4901b14d48eb8f209e2a2c0bfd1c.md",
+    "type": "text",
+    "sha1": "8336da6f8d1057cdb198a57a566f424497b3969f",
+    "size": 121
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Magic System f2de5fb96d4d48b9a7e077ce881402f9.md",
+    "type": "text",
+    "sha1": "979a10afc4a4fbbc38076641d393dc25c8fd8334",
+    "size": 1875
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Magical Creatures 02417d64446647d7975a68aca50a5da8.md",
+    "type": "text",
+    "sha1": "e6e092b0c5560f64eb6ce8795a99c086979af37a",
+    "size": 6210
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Magical Plants e72bbf2fbc25407bad4acc87809356f9.md",
+    "type": "text",
+    "sha1": "869b25770ae733735046c74f83a07529052bebb1",
+    "size": 2033
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Magical Vehicles Transportation 365250ba603c4ce089774ce7f60789b5.md",
+    "type": "text",
+    "sha1": "8744a4d15f8c888de89e0212a53b20fcb62b0b6a",
+    "size": 1162
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Maps a13e6b70ca204193851259682302f651.md",
+    "type": "text",
+    "sha1": "eae0292cdd1e989d32d8cd0d86aabeb3159a7a75",
+    "size": 832
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Maps/Untitled.png",
+    "type": "binary",
+    "sha1": "fdccfdc35e9e4f5c229b8eb4c7ea6731ac0d86ae",
+    "size": 580533
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Plot Outline 3890d718aacb47a7ba05e48eae22a5a0.md",
+    "type": "text",
+    "sha1": "a2d4174eeaa8aaa0cf531217e4b73e6bda268d50",
+    "size": 2225
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Plot Outline/Major Sites in Aus 52c8b6c3baa14cdcb34b464131ad1b79.md",
+    "type": "text",
+    "sha1": "d74c81c15da91bdc04eaf8eec6891b5d2be1ed4b",
+    "size": 338
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Plot Outline/Untitled.png",
+    "type": "binary",
+    "sha1": "2d992cd9e55a3945875bed2a2ff3d3579e52f203",
+    "size": 264215
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Politics 1c7e9331a6df44858723404a09ec9cac.md",
+    "type": "text",
+    "sha1": "146a4acde4699baecc18e434e16976d7a802cfb0",
+    "size": 10
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Thoughts 6e4db8fcac2e4ecabe3008e4a6e00a74.md",
+    "type": "text",
+    "sha1": "c1abecb17d0eee8a084576e0832ab5fc4a8ddf68",
+    "size": 3336
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Working with Indigenous Australians 00aa89833a2d44b2ad54ee81e42394e6.md",
+    "type": "text",
+    "sha1": "74f562a79ddf46acd4c881e418b6a922f6cfa14a",
+    "size": 6154
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/World Timelines 348fc257cb21494e8dd79f892ff030ee.md",
+    "type": "text",
+    "sha1": "737f7a360f7c2e1f6ef71e740ded064e570a28f6",
+    "size": 5296
+  },
+  {
+    "path": "RPG Encounters/!Game/Outline.md",
+    "type": "text",
+    "sha1": "8bf419c7acc5b39c56d37933b9673eeb4a8bec5b",
+    "size": 915
+  },
+  {
+    "path": "RPG Encounters/!Game/Settings.md",
+    "type": "text",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "size": 0
+  },
+  {
+    "path": "RPG Encounters/.obsidian/app.json",
+    "type": "text",
+    "sha1": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+    "size": 2
+  },
+  {
+    "path": "RPG Encounters/.obsidian/appearance.json",
+    "type": "text",
+    "sha1": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+    "size": 2
+  },
+  {
+    "path": "RPG Encounters/.obsidian/community-plugins.json",
+    "type": "text",
+    "sha1": "fc4c6771c4fe9a8cc5a33ce07e68d516de29d6d4",
+    "size": 103
+  },
+  {
+    "path": "RPG Encounters/.obsidian/core-plugins.json",
+    "type": "text",
+    "sha1": "fa962502131e32bb44a1761bbc3bae7c96431c8a",
+    "size": 695
+  },
+  {
+    "path": "RPG Encounters/.obsidian/graph.json",
+    "type": "text",
+    "sha1": "63160608ab961871e8719bc79db584166c2a7040",
+    "size": 510
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/copilot/data.json",
+    "type": "text",
+    "sha1": "24bce47c622514ce18de6b0d4ffee8100ca16410",
+    "size": 9088
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/copilot/main.js",
+    "type": "text",
+    "sha1": "b2aea6ccc643101f7c3fac4fba6bb6885cf2bf41",
+    "size": 5211444
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/copilot/manifest.json",
+    "type": "text",
+    "sha1": "9dcc86a38d30c41f56d5f8709dd5eb700c21a7c2",
+    "size": 415
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/copilot/styles.css",
+    "type": "text",
+    "sha1": "957106607260e757b3f93dea27596c0eb95fb8ff",
+    "size": 59635
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/dataview/data.json",
+    "type": "text",
+    "sha1": "77644e4f5de8f5708db758df367c94f699d8dac4",
+    "size": 860
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/dataview/main.js",
+    "type": "text",
+    "sha1": "ada06164ae4cfba6d75721cf884a953a0acd7801",
+    "size": 1302069
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/dataview/manifest.json",
+    "type": "text",
+    "sha1": "0925004a8239aa102cd5335e3f2f00238bd37b2a",
+    "size": 357
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/dataview/styles.css",
+    "type": "text",
+    "sha1": "a1d63da1f7c02873f571343b63aff62fab1f08ad",
+    "size": 2965
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/smart-connections/data.json",
+    "type": "text",
+    "sha1": "571ec1a5e175538dda089a2300a98a1f29fc31e2",
+    "size": 62
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/smart-connections/main.js",
+    "type": "text",
+    "sha1": "3846511766b23698e258d0d03c33a5df6731a3ed",
+    "size": 934398
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/smart-connections/manifest.json",
+    "type": "text",
+    "sha1": "e1df1bbc15dc9b7bde08af3876b40721b09cfa1a",
+    "size": 313
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/smart-connections/styles.css",
+    "type": "text",
+    "sha1": "c0ec604b0d844aa1b25cf9861d496b62309afdd7",
+    "size": 17974
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/table-editor-obsidian/data.json",
+    "type": "text",
+    "sha1": "94c879cd5c6a819bd39c4de9d25919dcf08764a0",
+    "size": 94
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/table-editor-obsidian/main.js",
+    "type": "text",
+    "sha1": "ebe7c19a7896b68dd50e03ece7b05b195a82957e",
+    "size": 272250
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/table-editor-obsidian/manifest.json",
+    "type": "text",
+    "sha1": "b9c844ea413b92c807b7cbcbe2f9bf3973c1b622",
+    "size": 564
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/table-editor-obsidian/styles.css",
+    "type": "text",
+    "sha1": "a03f657e10903825a3c4b2c2ff67b378b33df136",
+    "size": 1751
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/templater-obsidian/main.js",
+    "type": "text",
+    "sha1": "5a244a078c224f760f87fd794e9dff45059a5775",
+    "size": 339328
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/templater-obsidian/manifest.json",
+    "type": "text",
+    "sha1": "8e9109f64e86f39e84d6da990fcc51f0c8f2598c",
+    "size": 330
+  },
+  {
+    "path": "RPG Encounters/.obsidian/plugins/templater-obsidian/styles.css",
+    "type": "text",
+    "sha1": "b2c4067f3b88195119bba47eb48f1a13f14f7a38",
+    "size": 4932
+  },
+  {
+    "path": "RPG Encounters/.obsidian/workspace.json",
+    "type": "text",
+    "sha1": "f473f1585630d7935a6085aaa38a73a1c8c5510b",
+    "size": 7601
+  },
+  {
+    "path": "RPG Encounters/.smart-env/embedding_models/embedding_models.ajson",
+    "type": "text",
+    "sha1": "356806b505a5ee76e979e4f8cc4464ed71acde62",
+    "size": 249
+  },
+  {
+    "path": "RPG Encounters/.smart-env/event_logs/event_logs.ajson",
+    "type": "text",
+    "sha1": "fb06c2d33741efa85f3dc9396ebfc26f9208508d",
+    "size": 4346
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/!Game_Layout_md.ajson",
+    "type": "text",
+    "sha1": "766da35e58436f50bc6d31ddd2b8fdff284a24da",
+    "size": 9729
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/!Game_Outline_md.ajson",
+    "type": "text",
+    "sha1": "1956fd71bc26073bded759f39d2a8844494a9168",
+    "size": 10721
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/00_Overview_Flowchart_md.ajson",
+    "type": "text",
+    "sha1": "20491086cf002033fac9b2e78d1107b9b29509bb",
+    "size": 17009
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/00_Overview_README_md.ajson",
+    "type": "text",
+    "sha1": "807c16aa0c659d7fed19cd5f62cd0523f955b2b7",
+    "size": 23283
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/10_Systems_Systems_-_Checks_md.ajson",
+    "type": "text",
+    "sha1": "dfbda1b59cc0cea20c7a311292d4555d13b92b11",
+    "size": 16462
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/10_Systems_Systems_-_Reputation_md.ajson",
+    "type": "text",
+    "sha1": "60d968cf067237257085e8058ad13dde6dd01dac",
+    "size": 15402
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/10_Systems_Systems_-_Rewards_md.ajson",
+    "type": "text",
+    "sha1": "55dfd2fa7503cbea99bd1d9f903d1ff9cf8ed6b1",
+    "size": 20147
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/10_Systems_Systems_-_Variables_&_Modifiers_md.ajson",
+    "type": "text",
+    "sha1": "969663df1ed3508253dd8ddfffd6e66f0905bc05",
+    "size": 20998
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/20_Characters_Character_-_Player_md.ajson",
+    "type": "text",
+    "sha1": "f03e19d3b40e04013ff09ffad95e2a09e1c491b8",
+    "size": 5274
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/20_Characters_Character_Profile_Template_md.ajson",
+    "type": "text",
+    "sha1": "dc106c0f8152ac37b4248db2dcedec4556bce6fb",
+    "size": 15350
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/20_Characters_Dashboard_md.ajson",
+    "type": "text",
+    "sha1": "7463780d261bd3c104f768e21065698e793855f2",
+    "size": 411
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/20_Characters_NPC_-_Powerful_Figure_md.ajson",
+    "type": "text",
+    "sha1": "c9e925ebef3a33f2b4ac203a9ebcf3aae73507b7",
+    "size": 21650
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/30_Encounters_Dashboard_md.ajson",
+    "type": "text",
+    "sha1": "5120715642822c3c6a4f8f6162d3b54d32f63877",
+    "size": 409
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/30_Encounters_Encounter_-_Forest_Clearing_-_Bandits_md.ajson",
+    "type": "text",
+    "sha1": "b0d5470c7182763c8ca34fadb836748b97472acb",
+    "size": 69489
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/30_Encounters_Encounter_-_Inn_Attack_md.ajson",
+    "type": "text",
+    "sha1": "9d24d26f60976c6b2e02bebbb0addf6275c84df9",
+    "size": 39975
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/30_Encounters_Encounter_Template_md.ajson",
+    "type": "text",
+    "sha1": "962d9963be6b89117301b66098a96b854d8d9f40",
+    "size": 36967
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/30_Encounters_Untitled_md.ajson",
+    "type": "text",
+    "sha1": "89fd2cde895522dfcf75eef3c5fa798c1623b41f",
+    "size": 10071
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/40_Logs_Encounter_Log_md.ajson",
+    "type": "text",
+    "sha1": "cf6e8791b7d861a684cc0cbb088b94dae7b35373",
+    "size": 25178
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/90_Indexes_Index_-_NPCs_md.ajson",
+    "type": "text",
+    "sha1": "f16e46c74ed9b9b01e86ab038f3300ca39cbec61",
+    "size": 5070
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/90_Indexes_Index_-_Rewards_md.ajson",
+    "type": "text",
+    "sha1": "7d7339fca906b9458acf8ff8c8797853e27f7b46",
+    "size": 10550
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Character_Attributes_md.ajson",
+    "type": "text",
+    "sha1": "146153d7846b2baffaf2a97c9a3e16d72e063afa",
+    "size": 19179
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-conversations_Can_you_read_and_review_the_files_within_this_RPG@20260109_070545_md.ajson",
+    "type": "text",
+    "sha1": "72d59c4dd20f6946b0869af3c78eaecbffb2f092",
+    "size": 109682
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Emojify_md.ajson",
+    "type": "text",
+    "sha1": "88a86fdcf2b1c4ef3df0194062346d9aa1aab175",
+    "size": 9853
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Explain_like_I_am_5_md.ajson",
+    "type": "text",
+    "sha1": "be85f575afc421ca6792b7289c1f5c2bf7ee883d",
+    "size": 9932
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Fix_grammar_and_spelling_md.ajson",
+    "type": "text",
+    "sha1": "7ea773d73e3ff8420a57631992ca262c2a08f6da",
+    "size": 5137
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Generate_glossary_md.ajson",
+    "type": "text",
+    "sha1": "23febab371d2b0a8086f0cc5a22412bbe8eb3a10",
+    "size": 5125
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Generate_table_of_contents_md.ajson",
+    "type": "text",
+    "sha1": "8131edc03b2e79e73a080b15297bdbc826113cbe",
+    "size": 5138
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Make_longer_md.ajson",
+    "type": "text",
+    "sha1": "21a166a942d79b5aad911e5657a37a877fbc54f4",
+    "size": 5082
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Make_shorter_md.ajson",
+    "type": "text",
+    "sha1": "75c2904d726935754b2b1be57962f95af4926807",
+    "size": 5108
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Remove_URLs_md.ajson",
+    "type": "text",
+    "sha1": "d5916de3f488cb43ddd9b032e8466fcdd9e30b87",
+    "size": 5114
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Rewrite_as_tweet_md.ajson",
+    "type": "text",
+    "sha1": "3b3e0b97aee5ff3ebe7038cf52fcc2b2bbc80ee9",
+    "size": 5124
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Rewrite_as_tweet_thread_md.ajson",
+    "type": "text",
+    "sha1": "b4829693553753bdd7ac3be6e6bc1aba074da899",
+    "size": 9943
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Simplify_md.ajson",
+    "type": "text",
+    "sha1": "87e6eba560c53b7310a68a8b0688a289740a597c",
+    "size": 5094
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Summarize_md.ajson",
+    "type": "text",
+    "sha1": "2d52258f98d8ede257ec960d00e60df130026956",
+    "size": 5098
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/copilot_copilot-custom-prompts_Translate_to_Chinese_md.ajson",
+    "type": "text",
+    "sha1": "bc7b95be8a9e4e12a17462617ca70cb7e3ed989d",
+    "size": 5133
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Factions_Oceanside_Kingdom_md.ajson",
+    "type": "text",
+    "sha1": "75a7d5938ef1c78c080088e0bdf213d099c0849f",
+    "size": 15008
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Factions_The_League_md.ajson",
+    "type": "text",
+    "sha1": "083918053be696a8248e1db2741643b296da60c4",
+    "size": 28686
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Factions_Thieves_Guild_md.ajson",
+    "type": "text",
+    "sha1": "6e24c8a8e5ece7f44304749125ee5ca4d07a5a4c",
+    "size": 16049
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Focus_Focus_Balance_md.ajson",
+    "type": "text",
+    "sha1": "50cc2f7e03f16ccf62064e9d7b018c0ea1e159f0",
+    "size": 10246
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Focus_Focus_Influence_md.ajson",
+    "type": "text",
+    "sha1": "a2d219b4363824ad97539f0c56e8afba343fd7af",
+    "size": 12553
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Focus_Focus_Madness_md.ajson",
+    "type": "text",
+    "sha1": "b5c8109461115ae6fae26ab864d0c3cc2c88d1c9",
+    "size": 9982
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Focus_Framework_-_Focus_md.ajson",
+    "type": "text",
+    "sha1": "b3294fab50ee1231259ecd7200036903c6543b21",
+    "size": 65287
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Focus_Tiers_of_Power_md.ajson",
+    "type": "text",
+    "sha1": "170aa177ee49382bdf3feb2e49948059e2cf551c",
+    "size": 4837
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Class_Class_md.ajson",
+    "type": "text",
+    "sha1": "241b4871c9326b2f3952f3c8f4d08a7ddb9af074",
+    "size": 78164
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Class_Class_Titles_md.ajson",
+    "type": "text",
+    "sha1": "c179f6891a80dc3f88c34e583a4582eda576dd6c",
+    "size": 11230
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Class_Known_Class_Perks_md.ajson",
+    "type": "text",
+    "sha1": "f29f9e82562d284da7e3060c1cd5556993412687",
+    "size": 15046
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Class_Known_Classes_md.ajson",
+    "type": "text",
+    "sha1": "6e6ac688562f4eabb596b1271987f03ed513e73b",
+    "size": 14248
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Cultivation_Cultivation_Aspects_md.ajson",
+    "type": "text",
+    "sha1": "a86fb5e3ab125cb9c6cd3b5551510adaedde413e",
+    "size": 9646
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Cultivation_Cultivation_md.ajson",
+    "type": "text",
+    "sha1": "1c5ee59391dcd6adffcc63d60133c7ff08036591",
+    "size": 67617
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Cultivation_Cultivation_Paths_md.ajson",
+    "type": "text",
+    "sha1": "391c48829679bc82464cc4400f11404fe3eb165a",
+    "size": 9693
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Cultivation_Cultivation_Perks_md.ajson",
+    "type": "text",
+    "sha1": "c35c14a64f16cda5f9e2ae04701e126a96c2ad43",
+    "size": 9655
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Cultivation_Cultivation_Titles_md.ajson",
+    "type": "text",
+    "sha1": "b3727822c24e99d6c291e1d7e00b1fe9897c62f7",
+    "size": 9664
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Skills_Skill_Paths_md.ajson",
+    "type": "text",
+    "sha1": "fb1f40a85d6842845e741a6909fbca38632a41d6",
+    "size": 28537
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Skills_Skill_Perks_md.ajson",
+    "type": "text",
+    "sha1": "5000dde29a2d56319464b8d3843c683c86f2bd72",
+    "size": 11428
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Skills_Skill_Titles_md.ajson",
+    "type": "text",
+    "sha1": "6ebc478b43960e1cfd8b511e2c0e966cd6d8ccb0",
+    "size": 11614
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Progression_Skills_Skills_md.ajson",
+    "type": "text",
+    "sha1": "78dd3edca527113d1fe799d0d57c56a4cde12244",
+    "size": 67622
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_Dealmaker_md.ajson",
+    "type": "text",
+    "sha1": "af85a8165cbacb943f41b5dbb75bd57e7b75289b",
+    "size": 16754
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_Iterations_md.ajson",
+    "type": "text",
+    "sha1": "b8a3ef82bb7aa5d9058a9ddc26a11c09b56a1e08",
+    "size": 20933
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_Rarities_md.ajson",
+    "type": "text",
+    "sha1": "c92d6a86b66c713ca731437cae4962eb9f96d927",
+    "size": 10394
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_The_Infinite_Realm_md.ajson",
+    "type": "text",
+    "sha1": "5978fcaa7749ef1f5c78deed0acdf661739c148f",
+    "size": 18633
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_The_Three_md.ajson",
+    "type": "text",
+    "sha1": "da074313136e73a09df967991f8f2e745cb3844c",
+    "size": 10500
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Factions_Oceanside_Kingdom_md.ajson",
+    "type": "text",
+    "sha1": "28e87603067521d43a7d17ea9c446a878cc5b2b6",
+    "size": 15144
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Factions_The_League_md.ajson",
+    "type": "text",
+    "sha1": "9c53b4d390753c26fd0ab8e3b0c40a7c0654cb2e",
+    "size": 28915
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Factions_Thieves_Guild_md.ajson",
+    "type": "text",
+    "sha1": "61a1b4acf074c3cccf10d2c1fab8a4f5a1fcb2a1",
+    "size": 16177
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Focus_Focus_Balance_md.ajson",
+    "type": "text",
+    "sha1": "e883ff8f8a27387f25ce6bb117a1259ad6d0a433",
+    "size": 10377
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Focus_Focus_Influence_md.ajson",
+    "type": "text",
+    "sha1": "3b3d35d39c2dfcd505012887319e129b199672d0",
+    "size": 12634
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Focus_Focus_Madness_md.ajson",
+    "type": "text",
+    "sha1": "aea18aa7eef6f3c1fbe607e0221730b0cb4c63c2",
+    "size": 10070
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Focus_Framework_-_Focus_md.ajson",
+    "type": "text",
+    "sha1": "a27e5f501bb3e386881c45d3a0f91be99dcf0799",
+    "size": 65854
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Focus_Tiers_of_Power_md.ajson",
+    "type": "text",
+    "sha1": "e665ed89560ad42891ba91900dd1870a1547e28f",
+    "size": 415
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Class_Class_md.ajson",
+    "type": "text",
+    "sha1": "de20d75c081120e0839cebc1bc350f9773622b40",
+    "size": 78921
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Class_Class_Titles_md.ajson",
+    "type": "text",
+    "sha1": "46c57beb8ae69d56c2f3f3df4fdaf27d6db4f0da",
+    "size": 11350
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Class_Known_Class_Perks_md.ajson",
+    "type": "text",
+    "sha1": "f53904c55a75ac7936a77ab413196ac8123e8c11",
+    "size": 15183
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Class_Known_Classes_md.ajson",
+    "type": "text",
+    "sha1": "069531ccf7fb9c12a6cb43513949fdac78f9a2a2",
+    "size": 14349
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Cultivation_Cultivation_Aspects_md.ajson",
+    "type": "text",
+    "sha1": "038f10157ba3f71180f89b3620d64690a851ab4b",
+    "size": 9740
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Cultivation_Cultivation_md.ajson",
+    "type": "text",
+    "sha1": "53501e5e25f1015428580feb6ef6d57f8928821f",
+    "size": 68228
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Cultivation_Cultivation_Paths_md.ajson",
+    "type": "text",
+    "sha1": "a9350b154c333c6aafd0022ea71ca9a7f310b340",
+    "size": 9756
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Cultivation_Cultivation_Perks_md.ajson",
+    "type": "text",
+    "sha1": "d1657567e8ec2133ee22ab57a6f4dd35ec145a67",
+    "size": 9766
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Cultivation_Cultivation_Titles_md.ajson",
+    "type": "text",
+    "sha1": "1fa510c56c1b6f35c1e716f788e61f3dca142e7b",
+    "size": 9756
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Skills_Skill_Paths_md.ajson",
+    "type": "text",
+    "sha1": "a14e6fb6b68ad5fe7a8e9e8769bf5ffd48b7b3ff",
+    "size": 28619
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Skills_Skill_Perks_md.ajson",
+    "type": "text",
+    "sha1": "f272396f3ecfdc1f015af3cf35b467b9037a7e1a",
+    "size": 11531
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Skills_Skill_Titles_md.ajson",
+    "type": "text",
+    "sha1": "3cd1d4b9a65a0eaa5f69e0a882909301e43a5b8d",
+    "size": 11713
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_Progression_Skills_Skills_md.ajson",
+    "type": "text",
+    "sha1": "ff3e1ea74c639b91e1a40bb657f44b6b74c24ad6",
+    "size": 68231
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_The_Infinite_Realm_Dealmaker_md.ajson",
+    "type": "text",
+    "sha1": "0637a1be4aa2f96310a019dec252d3df1481b0cd",
+    "size": 16898
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_The_Infinite_Realm_Iterations_md.ajson",
+    "type": "text",
+    "sha1": "fc6cafdfb67d60c11253e5531dd4b10b8dd873e0",
+    "size": 21115
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_The_Infinite_Realm_Rarities_md.ajson",
+    "type": "text",
+    "sha1": "5434f606fd088ad6319d883aa5b110cec4621501",
+    "size": 10515
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_The_Infinite_Realm_The_Infinite_Realm_md.ajson",
+    "type": "text",
+    "sha1": "b2ef0d94a9c17393cf22958f0a4a13e5790be78f",
+    "size": 18761
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/The_Infinite_Realm_World_The_Infinite_Realm_The_Three_md.ajson",
+    "type": "text",
+    "sha1": "3ef08a4b8147d4b0b03db76efa9d76dc7e2057fa",
+    "size": 10598
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Theory_of_Magic_Theory_of_Magic_md.ajson",
+    "type": "text",
+    "sha1": "6b5c13cbc7d0f2543d15e379499069f49addbd6c",
+    "size": 15298
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Theory_of_Magic_ToM_Adventures_md.ajson",
+    "type": "text",
+    "sha1": "c7c0c330c3b9daf126b8d968ba2daaff63d9e02f",
+    "size": 578850
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Theory_of_Magic_ToM_Encounters_md.ajson",
+    "type": "text",
+    "sha1": "15d0087806fba3baf7cf1e88486730673cf2255b",
+    "size": 403191
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Theory_of_Magic_ToM_Monsters_md.ajson",
+    "type": "text",
+    "sha1": "61bcba6e10d97fd40cff169f2994b80c4ac9f5b0",
+    "size": 284348
+  },
+  {
+    "path": "RPG Encounters/.smart-env/multi/Theory_of_Magic_ToM_Skills_md.ajson",
+    "type": "text",
+    "sha1": "08f521ca28bb84aa8db1924161de28bfc9a74db0",
+    "size": 9594
+  },
+  {
+    "path": "RPG Encounters/.smart-env/smart_env.json",
+    "type": "text",
+    "sha1": "1b4fbd29aaad965ef062fc7ffb26a3df744595b7",
+    "size": 1794
+  },
+  {
+    "path": "RPG Encounters/00_Overview/Flowchart.md",
+    "type": "text",
+    "sha1": "b136d1247e53f9af2e3f3a1ee7f33d629e721cca",
+    "size": 2205
+  },
+  {
+    "path": "RPG Encounters/00_Overview/Plot - Main Arc.md",
+    "type": "text",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "size": 0
+  },
+  {
+    "path": "RPG Encounters/00_Overview/README.md",
+    "type": "text",
+    "sha1": "343a7737a135a9c54b46deeb6f455f873c868703",
+    "size": 1276
+  },
+  {
+    "path": "RPG Encounters/10_Systems/Systems - Checks.md",
+    "type": "text",
+    "sha1": "ad417e9a5ed173a8f57f84b1782fde4546eff301",
+    "size": 973
+  },
+  {
+    "path": "RPG Encounters/10_Systems/Systems - Reputation.md",
+    "type": "text",
+    "sha1": "665aac97c23fc181a1b7a80eda9f2a1958f61fd4",
+    "size": 684
+  },
+  {
+    "path": "RPG Encounters/10_Systems/Systems - Rewards.md",
+    "type": "text",
+    "sha1": "40332146f168b90f97f706b0dfe8033e0b9d3f8a",
+    "size": 784
+  },
+  {
+    "path": "RPG Encounters/10_Systems/Systems - Variables & Modifiers.md",
+    "type": "text",
+    "sha1": "a14397db7def46a7ecac4cbe3d8c23377f3b83ae",
+    "size": 1036
+  },
+  {
+    "path": "RPG Encounters/20_Characters/Character - Player.md",
+    "type": "text",
+    "sha1": "d2fc8ec30513ee7cf5b697aabd00818d96b193ae",
+    "size": 257
+  },
+  {
+    "path": "RPG Encounters/20_Characters/Character Profile Template.md",
+    "type": "text",
+    "sha1": "3deb3373368e2086046aee090eb2da2918ec62b2",
+    "size": 242
+  },
+  {
+    "path": "RPG Encounters/20_Characters/Dashboard.md",
+    "type": "text",
+    "sha1": "308cd4d14d38f7146ddc79cf8c06d25a29c323cf",
+    "size": 107
+  },
+  {
+    "path": "RPG Encounters/20_Characters/NPC - Powerful Figure.md",
+    "type": "text",
+    "sha1": "fb2a6ae2c1b2c3e7ded5a94f80a38a67ab0085e5",
+    "size": 1156
+  },
+  {
+    "path": "RPG Encounters/30_Encounters/Dashboard.md",
+    "type": "text",
+    "sha1": "702794e949e15848ca0b7d86794af8fa43309f0b",
+    "size": 128
+  },
+  {
+    "path": "RPG Encounters/30_Encounters/Encounter - Forest Clearing - Bandits.md",
+    "type": "text",
+    "sha1": "923244bf6fe9325babf3530785ae0a204b1f0ff9",
+    "size": 1432
+  },
+  {
+    "path": "RPG Encounters/30_Encounters/Encounter - Inn Attack.md",
+    "type": "text",
+    "sha1": "233aa6c96f94a8da4935999d75793b2775100ef1",
+    "size": 2551
+  },
+  {
+    "path": "RPG Encounters/30_Encounters/Encounter Template.md",
+    "type": "text",
+    "sha1": "cec84ccdfd5e20c370acbdee7a4dca5ca82451df",
+    "size": 510
+  },
+  {
+    "path": "RPG Encounters/30_Encounters/Untitled.md",
+    "type": "text",
+    "sha1": "3aa136bbe877e30650c4e7a04ed42adbac26ccfd",
+    "size": 473
+  },
+  {
+    "path": "RPG Encounters/40_Logs/Encounter Log.md",
+    "type": "text",
+    "sha1": "768494c860c4e59acb846e62160397e96fa23111",
+    "size": 1018
+  },
+  {
+    "path": "RPG Encounters/40_Logs/Session Notes.md",
+    "type": "text",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "size": 0
+  },
+  {
+    "path": "RPG Encounters/90_Indexes/Index - Encounters.md",
+    "type": "text",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "size": 0
+  },
+  {
+    "path": "RPG Encounters/90_Indexes/Index - NPCs.md",
+    "type": "text",
+    "sha1": "a90dd8a847fe233bdc6e609e2b6c25342671b1b7",
+    "size": 98
+  },
+  {
+    "path": "RPG Encounters/90_Indexes/Index - Rewards.md",
+    "type": "text",
+    "sha1": "5560a3ae2ddcb4565328696279f8c90627dd9181",
+    "size": 321
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-conversations/Can_you_read_and_review_the_files_within_this_RPG@20260109_070545.md",
+    "type": "text",
+    "sha1": "729957224f9bc07a889fb4f4b99953c24c7064b2",
+    "size": 11257
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Emojify.md",
+    "type": "text",
+    "sha1": "604f7bd355ebae6af899a9a13bb964f2b70dc276",
+    "size": 470
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "type": "text",
+    "sha1": "28e2285607b825055f5064a4442830a2f87618a1",
+    "size": 388
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "type": "text",
+    "sha1": "9432d24edd28b1059d3cdd84af4fdad70aaed2e0",
+    "size": 350
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Generate glossary.md",
+    "type": "text",
+    "sha1": "c5e357afbdfeeca077b465b3d2a797b3e41c5f10",
+    "size": 353
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Generate table of contents.md",
+    "type": "text",
+    "sha1": "81fb50713f7020dcf506e16222701ac925e626f4",
+    "size": 357
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Make longer.md",
+    "type": "text",
+    "sha1": "640a8fdaff05a0edef3b33f298487c1c334f36b8",
+    "size": 379
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Make shorter.md",
+    "type": "text",
+    "sha1": "15f9288ced1cb390db611039810a0ba80c590b24",
+    "size": 373
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Remove URLs.md",
+    "type": "text",
+    "sha1": "fe64fdcd2e526dc25bc03d60e8d7a76589f11025",
+    "size": 347
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "type": "text",
+    "sha1": "7661132c38bea20274d4017cb444ecd03afcf406",
+    "size": 500
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "type": "text",
+    "sha1": "040d0211eb3208e314373dc1ccfc79aa5876ef4e",
+    "size": 376
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Simplify.md",
+    "type": "text",
+    "sha1": "ef759fc6f87e4f6eb7ab2ae65f40ea0e116646fb",
+    "size": 370
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Summarize.md",
+    "type": "text",
+    "sha1": "7cf7770785e9a9eb97fe9f50f84e2c00f0031cab",
+    "size": 307
+  },
+  {
+    "path": "RPG Encounters/copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "type": "text",
+    "sha1": "b68597fbba837018101e4dd39753d4cbe444e831",
+    "size": 369
+  },
+  {
+    "path": "RPG Encounters/Images/Pasted image 20260108125255.png",
+    "type": "binary",
+    "sha1": "6ff608474b0e4d48eca6f5ea35c74b32c12ffe51",
+    "size": 1226888
+  },
+  {
+    "path": "RPG Encounters/Images/Pasted image 20260108125311.png",
+    "type": "binary",
+    "sha1": "cc9856462e9813fc15f4ac0d70c29484fbffa57e",
+    "size": 228152
+  },
+  {
+    "path": "RPG Encounters/Images/Pasted image 20260108130620.png",
+    "type": "binary",
+    "sha1": "7f31e27367b923a905a800a459775556252ef5a2",
+    "size": 140206
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Factions/Oceanside Kingdom.md",
+    "type": "text",
+    "sha1": "2a9a2559dc1aa4a546f1372dd9ad4f79ebf9187d",
+    "size": 793
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Factions/The League.md",
+    "type": "text",
+    "sha1": "f8fb4c9d851f5c7ee38eeb817c24ff2b31d27ffd",
+    "size": 2073
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Factions/Thieves Guild.md",
+    "type": "text",
+    "sha1": "a37630fcb13ca1691c619401119af56a02183bce",
+    "size": 773
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Focus/Focus Balance.md",
+    "type": "text",
+    "sha1": "7db4a7fb786ce334105a557b87327f5644b00d0e",
+    "size": 987
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Focus/Focus Influence.md",
+    "type": "text",
+    "sha1": "f2d7dbcfddfd76b04f456c3c12f9e31e9f5852e5",
+    "size": 4417
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Focus/Focus Madness.md",
+    "type": "text",
+    "sha1": "144e65789d44bcff031704b35986b1deb26a81d0",
+    "size": 645
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Focus/Framework - Focus.md",
+    "type": "text",
+    "sha1": "64774a443224778504e7932a71ea66915e5642ba",
+    "size": 6265
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Focus/Tiers of Power.md",
+    "type": "text",
+    "sha1": "09083d3ae685f7958e59c72e331ae70a438d3607",
+    "size": 93
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Class/Class Titles.md",
+    "type": "text",
+    "sha1": "e0e454c2cc3e6dc39aa326dff66c0d25e9fd663f",
+    "size": 1024
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Class/Class.md",
+    "type": "text",
+    "sha1": "9fd842af1f722c190a431390508b963545b7f1ad",
+    "size": 5202
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Class/Known Class Perks.md",
+    "type": "text",
+    "sha1": "0b1f07c78e0835c5eca4bc3a1a81c68b8918ad25",
+    "size": 5474
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Class/Known Classes.md",
+    "type": "text",
+    "sha1": "6d626ca3c5e4de0077b66f2613df5e8c96efb6a5",
+    "size": 2641
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Aspects.md",
+    "type": "text",
+    "sha1": "1c4c4c983daa9e35c16882a08712c104bbd3d5b3",
+    "size": 2968
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Paths.md",
+    "type": "text",
+    "sha1": "b942ca1446530eb627be42aa204fe697ced86bd0",
+    "size": 1111
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Perks.md",
+    "type": "text",
+    "sha1": "a6cc4c4bcd02c65a0118ddba9380a341c27f363c",
+    "size": 14075
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Titles.md",
+    "type": "text",
+    "sha1": "d5b4ffbd239345632632148ce10abc2ad81f3c7c",
+    "size": 1102
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation.md",
+    "type": "text",
+    "sha1": "c65806f6f5084d27ea8f7b1e5db9273b46efb877",
+    "size": 5721
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Paths.md",
+    "type": "text",
+    "sha1": "e3316de4f35124425d116f5eef7804a550a1f031",
+    "size": 10994
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Perks.md",
+    "type": "text",
+    "sha1": "00817466acd79229b0a32df2f3649a88f966fa0a",
+    "size": 2787
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Titles.md",
+    "type": "text",
+    "sha1": "157200c76da9605e69b0407c9e9f704ea837389e",
+    "size": 1873
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/Progression/Skills/Skills.md",
+    "type": "text",
+    "sha1": "caffc078670b3e3ca9efa0065118ee2b06b76b93",
+    "size": 4275
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/The Infinite Realm/Dealmaker.md",
+    "type": "text",
+    "sha1": "3fea3d9b62c10f88632003c42316a12bb6972d4c",
+    "size": 1564
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/The Infinite Realm/Iterations.md",
+    "type": "text",
+    "sha1": "89c3fe880f202875fc765657a9957a0a0ceae9bf",
+    "size": 2034
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/The Infinite Realm/Rarities.md",
+    "type": "text",
+    "sha1": "233da0a334d2d20e8a9a3ee8cc76c4e671fd0f07",
+    "size": 1180
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/The Infinite Realm/The Infinite Realm.md",
+    "type": "text",
+    "sha1": "9c9fbeef8e3abbdd1bcf61afa10cff748db40311",
+    "size": 1224
+  },
+  {
+    "path": "RPG Encounters/The Infinite Realm World/The Infinite Realm/The Three.md",
+    "type": "text",
+    "sha1": "86002ac0b2490cbd7c183b7d0c9f5ed7d4a491f1",
+    "size": 1095
+  },
+  {
+    "path": "RPG Encounters/Theory of Magic/Theory of Magic.md",
+    "type": "text",
+    "sha1": "da0346045cd8288a90840dd999bfb8b33f97b1b2",
+    "size": 212
+  },
+  {
+    "path": "RPG Encounters/Theory of Magic/ToM Adventures.md",
+    "type": "text",
+    "sha1": "1a4690154d9f30654736c6d905f3bc5a081628dc",
+    "size": 126415
+  },
+  {
+    "path": "RPG Encounters/Theory of Magic/ToM Encounters.md",
+    "type": "text",
+    "sha1": "9fd830d4aa8a6bb90b3fa1ff763d0318368ba1c8",
+    "size": 112410
+  },
+  {
+    "path": "RPG Encounters/Theory of Magic/ToM Monsters.md",
+    "type": "text",
+    "sha1": "4a6898bf628afca97e98ff7cfaed5cb9c9811a78",
+    "size": 77933
+  },
+  {
+    "path": "RPG Encounters/Theory of Magic/ToM Skills.md",
+    "type": "text",
+    "sha1": "be88c12761d390436393bc427b6afaf3f5ea7703",
+    "size": 11733
+  },
+  {
+    "path": "RPG Encounters/Untitled.base",
+    "type": "text",
+    "sha1": "f48a665557b76cb49875453eb749851a38444a22",
+    "size": 39
+  }
+]

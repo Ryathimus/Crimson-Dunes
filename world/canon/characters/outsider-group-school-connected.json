@@ -1,0 +1,17 @@
+{
+  "id": "group-school-connected-outsiders-1810",
+  "displayName": "Mixed School-Connected Outsiders",
+  "canonStatus": "draft",
+  "type": "group",
+  "timelineLayer": "playable",
+  "startingYear": 1810,
+  "relationshipToWaru": "observed_from_distance",
+  "relationshipToCrimsonDunes": "connected_to_emerging_school",
+  "composition": "To be defined. Should include mixed perspectives rather than a single cultural/social lens.",
+  "knownToWaru": false,
+  "slice1Purpose": [
+    "provide outsider contrast",
+    "demonstrate different interpretations of land/magic",
+    "create reveal-state tension"
+  ]
+}

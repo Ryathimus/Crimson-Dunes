@@ -1,0 +1,22 @@
+{
+  "id": "crimson-dunes",
+  "title": "Crimson Dunes",
+  "canonStatus": "canon",
+  "defaultWorldSeed": "crimson-dunes-dev-001",
+  "defaultPlayableStart": {
+    "year": 1810,
+    "label": "Crimson Dunes School formation era"
+  },
+  "timelineLayers": [
+    "historicalFoundation",
+    "playable",
+    "futureProjection"
+  ],
+  "viewerModes": [
+    "overworld",
+    "multiCharacter",
+    "singleCharacter"
+  ],
+  "firstLockedPOV": "char-waru",
+  "notes": "Architecture draft only; not implementation data-complete."
+}

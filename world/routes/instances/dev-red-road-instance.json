@@ -1,0 +1,26 @@
+{
+  "id": "route-instance-red-road-dev-001",
+  "templateId": "route-red-road-to-crimson-dunes",
+  "worldSeed": "crimson-dunes-dev-001",
+  "localSeed": "red-road-slice-001",
+  "canonStatus": "generated",
+  "currentNodeId": "node-red-dust-approach",
+  "currentYear": 1810,
+  "activeCharacters": [
+    "char-waru",
+    "group-school-connected-outsiders-1810"
+  ],
+  "revealStates": [
+    {
+      "observer": "char-waru",
+      "target": "group-school-connected-outsiders-1810",
+      "state": "hidden"
+    }
+  ],
+  "generatedEncounters": [
+    "encounter-outsiders-disturb-route-sign"
+  ],
+  "generatedDiscoveries": [
+    "discovery-land-remembers-old-crossing"
+  ]
+}

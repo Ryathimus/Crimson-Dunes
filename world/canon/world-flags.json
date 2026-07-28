@@ -1,0 +1,26 @@
+[
+  {
+    "id": "first_fleet_magic_contact",
+    "timelineLayer": "historicalFoundation",
+    "canonStatus": "draft",
+    "description": "Magical contact begins around the First Fleet arrival period."
+  },
+  {
+    "id": "wizarding_stowaway_present_1788",
+    "timelineLayer": "historicalFoundation",
+    "canonStatus": "draft",
+    "description": "At least one wizarding stowaway or hidden magical actor is present with the First Fleet."
+  },
+  {
+    "id": "fusion_magic_conditions_seeded",
+    "timelineLayer": "historicalFoundation",
+    "canonStatus": "draft",
+    "description": "Conditions that later enable or force magical synthesis are seeded before 1810."
+  },
+  {
+    "id": "crimson_dunes_school_need_emerging",
+    "timelineLayer": "historicalFoundation",
+    "canonStatus": "draft",
+    "description": "By 1810, prior events have created pressure for a shared or adapted magical institution."
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "id": "discovery-land-remembers-old-crossing",
+  "title": "The Land Remembers an Old Crossing",
+  "canonStatus": "draft",
+  "timelineLayer": "playable",
+  "visibleTo": [
+    "char-waru"
+  ],
+  "summary": "Waru recognises that the route marker is not merely physical. It carries traces of older movement and recent disturbance.",
+  "teaches": [
+    "land-based perception matters",
+    "Waru's knowledge is powerful but incomplete",
+    "outsider magic can disturb older paths"
+  ]
+}

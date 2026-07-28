@@ -1,0 +1,16 @@
+{
+  "bundleSource": "BUNDLE.md",
+  "totalFilesInBundle": 264,
+  "markdownFilesImported": 83,
+  "textFilesInBundle": 204,
+  "binaryFilesIndexed": 60,
+  "categoryCounts": {
+    "crimson-dunes-worldbuilding": 15,
+    "rpg-encounter-system": 23,
+    "tooling-ai-notes": 14,
+    "rpg-reference-infinite-realm": 26,
+    "rpg-reference-theory-of-magic": 5
+  },
+  "note": "All markdown files from the bundle have been imported as raw source data under source-import/markdown. Binary files are indexed but not embedded because the AI bundle did not inline binary content. Timeline parser now preserves year-only events and nested bullet details.",
+  "parsedWorldTimelineEvents": 66
+}

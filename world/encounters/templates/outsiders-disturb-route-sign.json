@@ -1,0 +1,62 @@
+{
+  "id": "encounter-outsiders-disturb-route-sign",
+  "title": "The Outsiders Disturb a Route Sign",
+  "canonStatus": "draft",
+  "encounterType": "observation_first",
+  "fixedPurpose": "Demonstrate outsiders moving through a magically sensitive landscape without fully understanding it.",
+  "availableToRoutes": [
+    "route-red-road-to-crimson-dunes"
+  ],
+  "povCharacter": "char-waru",
+  "defaultRevealState": "hidden",
+  "choices": [
+    {
+      "id": "watch",
+      "label": "Watch and do nothing yet",
+      "risk": "low",
+      "possibleEffects": [
+        "gain_information"
+      ]
+    },
+    {
+      "id": "move_closer",
+      "label": "Move closer and inspect the disturbance",
+      "risk": "medium",
+      "possibleEffects": [
+        "gain_information",
+        "increase_detection_risk"
+      ]
+    },
+    {
+      "id": "leave_warning",
+      "label": "Leave a subtle warning without revealing yourself",
+      "risk": "medium",
+      "possibleEffects": [
+        "indirect_interaction",
+        "change_outsider_path"
+      ]
+    },
+    {
+      "id": "redirect",
+      "label": "Redirect them indirectly",
+      "risk": "medium_high",
+      "possibleEffects": [
+        "protect_location",
+        "increase_suspicion"
+      ]
+    },
+    {
+      "id": "reveal",
+      "label": "Risk revealing yourself",
+      "risk": "high",
+      "possibleEffects": [
+        "reveal_state_changes",
+        "direct_dialogue_possible"
+      ]
+    }
+  ],
+  "hiddenOverworldNotes": [
+    "Outsiders may be connected to Crimson Dunes School formation.",
+    "Route sign may sit near disturbed magical crossing."
+  ]
+}

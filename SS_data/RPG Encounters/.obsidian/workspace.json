@@ -1,0 +1,256 @@
+{
+  "main": {
+    "id": "1f6103bf7ebd5274",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb7eecf9ad28408e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfde3ea60f473231",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "30_Encounters/Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c6bf50782b818fd4",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd29cfe0e1ea1795",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc8b00393384d6e5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b1b090c369c2e2d1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "4f12b84906d9e3f7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 298.5
+  },
+  "right": {
+    "id": "357ab84849c3efaa",
+    "type": "split",
+    "children": [
+      {
+        "id": "0ffd22834164525b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3dbc73909613cf9c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "!Game/Outline.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Outline"
+            }
+          },
+          {
+            "id": "cec3f234f1e97955",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "30_Encounters/Untitled.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Untitled"
+            }
+          },
+          {
+            "id": "2502592f95c1bd80",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e7e4ab218f2db989",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "59d5f6901a26300c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Outline.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Outline"
+            }
+          },
+          {
+            "id": "1ee67ee008924b16",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
+            "id": "5499fec813e3f0cf",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 457.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "copilot:Open Copilot Chat": false,
+      "templater-obsidian:Templater": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "publish:Publish changes...": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "smart-connections:Smart Connections: Open random connection": false
+    }
+  },
+  "active": "cfde3ea60f473231",
+  "lastOpenFiles": [
+    "30_Encounters/Encounter Template.md",
+    "30_Encounters/Untitled.md",
+    "30_Encounters/Encounter - Forest Clearing - Bandits.md",
+    "30_Encounters/Encounter - Inn Attack.md",
+    "20_Characters/Character Profile Template.md",
+    "20_Characters/Character - Player.md",
+    "30_Encounters/Dashboard.md",
+    "20_Characters/Dashboard.md",
+    "Untitled.base",
+    "00_Overview/README.md",
+    "00_Overview/Flowchart.md",
+    "00_Overview/Plot - Main Arc.md",
+    "!Game/Settings.md",
+    "!Game/Outline.md",
+    "!Game/Layout.md",
+    "Images/Pasted image 20260108130620.png",
+    "Images/Pasted image 20260108125311.png",
+    "Images/Pasted image 20260108125255.png",
+    "Theory of Magic/Theory of Magic.md",
+    "Character/Character Profile.md",
+    "Character/Attributes.md",
+    "The Infinite Realm World/The Infinite Realm/Dealmaker.md",
+    "The Infinite Realm World/The Infinite Realm",
+    "tree.txt",
+    "copilot/copilot-conversations/Can_you_read_and_review_the_files_within_this_RPG@20260109_070545.md",
+    "copilot/copilot-conversations",
+    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot/copilot-custom-prompts/Remove URLs.md",
+    "copilot/copilot-custom-prompts/Generate glossary.md",
+    "copilot/copilot-custom-prompts/Generate table of contents.md",
+    "copilot/copilot-custom-prompts/Make longer.md",
+    "copilot/copilot-custom-prompts/Make shorter.md",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "90_Indexes",
+    "40_Logs",
+    "30_Encounters",
+    "20_Characters",
+    "Encounters/Encounters.canvas"
+  ]
+}

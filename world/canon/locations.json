@@ -1,0 +1,30 @@
+[
+  {
+    "id": "loc-outback-opening-route",
+    "name": "The Red Road to Crimson Dunes",
+    "type": "route",
+    "canonStatus": "draft",
+    "visibility": "partly_known",
+    "notes": "Semi-procedural opening route for 1810."
+  },
+  {
+    "id": "loc-crimson-dunes-school",
+    "name": "Crimson Dunes School of Sorcery",
+    "type": "anchorHub",
+    "canonStatus": "draft",
+    "visibility": "hidden_or_rumoured",
+    "notes": "Initial destination / anchor hub rather than first active interface."
+  },
+  {
+    "id": "loc-uluru-indigenous-magic-school",
+    "name": "Indigenous Magic School - Uluru",
+    "type": "majorSite",
+    "canonStatus": "draft"
+  },
+  {
+    "id": "loc-school-new-holland-davenport",
+    "name": "School of New Holland - Davenport",
+    "type": "majorSite",
+    "canonStatus": "draft"
+  }
+]

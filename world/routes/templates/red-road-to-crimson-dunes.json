@@ -1,0 +1,49 @@
+{
+  "id": "route-red-road-to-crimson-dunes",
+  "title": "The Red Road to Crimson Dunes",
+  "canonStatus": "draft",
+  "routeType": "semiProcedural",
+  "startYear": 1810,
+  "startRegion": "Outback / travel route",
+  "destination": "loc-crimson-dunes-school",
+  "fixedNarrativeAnchors": [
+    "departure_threshold",
+    "first_environmental_anomaly",
+    "first_character_contrast",
+    "route_complication",
+    "first_hint_of_crimson_dunes",
+    "arrival_threshold"
+  ],
+  "slice1Nodes": [
+    {
+      "id": "node-red-dust-approach",
+      "title": "Red Dust Approach",
+      "slotType": "fixed"
+    },
+    {
+      "id": "node-dry-creek-sign",
+      "title": "Dry Creek Sign",
+      "slotType": "discoverySlot"
+    },
+    {
+      "id": "node-distant-smoke-hidden-track",
+      "title": "Distant Smoke / Hidden Track",
+      "slotType": "encounterSlot"
+    }
+  ],
+  "allowedEncounterPools": [
+    "observation_first",
+    "environmental_anomaly",
+    "outsider_misinterpretation",
+    "route_sign_disturbance"
+  ],
+  "forbiddenEncounterPools": [
+    "full_combat_tutorial",
+    "school_management",
+    "unreviewed_canon_changing_history"
+  ],
+  "activeCharacters": [
+    "char-waru",
+    "group-school-connected-outsiders-1810"
+  ]
+}

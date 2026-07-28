@@ -1,0 +1,30 @@
+{
+  "id": "char-waru",
+  "displayName": "Waru",
+  "canonStatus": "draft",
+  "role": "main",
+  "archetype": "hero",
+  "openingRole": "localInitiate",
+  "initialPOV": "singleCharacterLocked",
+  "startingYear": 1810,
+  "startingSituation": "Cautiously observing outsiders from a distance along an Outback route connected to the emerging Crimson Dunes School.",
+  "revealStateToOutsiders": "hidden",
+  "knows": [
+    "some land-based signs",
+    "local route markers",
+    "some initiate obligations",
+    "environmental warning patterns"
+  ],
+  "doesNotFullyKnow": [
+    "what Crimson Dunes School will become",
+    "the outsiders' true motives",
+    "the full origin of current magical disturbances",
+    "how British wizarding systems will reshape local magic"
+  ],
+  "slice1Purpose": [
+    "test POV filtering",
+    "test observation-first gameplay",
+    "test land-aware discovery",
+    "test reveal-state tracking"
+  ]
+}

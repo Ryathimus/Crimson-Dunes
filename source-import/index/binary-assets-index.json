@@ -1,0 +1,422 @@
+[
+  {
+    "path": "build-bundle.py",
+    "type": "binary",
+    "sha1": "c725a5306b12edcf90d607b8a9628942655bd59b",
+    "size": 9988,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/aboriginal symbols.jpg",
+    "type": "binary",
+    "sha1": "cc4f3e61cdd5eab59558fe6159c27a6932142c93",
+    "size": 48291,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Almanac.xlsx",
+    "type": "binary",
+    "sha1": "a365a14a4c1a572e19ac53a4608da8d8e5e4269b",
+    "size": 971134,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 1.jpg",
+    "type": "binary",
+    "sha1": "2ef00b95ba362228f89651ba1c624eec96208ec4",
+    "size": 10734,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 2.jpg",
+    "type": "binary",
+    "sha1": "9a47e70307b9290a6f5e26433bd1f13afb1da151",
+    "size": 13544,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 3.jpg",
+    "type": "binary",
+    "sha1": "a01124a6ada46e4b54638d5ce16474a9efaaf31c",
+    "size": 10325,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 4.jpg",
+    "type": "binary",
+    "sha1": "248d00f12bebfe2f443e2502672ab44f750c8bab",
+    "size": 12488,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 5.jpg",
+    "type": "binary",
+    "sha1": "244a0dcd51ba7bcd0c4d423e1ad1cb9e0b88333f",
+    "size": 9646,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 6.jpg",
+    "type": "binary",
+    "sha1": "11b1a75f59410fb7c586e72a4204a7915080fdd5",
+    "size": 12708,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 7.jpg",
+    "type": "binary",
+    "sha1": "d3214af4c2395ad64aa23e2ef60d1dea4bbe6e75",
+    "size": 215588,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/bodypaint 8.jpg",
+    "type": "binary",
+    "sha1": "ee061dd385613a87488b8a6fd879ff332a1224d2",
+    "size": 14739,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 1.jpg",
+    "type": "binary",
+    "sha1": "a4e5bc1a5ef487c140b57d75f20326a6012aaa7d",
+    "size": 41634,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 2.jpg",
+    "type": "binary",
+    "sha1": "7651e729f3829fd761767cb1ac313dd278f496eb",
+    "size": 7092,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 3.jpg",
+    "type": "binary",
+    "sha1": "145af361bd57c0c043580551235313ce62398979",
+    "size": 12430,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 4.png",
+    "type": "binary",
+    "sha1": "78c761f4f0873bf5e857bac9ca92a0a4dbc24605",
+    "size": 312574,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 5.jpg",
+    "type": "binary",
+    "sha1": "d27060b7b072c82edccebcce5bcb41850560a240",
+    "size": 188516,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/char 6.jpg",
+    "type": "binary",
+    "sha1": "5293e81c46018287089c8757821ec8f03c14200c",
+    "size": 8048,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 1.jpg",
+    "type": "binary",
+    "sha1": "0e0a1cea8a89e007dbc5893cae25981799e6d063",
+    "size": 126722,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 10.jpg",
+    "type": "binary",
+    "sha1": "698f65ec8e89f96d2836e8c0275bc0a50f9da56b",
+    "size": 95245,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 2.jpg",
+    "type": "binary",
+    "sha1": "22aefb2dd2bb178a24e3e78163b2d6dad3ad7bda",
+    "size": 69414,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 3.jpg",
+    "type": "binary",
+    "sha1": "dc80cdc242ad97af7658fffb200ba40c98ff0d4c",
+    "size": 63094,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 4.jpg",
+    "type": "binary",
+    "sha1": "540fee4bea446b4826ab120e82eaa888cea32fec",
+    "size": 191828,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 5.jpg",
+    "type": "binary",
+    "sha1": "a9770f88c10c93960a8f46cb106e3245d4b781a8",
+    "size": 114392,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 6.jpg",
+    "type": "binary",
+    "sha1": "b5c2585588315b775f583d55a71981164d9f68f3",
+    "size": 483040,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 7.jpg",
+    "type": "binary",
+    "sha1": "317734dc7f3c071d547203db9ed8b8890950e64c",
+    "size": 278585,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 8.jpg",
+    "type": "binary",
+    "sha1": "041d49e5b64f851fce5658f0715ce1e9529cb9d3",
+    "size": 45845,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/dancing 9.jpg",
+    "type": "binary",
+    "sha1": "73ca4f6a38bd6bf1c7b26746abd5fdf2fd386dbd",
+    "size": 252311,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/female 1.jpg",
+    "type": "binary",
+    "sha1": "00e76cb87c412722719f852cb89b773685f06262",
+    "size": 140716,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/female 2.jpg",
+    "type": "binary",
+    "sha1": "955f56362a2e761b7b3204319cfc6c6e3a1feb35",
+    "size": 275232,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/female 3.jpg",
+    "type": "binary",
+    "sha1": "dbf2ecba0962939b8b18a6028808bcfba1af161f",
+    "size": 79975,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/female 4.jpg",
+    "type": "binary",
+    "sha1": "8cc43715d3d67e431e60dc2c0493cf3511728a41",
+    "size": 208262,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/sun wukong silhouette.jpg",
+    "type": "binary",
+    "sha1": "f75269c5219a4d48ebc89efa34501494f9d7b4fd",
+    "size": 44444,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Character Design/sun wukong.webp",
+    "type": "binary",
+    "sha1": "168bfb243a06ef41cf8e949b2340a608284fef64",
+    "size": 17402,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/8-HxqHB6Mkx7RkdRG.png",
+    "type": "binary",
+    "sha1": "cb26e0f05cdd15be36a2b91f92d7a4a65480c766",
+    "size": 414026,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/8-ORwv6P5HSMMoky3.png",
+    "type": "binary",
+    "sha1": "f3cbe622d96fa24e769e0a8c207029e95c7f0018",
+    "size": 447842,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/8486963318da220631f0cf2424cdf0f2.jpg",
+    "type": "binary",
+    "sha1": "3bfd081674f024634c70dd0ac77fd2c7f313ada8",
+    "size": 99850,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/8dJ3WD86XSV1kBEZ_640x331.jpg",
+    "type": "binary",
+    "sha1": "e72f33395d6ffb7387195e2e8e6e1db589ecf991",
+    "size": 148704,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/aboriginal-rock-art-chillagoe-ca-19319_1280x853 (1).jpg",
+    "type": "binary",
+    "sha1": "cfb4ebfa4ccbef6acaed081f2af8b1cb8bab2dc2",
+    "size": 266065,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/ATDW - Jenolan Caves - The Pool of Reflections - Credit Timeless Creations - Jenolan Caves Reserve Trust_0.jpg",
+    "type": "binary",
+    "sha1": "08d688b35dc41d136542fcaa53ff92529312808f",
+    "size": 220571,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/chillagoeslider.jpg",
+    "type": "binary",
+    "sha1": "9b5ac10588ec944788e8d56d91f0bf166ea52d70",
+    "size": 31715,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Damien_Yilpi_Marks_Aboriginal_Symbols.001.jpg",
+    "type": "binary",
+    "sha1": "c847f46f94714aab92fd316f0a749ae4b4b6b4a9",
+    "size": 189963,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/elevation-east-kimberley-western-australia_1200x.webp",
+    "type": "binary",
+    "sha1": "275d50893a62554f5f3ea4a2c8f8991afbb14706",
+    "size": 249286,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Kata Tjuta 1.jpg",
+    "type": "binary",
+    "sha1": "e717b8c7e5ea64b57724004389bb2ca801b3c24c",
+    "size": 571697,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Kata Tjuta 2.jpg",
+    "type": "binary",
+    "sha1": "884b832e81a4ddf09b875e2dbbd33e121fc59da4",
+    "size": 256117,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Kata Tjuta 3.jpg",
+    "type": "binary",
+    "sha1": "5788fa3df2e1f333d5b9fbb84fea8465bbc0508b",
+    "size": 989054,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Kata Tjuta 4.jpg",
+    "type": "binary",
+    "sha1": "c994e796176d47378a1a6dcde8115263d285f819",
+    "size": 223772,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/LBP1011-Revolver-Falls-Copyright-Landi-Bradshaw-Photography-Landscape-Print-The-Kimberley-Waterfalls-Revolver-Falls-Carr-Boyd-Range-Lake-Argyle-Wet-Season-Aerial-Ranges-River-768x576.jpg",
+    "type": "binary",
+    "sha1": "a7978d8705b7e8906005fffe04f6bfaa8e37a225",
+    "size": 141231,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/mt-mulligan-from-the-air-29580_1280x853-1260x700.jpg",
+    "type": "binary",
+    "sha1": "66cf27479bd7d68ddfde779204e50a103826e888",
+    "size": 240220,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/natural caverns.webp",
+    "type": "binary",
+    "sha1": "0a722ec90ecb07aa823fd4f1cc997d41ef2c6b94",
+    "size": 59470,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/NEW_Caves_Nullarbor_2.jpg",
+    "type": "binary",
+    "sha1": "d4db25e5f0fdeee077a000d4408208eee1ec8228",
+    "size": 106328,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/photo-1510256506868-484d0db06ee2.webp",
+    "type": "binary",
+    "sha1": "abe7d90d39f67a1f1e351f4b81fab03eaaee922a",
+    "size": 130196,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/revolver-falls-helispirit-scotty-connell.jfif",
+    "type": "binary",
+    "sha1": "630ee2ce1388da2bd5a79672267265341bf3ea9a",
+    "size": 1726675,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Sahara Desert.jpg",
+    "type": "binary",
+    "sha1": "76d29db7db58ec7c3a54a37795622c491e82a474",
+    "size": 108066,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/Terra Australia 1644.jpg",
+    "type": "binary",
+    "sha1": "3069c0e52e04dcd2ec9066e610b7cd81dbe3ac3a",
+    "size": 192869,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Crimson Dunes School Design/wombeyan-karst-landscape-geology-01.jpg",
+    "type": "binary",
+    "sha1": "588d938cd36435feb3ba43537f18eb661586129a",
+    "size": 115014,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Maps/Untitled.png",
+    "type": "binary",
+    "sha1": "fdccfdc35e9e4f5c229b8eb4c7ea6731ac0d86ae",
+    "size": 580533,
+    "content": ""
+  },
+  {
+    "path": "Crimson Dunes/Jonathan Giya/Plot Outline/Untitled.png",
+    "type": "binary",
+    "sha1": "2d992cd9e55a3945875bed2a2ff3d3579e52f203",
+    "size": 264215,
+    "content": ""
+  },
+  {
+    "path": "RPG Encounters/Images/Pasted image 20260108125255.png",
+    "type": "binary",
+    "sha1": "6ff608474b0e4d48eca6f5ea35c74b32c12ffe51",
+    "size": 1226888,
+    "content": ""
+  },
+  {
+    "path": "RPG Encounters/Images/Pasted image 20260108125311.png",
+    "type": "binary",
+    "sha1": "cc9856462e9813fc15f4ac0d70c29484fbffa57e",
+    "size": 228152,
+    "content": ""
+  },
+  {
+    "path": "RPG Encounters/Images/Pasted image 20260108130620.png",
+    "type": "binary",
+    "sha1": "7f31e27367b923a905a800a459775556252ef5a2",
+    "size": 140206,
+    "content": ""
+  }
+]

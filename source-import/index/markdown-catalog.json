@@ -1,0 +1,832 @@
+[
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Character Sheets bc78266535c7470ab9b5b9094efedc2b.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Character Sheets bc78266535c7470ab9b5b9094efedc2b.md",
+    "title": "Character Sheets",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "7066706e400e18829d77a9d484f8a59a746a778d",
+    "size": 678,
+    "lineCount": 31,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Crimson Dunes Academy becc15c1e6d848ef918c68742043e03b.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Crimson Dunes Academy becc15c1e6d848ef918c68742043e03b.md",
+    "title": "Crimson Dunes Academy",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "f3da799db7e55cc535cb5612fb722c6a3c6ee519",
+    "size": 2934,
+    "lineCount": 30,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Foundational Concepts of Australian Fusion Magic f b9a16adfca1347df807b4bebfdf3fa60.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Foundational Concepts of Australian Fusion Magic f b9a16adfca1347df807b4bebfdf3fa60.md",
+    "title": "Foundational Concepts of Australian Fusion Magic for Children: A Textbook Guide",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "2a43beb3178c686e48ceba8a0066e7b2ebd68ddd",
+    "size": 10103,
+    "lineCount": 175,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Game Adaptation fb7f4901b14d48eb8f209e2a2c0bfd1c.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Game Adaptation fb7f4901b14d48eb8f209e2a2c0bfd1c.md",
+    "title": "Game Adaptation",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "8336da6f8d1057cdb198a57a566f424497b3969f",
+    "size": 121,
+    "lineCount": 5,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Magic System f2de5fb96d4d48b9a7e077ce881402f9.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Magic System f2de5fb96d4d48b9a7e077ce881402f9.md",
+    "title": "Magic System",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "979a10afc4a4fbbc38076641d393dc25c8fd8334",
+    "size": 1875,
+    "lineCount": 40,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Magical Creatures 02417d64446647d7975a68aca50a5da8.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Magical Creatures 02417d64446647d7975a68aca50a5da8.md",
+    "title": "Magical Creatures",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "e6e092b0c5560f64eb6ce8795a99c086979af37a",
+    "size": 6210,
+    "lineCount": 83,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Magical Plants e72bbf2fbc25407bad4acc87809356f9.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Magical Plants e72bbf2fbc25407bad4acc87809356f9.md",
+    "title": "Magical Plants",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "869b25770ae733735046c74f83a07529052bebb1",
+    "size": 2033,
+    "lineCount": 36,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Magical Vehicles Transportation 365250ba603c4ce089774ce7f60789b5.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Magical Vehicles Transportation 365250ba603c4ce089774ce7f60789b5.md",
+    "title": "Magical Vehicles/Transportation",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "8744a4d15f8c888de89e0212a53b20fcb62b0b6a",
+    "size": 1162,
+    "lineCount": 11,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Maps a13e6b70ca204193851259682302f651.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Maps a13e6b70ca204193851259682302f651.md",
+    "title": "Maps",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "eae0292cdd1e989d32d8cd0d86aabeb3159a7a75",
+    "size": 832,
+    "lineCount": 23,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Plot Outline 3890d718aacb47a7ba05e48eae22a5a0.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Plot Outline 3890d718aacb47a7ba05e48eae22a5a0.md",
+    "title": "Plot Outline",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "a2d4174eeaa8aaa0cf531217e4b73e6bda268d50",
+    "size": 2225,
+    "lineCount": 39,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Plot Outline/Major Sites in Aus 52c8b6c3baa14cdcb34b464131ad1b79.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Plot Outline/Major Sites in Aus 52c8b6c3baa14cdcb34b464131ad1b79.md",
+    "title": "Major Sites in Aus",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "d74c81c15da91bdc04eaf8eec6891b5d2be1ed4b",
+    "size": 338,
+    "lineCount": 21,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Politics 1c7e9331a6df44858723404a09ec9cac.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Politics 1c7e9331a6df44858723404a09ec9cac.md",
+    "title": "Politics",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "146a4acde4699baecc18e434e16976d7a802cfb0",
+    "size": 10,
+    "lineCount": 1,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Thoughts 6e4db8fcac2e4ecabe3008e4a6e00a74.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Thoughts 6e4db8fcac2e4ecabe3008e4a6e00a74.md",
+    "title": "Thoughts",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "c1abecb17d0eee8a084576e0832ab5fc4a8ddf68",
+    "size": 3336,
+    "lineCount": 9,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/Working with Indigenous Australians 00aa89833a2d44b2ad54ee81e42394e6.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/Working with Indigenous Australians 00aa89833a2d44b2ad54ee81e42394e6.md",
+    "title": "Working with Indigenous Australians",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "74f562a79ddf46acd4c881e418b6a922f6cfa14a",
+    "size": 6154,
+    "lineCount": 29,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "Crimson Dunes/Jonathan Giya/World Timelines 348fc257cb21494e8dd79f892ff030ee.md",
+    "importedPath": "source-import/markdown/Crimson Dunes/Jonathan Giya/World Timelines 348fc257cb21494e8dd79f892ff030ee.md",
+    "title": "World Timelines",
+    "category": "crimson-dunes-worldbuilding",
+    "sha1": "737f7a360f7c2e1f6ef71e740ded064e570a28f6",
+    "size": 5296,
+    "lineCount": 177,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/!Game/Outline.md",
+    "importedPath": "source-import/markdown/RPG Encounters/!Game/Outline.md",
+    "title": "",
+    "category": "rpg-encounter-system",
+    "sha1": "8bf419c7acc5b39c56d37933b9673eeb4a8bec5b",
+    "size": 915,
+    "lineCount": 9,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/!Game/Settings.md",
+    "importedPath": "source-import/markdown/RPG Encounters/!Game/Settings.md",
+    "title": "",
+    "category": "rpg-encounter-system",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "size": 0,
+    "lineCount": 1,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/00_Overview/Flowchart.md",
+    "importedPath": "source-import/markdown/RPG Encounters/00_Overview/Flowchart.md",
+    "title": "Flowchart – Branching Encounters",
+    "category": "rpg-encounter-system",
+    "sha1": "b136d1247e53f9af2e3f3a1ee7f33d629e721cca",
+    "size": 2205,
+    "lineCount": 89,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/00_Overview/Plot - Main Arc.md",
+    "importedPath": "source-import/markdown/RPG Encounters/00_Overview/Plot - Main Arc.md",
+    "title": "",
+    "category": "rpg-encounter-system",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "size": 0,
+    "lineCount": 1,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/00_Overview/README.md",
+    "importedPath": "source-import/markdown/RPG Encounters/00_Overview/README.md",
+    "title": "RPG Branching Framework – README",
+    "category": "rpg-encounter-system",
+    "sha1": "343a7737a135a9c54b46deeb6f455f873c868703",
+    "size": 1276,
+    "lineCount": 45,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/10_Systems/Systems - Checks.md",
+    "importedPath": "source-import/markdown/RPG Encounters/10_Systems/Systems - Checks.md",
+    "title": "Systems – Checks & Degrees of Success",
+    "category": "rpg-encounter-system",
+    "sha1": "ad417e9a5ed173a8f57f84b1782fde4546eff301",
+    "size": 973,
+    "lineCount": 51,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/10_Systems/Systems - Reputation.md",
+    "importedPath": "source-import/markdown/RPG Encounters/10_Systems/Systems - Reputation.md",
+    "title": "Systems – Reputation & Faction Standing",
+    "category": "rpg-encounter-system",
+    "sha1": "665aac97c23fc181a1b7a80eda9f2a1958f61fd4",
+    "size": 684,
+    "lineCount": 31,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/10_Systems/Systems - Rewards.md",
+    "importedPath": "source-import/markdown/RPG Encounters/10_Systems/Systems - Rewards.md",
+    "title": "Systems – Rewards",
+    "category": "rpg-encounter-system",
+    "sha1": "40332146f168b90f97f706b0dfe8033e0b9d3f8a",
+    "size": 784,
+    "lineCount": 37,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/10_Systems/Systems - Variables & Modifiers.md",
+    "importedPath": "source-import/markdown/RPG Encounters/10_Systems/Systems - Variables & Modifiers.md",
+    "title": "Systems – Encounter Variables & Modifiers",
+    "category": "rpg-encounter-system",
+    "sha1": "a14397db7def46a7ecac4cbe3d8c23377f3b83ae",
+    "size": 1036,
+    "lineCount": 41,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/20_Characters/Character - Player.md",
+    "importedPath": "source-import/markdown/RPG Encounters/20_Characters/Character - Player.md",
+    "title": "{{title}}",
+    "category": "rpg-encounter-system",
+    "sha1": "d2fc8ec30513ee7cf5b697aabd00818d96b193ae",
+    "size": 257,
+    "lineCount": 26,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/20_Characters/Character Profile Template.md",
+    "importedPath": "source-import/markdown/RPG Encounters/20_Characters/Character Profile Template.md",
+    "title": "{{title}}",
+    "category": "rpg-encounter-system",
+    "sha1": "3deb3373368e2086046aee090eb2da2918ec62b2",
+    "size": 242,
+    "lineCount": 31,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/20_Characters/Dashboard.md",
+    "importedPath": "source-import/markdown/RPG Encounters/20_Characters/Dashboard.md",
+    "title": "",
+    "category": "rpg-encounter-system",
+    "sha1": "308cd4d14d38f7146ddc79cf8c06d25a29c323cf",
+    "size": 107,
+    "lineCount": 6,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/20_Characters/NPC - Powerful Figure.md",
+    "importedPath": "source-import/markdown/RPG Encounters/20_Characters/NPC - Powerful Figure.md",
+    "title": "NPC – Powerful Figure",
+    "category": "rpg-encounter-system",
+    "sha1": "fb2a6ae2c1b2c3e7ded5a94f80a38a67ab0085e5",
+    "size": 1156,
+    "lineCount": 51,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/30_Encounters/Dashboard.md",
+    "importedPath": "source-import/markdown/RPG Encounters/30_Encounters/Dashboard.md",
+    "title": "",
+    "category": "rpg-encounter-system",
+    "sha1": "702794e949e15848ca0b7d86794af8fa43309f0b",
+    "size": 128,
+    "lineCount": 6,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/30_Encounters/Encounter - Forest Clearing - Bandits.md",
+    "importedPath": "source-import/markdown/RPG Encounters/30_Encounters/Encounter - Forest Clearing - Bandits.md",
+    "title": "Forest Bandits Encounter",
+    "category": "rpg-encounter-system",
+    "sha1": "923244bf6fe9325babf3530785ae0a204b1f0ff9",
+    "size": 1432,
+    "lineCount": 51,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/30_Encounters/Encounter - Inn Attack.md",
+    "importedPath": "source-import/markdown/RPG Encounters/30_Encounters/Encounter - Inn Attack.md",
+    "title": "[[Encounter Description]] – Inn Attack (Night Assault)",
+    "category": "rpg-encounter-system",
+    "sha1": "233aa6c96f94a8da4935999d75793b2775100ef1",
+    "size": 2551,
+    "lineCount": 91,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/30_Encounters/Encounter Template.md",
+    "importedPath": "source-import/markdown/RPG Encounters/30_Encounters/Encounter Template.md",
+    "title": "{{title}}",
+    "category": "rpg-encounter-system",
+    "sha1": "cec84ccdfd5e20c370acbdee7a4dca5ca82451df",
+    "size": 510,
+    "lineCount": 35,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/30_Encounters/Untitled.md",
+    "importedPath": "source-import/markdown/RPG Encounters/30_Encounters/Untitled.md",
+    "title": "{{title}}",
+    "category": "rpg-encounter-system",
+    "sha1": "3aa136bbe877e30650c4e7a04ed42adbac26ccfd",
+    "size": 473,
+    "lineCount": 30,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/40_Logs/Encounter Log.md",
+    "importedPath": "source-import/markdown/RPG Encounters/40_Logs/Encounter Log.md",
+    "title": "Encounter Log",
+    "category": "rpg-encounter-system",
+    "sha1": "768494c860c4e59acb846e62160397e96fa23111",
+    "size": 1018,
+    "lineCount": 67,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/40_Logs/Session Notes.md",
+    "importedPath": "source-import/markdown/RPG Encounters/40_Logs/Session Notes.md",
+    "title": "",
+    "category": "rpg-encounter-system",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "size": 0,
+    "lineCount": 1,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/90_Indexes/Index - Encounters.md",
+    "importedPath": "source-import/markdown/RPG Encounters/90_Indexes/Index - Encounters.md",
+    "title": "",
+    "category": "rpg-encounter-system",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "size": 0,
+    "lineCount": 1,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/90_Indexes/Index - NPCs.md",
+    "importedPath": "source-import/markdown/RPG Encounters/90_Indexes/Index - NPCs.md",
+    "title": "Index – NPCs",
+    "category": "rpg-encounter-system",
+    "sha1": "a90dd8a847fe233bdc6e609e2b6c25342671b1b7",
+    "size": 98,
+    "lineCount": 15,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/90_Indexes/Index - Rewards.md",
+    "importedPath": "source-import/markdown/RPG Encounters/90_Indexes/Index - Rewards.md",
+    "title": "Index – Rewards",
+    "category": "rpg-encounter-system",
+    "sha1": "5560a3ae2ddcb4565328696279f8c90627dd9181",
+    "size": 321,
+    "lineCount": 19,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-conversations/Can_you_read_and_review_the_files_within_this_RPG@20260109_070545.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-conversations/Can_you_read_and_review_the_files_within_this_RPG@20260109_070545.md",
+    "title": "Current Understanding from `Outline.md`",
+    "category": "tooling-ai-notes",
+    "sha1": "729957224f9bc07a889fb4f4b99953c24c7064b2",
+    "size": 11257,
+    "lineCount": 258,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Emojify.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Emojify.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "604f7bd355ebae6af899a9a13bb964f2b70dc276",
+    "size": 470,
+    "lineCount": 13,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "28e2285607b825055f5064a4442830a2f87618a1",
+    "size": 388,
+    "lineCount": 12,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "9432d24edd28b1059d3cdd84af4fdad70aaed2e0",
+    "size": 350,
+    "lineCount": 8,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Generate glossary.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Generate glossary.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "c5e357afbdfeeca077b465b3d2a797b3e41c5f10",
+    "size": 353,
+    "lineCount": 8,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Generate table of contents.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Generate table of contents.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "81fb50713f7020dcf506e16222701ac925e626f4",
+    "size": 357,
+    "lineCount": 8,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Make longer.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Make longer.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "640a8fdaff05a0edef3b33f298487c1c334f36b8",
+    "size": 379,
+    "lineCount": 12,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Make shorter.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Make shorter.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "15f9288ced1cb390db611039810a0ba80c590b24",
+    "size": 373,
+    "lineCount": 12,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Remove URLs.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Remove URLs.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "fe64fdcd2e526dc25bc03d60e8d7a76589f11025",
+    "size": 347,
+    "lineCount": 8,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "7661132c38bea20274d4017cb444ecd03afcf406",
+    "size": 500,
+    "lineCount": 18,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "040d0211eb3208e314373dc1ccfc79aa5876ef4e",
+    "size": 376,
+    "lineCount": 12,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Simplify.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Simplify.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "ef759fc6f87e4f6eb7ab2ae65f40ea0e116646fb",
+    "size": 370,
+    "lineCount": 8,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Summarize.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Summarize.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "7cf7770785e9a9eb97fe9f50f84e2c00f0031cab",
+    "size": 307,
+    "lineCount": 8,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "importedPath": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "title": "",
+    "category": "tooling-ai-notes",
+    "sha1": "b68597fbba837018101e4dd39753d4cbe444e831",
+    "size": 369,
+    "lineCount": 12,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Factions/Oceanside Kingdom.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Factions/Oceanside Kingdom.md",
+    "title": "Leader",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "2a9a2559dc1aa4a546f1372dd9ad4f79ebf9187d",
+    "size": 793,
+    "lineCount": 13,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Factions/The League.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Factions/The League.md",
+    "title": "People",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "f8fb4c9d851f5c7ee38eeb817c24ff2b31d27ffd",
+    "size": 2073,
+    "lineCount": 30,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Factions/Thieves Guild.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Factions/Thieves Guild.md",
+    "title": "Leader",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "a37630fcb13ca1691c619401119af56a02183bce",
+    "size": 773,
+    "lineCount": 16,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Focus/Focus Balance.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Focus Balance.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "7db4a7fb786ce334105a557b87327f5644b00d0e",
+    "size": 987,
+    "lineCount": 19,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Focus/Focus Influence.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Focus Influence.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "f2d7dbcfddfd76b04f456c3c12f9e31e9f5852e5",
+    "size": 4417,
+    "lineCount": 32,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Focus/Focus Madness.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Focus Madness.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "144e65789d44bcff031704b35986b1deb26a81d0",
+    "size": 645,
+    "lineCount": 19,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Focus/Framework - Focus.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Framework - Focus.md",
+    "title": "Feats / Achievements[](https://auth.fandom.com/signin?redirect=https%3A%2F%2Finfinite-realm.fandom.com%2Fwiki%2FFocus%3Fveaction%3Dedit%26section%3D2&uselang=en \"Sign in to edit\")",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "64774a443224778504e7932a71ea66915e5642ba",
+    "size": 6265,
+    "lineCount": 78,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Focus/Tiers of Power.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Tiers of Power.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "09083d3ae685f7958e59c72e331ae70a438d3607",
+    "size": 93,
+    "lineCount": 7,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Class/Class Titles.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Class/Class Titles.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "e0e454c2cc3e6dc39aa326dff66c0d25e9fd663f",
+    "size": 1024,
+    "lineCount": 6,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Class/Class.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Class/Class.md",
+    "title": "**Core Definition**[](https://auth.fandom.com/signin?redirect=https%3A%2F%2Finfinite-realm.fandom.com%2Fwiki%2FClass%3Fveaction%3Dedit%26section%3D1&uselang=en \"Sign in to edit\")",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "9fd842af1f722c190a431390508b963545b7f1ad",
+    "size": 5202,
+    "lineCount": 59,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Class/Known Class Perks.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Class/Known Class Perks.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "0b1f07c78e0835c5eca4bc3a1a81c68b8918ad25",
+    "size": 5474,
+    "lineCount": 34,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Class/Known Classes.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Class/Known Classes.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "6d626ca3c5e4de0077b66f2613df5e8c96efb6a5",
+    "size": 2641,
+    "lineCount": 26,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Aspects.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Aspects.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "1c4c4c983daa9e35c16882a08712c104bbd3d5b3",
+    "size": 2968,
+    "lineCount": 55,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Paths.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Paths.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "b942ca1446530eb627be42aa204fe697ced86bd0",
+    "size": 1111,
+    "lineCount": 21,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Perks.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Perks.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "a6cc4c4bcd02c65a0118ddba9380a341c27f363c",
+    "size": 14075,
+    "lineCount": 52,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Titles.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Titles.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "d5b4ffbd239345632632148ce10abc2ad81f3c7c",
+    "size": 1102,
+    "lineCount": 12,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation.md",
+    "title": "**Core Definition**[](https://auth.fandom.com/signin?redirect=https%3A%2F%2Finfinite-realm.fandom.com%2Fwiki%2FCultivation%3Fveaction%3Dedit%26section%3D1&uselang=en \"Sign in to edit\")",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "c65806f6f5084d27ea8f7b1e5db9273b46efb877",
+    "size": 5721,
+    "lineCount": 100,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Paths.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Paths.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "e3316de4f35124425d116f5eef7804a550a1f031",
+    "size": 10994,
+    "lineCount": 72,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Perks.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Perks.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "00817466acd79229b0a32df2f3649a88f966fa0a",
+    "size": 2787,
+    "lineCount": 10,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Titles.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Titles.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "157200c76da9605e69b0407c9e9f704ea837389e",
+    "size": 1873,
+    "lineCount": 10,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/Progression/Skills/Skills.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Skills/Skills.md",
+    "title": "**Core Definition**[](https://auth.fandom.com/signin?redirect=https%3A%2F%2Finfinite-realm.fandom.com%2Fwiki%2FSkill%3Fveaction%3Dedit%26section%3D1&uselang=en \"Sign in to edit\")",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "caffc078670b3e3ca9efa0065118ee2b06b76b93",
+    "size": 4275,
+    "lineCount": 57,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/The Infinite Realm/Dealmaker.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/Dealmaker.md",
+    "title": "Status",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "3fea3d9b62c10f88632003c42316a12bb6972d4c",
+    "size": 1564,
+    "lineCount": 26,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/The Infinite Realm/Iterations.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/Iterations.md",
+    "title": "Arrival Schedule[](https://auth.fandom.com/signin?redirect=https%3A%2F%2Finfinite-realm.fandom.com%2Fwiki%2FIterations%3Fveaction%3Dedit%26section%3D1&uselang=en \"Sign in to edit\")",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "89c3fe880f202875fc765657a9957a0a0ceae9bf",
+    "size": 2034,
+    "lineCount": 27,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/The Infinite Realm/Rarities.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/Rarities.md",
+    "title": "",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "233da0a334d2d20e8a9a3ee8cc76c4e671fd0f07",
+    "size": 1180,
+    "lineCount": 24,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/The Infinite Realm/The Infinite Realm.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/The Infinite Realm.md",
+    "title": "**Statistics:**[](https://auth.fandom.com/signin?redirect=https%3A%2F%2Finfinite-realm.fandom.com%2Fwiki%2FInfinite_Realm%3Fveaction%3Dedit%26section%3D1&uselang=en \"Sign in to edit\")",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "9c9fbeef8e3abbdd1bcf61afa10cff748db40311",
+    "size": 1224,
+    "lineCount": 22,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/The Infinite Realm World/The Infinite Realm/The Three.md",
+    "importedPath": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/The Three.md",
+    "title": "Status",
+    "category": "rpg-reference-infinite-realm",
+    "sha1": "86002ac0b2490cbd7c183b7d0c9f5ed7d4a491f1",
+    "size": 1095,
+    "lineCount": 16,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/Theory of Magic/Theory of Magic.md",
+    "importedPath": "source-import/markdown/RPG Encounters/Theory of Magic/Theory of Magic.md",
+    "title": "",
+    "category": "rpg-reference-theory-of-magic",
+    "sha1": "da0346045cd8288a90840dd999bfb8b33f97b1b2",
+    "size": 212,
+    "lineCount": 6,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/Theory of Magic/ToM Adventures.md",
+    "importedPath": "source-import/markdown/RPG Encounters/Theory of Magic/ToM Adventures.md",
+    "title": "**⚔Dungeons**",
+    "category": "rpg-reference-theory-of-magic",
+    "sha1": "1a4690154d9f30654736c6d905f3bc5a081628dc",
+    "size": 126415,
+    "lineCount": 139,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/Theory of Magic/ToM Encounters.md",
+    "importedPath": "source-import/markdown/RPG Encounters/Theory of Magic/ToM Encounters.md",
+    "title": "Regular Encounters",
+    "category": "rpg-reference-theory-of-magic",
+    "sha1": "9fd830d4aa8a6bb90b3fa1ff763d0318368ba1c8",
+    "size": 112410,
+    "lineCount": 291,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/Theory of Magic/ToM Monsters.md",
+    "importedPath": "source-import/markdown/RPG Encounters/Theory of Magic/ToM Monsters.md",
+    "title": "Monsters",
+    "category": "rpg-reference-theory-of-magic",
+    "sha1": "4a6898bf628afca97e98ff7cfaed5cb9c9811a78",
+    "size": 77933,
+    "lineCount": 329,
+    "canonStatus": "source-import"
+  },
+  {
+    "originalPath": "RPG Encounters/Theory of Magic/ToM Skills.md",
+    "importedPath": "source-import/markdown/RPG Encounters/Theory of Magic/ToM Skills.md",
+    "title": "",
+    "category": "rpg-reference-theory-of-magic",
+    "sha1": "be88c12761d390436393bc427b6afaf3f5ea7703",
+    "size": 11733,
+    "lineCount": 672,
+    "canonStatus": "source-import"
+  }
+]
