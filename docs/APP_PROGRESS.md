@@ -47,3 +47,11 @@ No app shell currently promotes canon, mutates source-import, writes repository 
 - Added richer Waru HUD fields: objective, equipment, status, known factions.
 - Added Dev Mode schema cards.
 - Added `data/author-worldbuilding-index.v9.json`.
+
+
+## V10 Additions
+
+- Fixed mode visibility issue where Author panels could remain visible in Player/Dev Mode.
+- Added robust workspace panel visibility mapping for all major panels.
+- Added Author-only Canon Promotion Queue draft panel and data file.
+- Updated workspace configuration so Player Mode only shows Player preview/knowledge panels and Dev Mode only shows Dev/system panels.

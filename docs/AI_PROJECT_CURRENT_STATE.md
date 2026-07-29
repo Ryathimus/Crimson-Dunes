@@ -46,3 +46,8 @@ V8 improves mode separation by turning Player Mode into a character/scene interf
 ## V9 Current State Addendum
 
 V9 starts turning the app from a single long review page into mode-specific workspaces. Author Mode now has internal navigation and a worldbuilding dashboard. Player Mode is scene-first and character-first. Dev Mode now exposes schema cards for structured validation.
+
+
+## V10 Current State Addendum
+
+V10 addresses the screenshot issue where the UI appeared unchanged from Author Mode after switching modes. The mode visibility system now explicitly controls every major workspace panel. Player Mode should now hide Author dashboard/timeline/source panels, and Dev Mode should hide Author dashboard/source panels.

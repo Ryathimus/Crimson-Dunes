@@ -1,0 +1,33 @@
+{
+  "id": "canon-promotion-queue-v10",
+  "canonStatus": "draft",
+  "purpose": "Author-only queue for future draft-to-canon review. V10 does not promote canon; it only frames the queue.",
+  "rules": [
+    "Only Author Mode can move generated/source-working/draft items toward canon review.",
+    "Source-import is immutable and should not be overwritten.",
+    "Canon promotion requires explicit user action and should eventually generate a review patch."
+  ],
+  "queueItems": [
+    {
+      "id": "queue-timeline-v4-review",
+      "title": "Review V4 timeline migration candidate",
+      "source": "data/timelines/full-world-timeline.draft.json",
+      "status": "not-ready",
+      "nextAction": "Resolve validation warnings and Author review status."
+    },
+    {
+      "id": "queue-1788-slice-review",
+      "title": "Review 1788 Historical Foundation Slice",
+      "source": "data/slices/1788-historical-foundation.draft.json",
+      "status": "not-ready",
+      "nextAction": "Resolve decision queue items."
+    },
+    {
+      "id": "queue-waru-route-review",
+      "title": "Review Waru opening route prototype",
+      "source": "data/player/opening-route-waru.draft.json",
+      "status": "prototype",
+      "nextAction": "Add visibility rules and route consequences."
+    }
+  ]
+}

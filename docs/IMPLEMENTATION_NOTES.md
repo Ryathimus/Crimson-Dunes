@@ -104,3 +104,12 @@ Validation remains client-side only; it does not promote canon or write reposito
 - Added Player current scene card and richer character HUD.
 - Added Dev Mode schema cards from structured validation.
 - Updated UI recommendation docs to reflect implemented V9 direction.
+
+
+## Added Since V9 — V10 Mode Visibility Fix
+
+- Added `data/author/canon-promotion-queue.v10.json`.
+- Added Canon Promotion Queue panel.
+- Fixed workspace visibility by adding all major panel IDs to `applyWorkspaceVisibility()`.
+- Updated `applyAuthorSectionVisibility()` to only run Author sub-workspace logic when in Author Mode.
+- Updated workspace config so Player and Dev modes do not inherit Author panels.

@@ -56,3 +56,9 @@ No real AI provider calls are made and no API keys are included.
 - Author workspace navigation and worldbuilding dashboard.
 - Player scene-first layout and improved character HUD.
 - Dev schema-card validation view.
+
+## V10 Additions
+
+- Explicit mode visibility fix for Author/Player/Dev workspace switching.
+- Author-only Canon Promotion Queue draft panel.
+- Updated workspace configuration and docs.

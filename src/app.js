@@ -21,7 +21,8 @@ const state = {
   currentRouteNodeId: localStorage.getItem('crimsonDunes.currentRouteNodeId') || null,
   structuredValidation: null,
   authorWorldbuildingIndex: null,
-  activeAuthorSection: localStorage.getItem('crimsonDunes.activeAuthorSection') || 'dashboard'
+  activeAuthorSection: localStorage.getItem('crimsonDunes.activeAuthorSection') || 'dashboard',
+  canonQueue: null
 };
 const modeConfig = {
   author: { title:'Author Mode', badge:'canon management', description:'Full-access source, draft, canon and migration review shell. Draft-to-canon promotion is deliberately not implemented.', agentNote:'Author Agent can help compare source/draft/canon and prepare generated suggestions, but output remains generated until saved as draft.' },
@@ -36,13 +37,13 @@ async function init(){
   ]);
   state.events = await eventsRes.json();
   state.rawSource = await srcRes.text();
-  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
+  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderCanonQueue(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
 }
 function bindEvents(){
   document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
   ['layer-filter','category-filter','impact-filter','review-filter','search'].forEach(id=>$(id).addEventListener('input',renderTimeline));
   $('chat-form').addEventListener('submit',onChatSubmit); $('export-transcript').addEventListener('click',exportTranscript); $('clear-transcript').addEventListener('click',()=>{state.transcript=[];persistTranscript();renderTranscript();});
-  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); 
+  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); 
 }
 function populateCategories(){[...new Set(state.events.map(e=>e.timelineCategory).filter(Boolean))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;$('category-filter').appendChild(o);});}
 function renderMode(){
@@ -68,7 +69,7 @@ function saveCurrentReview(){if(!state.selectedId)return alert('Select an event 
 function exportReviewPatch(){const patch={exportedAt:new Date().toISOString(),status:'draft-review-patch',reviews:state.reviews};downloadJson(patch,`crimson-dunes-timeline-review-patch-${new Date().toISOString().slice(0,10)}.json`);}
 function tagBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><div class="tag-list">${values.map(v=>`<span class="tag">${esc(v)}</span>`).join('')}</div></section>`:'';}
 function listBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><ul>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></section>`:'';}
-function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
+function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
 
 
 function validateEvent(event){
@@ -164,8 +165,17 @@ async function loadWorkspaceConfig(){
 }
 function applyWorkspaceVisibility(){
   const visible=new Set(state.workspaceConfig?.modePanels?.[state.mode] || []);
-  const panelIds=['validation-dashboard','patch-actions','timeline-controls','timeline-split','slice-1788-panel','decision-queue-panel','author-review-panel','project-library-panel','player-preview-panel','player-knowledge-panel','dev-preview-panel'];
-  for(const id of panelIds){ const el=$(id); if(el) el.classList.toggle('workspace-hidden', !visible.has(id)); }
+  const panelIds=[
+    'author-nav-panel','author-dashboard-panel','canon-queue-panel',
+    'validation-dashboard','patch-actions','timeline-controls','timeline-split',
+    'slice-1788-panel','decision-queue-panel','author-review-panel','project-library-panel',
+    'player-preview-panel','player-knowledge-panel',
+    'dev-preview-panel','ui-recommendations-panel'
+  ];
+  for(const id of panelIds){
+    const el=$(id);
+    if(el) el.classList.toggle('workspace-hidden', !visible.has(id));
+  }
 }
 function renderDecisionQueue(){
   const q=state.decisionQueue1788; if(!q) return;
@@ -211,6 +221,19 @@ function renderPlayerKnowledge(){
   $('player-visible-facts').innerHTML=`<h4>Current scene</h4><ul>${facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul><h4>Known facts</h4><ul>${known}</ul>`;
 }
 
+
+async function loadV10Data(){
+  const res=await fetch('data/author/canon-promotion-queue.v10.json');
+  state.canonQueue=await res.json();
+}
+function renderCanonQueue(){
+  if(!state.canonQueue || !$('canon-queue-list')) return;
+  $('canon-queue-list').innerHTML=state.canonQueue.queueItems.map(item=>`<article class="world-card"><h4>${esc(item.title)}</h4><p>${esc(item.nextAction)}</p><p class="card-meta">${esc(item.status)} · ${esc(item.source)}</p></article>`).join('');
+}
+function exportCanonQueue(){
+  downloadJson({exportedAt:new Date().toISOString(),canonQueue:state.canonQueue},`crimson-dunes-canon-queue-${new Date().toISOString().slice(0,10)}.json`);
+}
+
 async function loadV9Data(){
   const res=await fetch('data/author-worldbuilding-index.v9.json');
   state.authorWorldbuildingIndex=await res.json();
@@ -226,19 +249,17 @@ function applyAuthorSectionVisibility(){
   if(state.mode!=='author') return;
   document.querySelectorAll('[data-author-section]').forEach(btn=>btn.classList.toggle('active',btn.dataset.authorSection===state.activeAuthorSection));
   const sets={
-    dashboard:['author-dashboard-panel','validation-dashboard','patch-actions'],
-    timeline:['timeline-controls','timeline-split','validation-dashboard','patch-actions'],
-    'source-review':['timeline-controls','timeline-split','author-review-panel','patch-actions'],
-    'slice-1788':['slice-1788-panel'],
-    decisions:['slice-1788-panel'],
-    library:['project-library-panel']
+    dashboard:['author-nav-panel','author-dashboard-panel','validation-dashboard','patch-actions'],
+    timeline:['author-nav-panel','timeline-controls','timeline-split','validation-dashboard','patch-actions'],
+    'source-review':['author-nav-panel','timeline-controls','timeline-split','author-review-panel','patch-actions'],
+    'slice-1788':['author-nav-panel','slice-1788-panel'],
+    decisions:['author-nav-panel','slice-1788-panel','decision-queue-panel'],
+    'canon-queue':['author-nav-panel','canon-queue-panel'],
+    library:['author-nav-panel','project-library-panel']
   };
-  const controlled=['author-dashboard-panel','validation-dashboard','patch-actions','timeline-controls','timeline-split','author-review-panel','slice-1788-panel','project-library-panel'];
+  const controlled=['author-nav-panel','author-dashboard-panel','canon-queue-panel','validation-dashboard','patch-actions','timeline-controls','timeline-split','author-review-panel','slice-1788-panel','decision-queue-panel','project-library-panel'];
   const visible=new Set(sets[state.activeAuthorSection] || sets.dashboard);
   controlled.forEach(id=>{const el=$(id); if(el) el.classList.toggle('workspace-hidden',!visible.has(id));});
-  if(state.activeAuthorSection==='decisions'){
-    const dq=$('decision-queue-panel'); if(dq) dq.classList.remove('workspace-hidden');
-  }
 }
 function renderAuthorDashboard(){
   if(!state.authorWorldbuildingIndex || !$('author-worldbuilding-cards')) return;

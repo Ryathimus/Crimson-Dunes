@@ -26,3 +26,6 @@
 - [x] Author worldbuilding dashboard / navigation prototype.
 - [x] Player scene-first layout prototype.
 - [x] Dev schema cards prototype.
+
+- [x] V10 explicit mode visibility fix.
+- [x] Author-only Canon Promotion Queue draft panel.

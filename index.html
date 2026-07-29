@@ -11,7 +11,7 @@
     <header class="topbar">
       <div>
         <h1>Crimson Dunes</h1>
-        <p>Author / Player / Dev static app shell — V9 source/draft review</p>
+        <p>Author / Player / Dev static app shell — V10 source/draft review</p>
       </div>
       <nav class="mode-tabs" aria-label="System mode tabs">
         <button data-mode="author" class="active">Author Mode</button>
@@ -37,7 +37,7 @@
             <button data-author-section="source-review">Source Review</button>
             <button data-author-section="slice-1788">1788 Slice</button>
             <button data-author-section="decisions">Decisions</button>
-            <button data-author-section="library">Project Library</button>
+            <button data-author-section="canon-queue">Canon Queue</button><button data-author-section="library">Project Library</button>
           </div>
         </section>
 
@@ -45,6 +45,14 @@
           <div class="panel-header"><h3>Narrative / Worldbuilding Dashboard</h3><span class="badge muted">author overview</span></div>
           <p class="small">Use this dashboard as the Author Mode starting point. It groups timeline, characters, locations, factions, magic systems, routes, encounters, and source review so the app does not become only a timeline screen.</p>
           <div id="author-worldbuilding-cards" class="worldbuilding-cards"></div>
+        </section>
+
+
+        <section id="canon-queue-panel" class="canon-queue-panel workspace-hidden">
+          <div class="panel-header"><h3>Canon Promotion Queue</h3><span class="badge muted">author-only draft</span></div>
+          <p class="small">This queue frames future canon-promotion review. V10 does not promote canon or write repository files.</p>
+          <div id="canon-queue-list" class="worldbuilding-cards"></div>
+          <button id="export-canon-queue">Export canon queue</button>
         </section>
 
         <section class="validation-dashboard workspace-shared" id="validation-dashboard">

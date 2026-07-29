@@ -13,7 +13,8 @@
       "timeline-split",
       "author-review-panel",
       "project-library-panel",
-      "ui-recommendations-panel"
+      "ui-recommendations-panel",
+      "canon-queue-panel"
     ],
     "player": [
       "player-preview-panel",
@@ -34,6 +35,8 @@
     "1788 decision queue belongs to Author Mode.",
     "Project Library is visible to Author and Dev only.",
     "Player character HUD and route node state replace generic timeline browsing in Player Mode.",
-    "Author Mode should use sub-workspace navigation so narrative/worldbuilding, source review, timelines, and decisions are not all competing at once."
+    "Author Mode should use sub-workspace navigation so narrative/worldbuilding, source review, timelines, and decisions are not all competing at once.",
+    "V10 fixes mode visibility by explicitly hiding all author-only panels outside Author Mode.",
+    "Canon Promotion Queue is visible in Author Mode only and remains non-operative until a future controlled promotion workflow is implemented."
   ]
 }

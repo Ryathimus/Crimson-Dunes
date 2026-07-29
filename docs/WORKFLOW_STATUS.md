@@ -19,3 +19,8 @@ Current build is a static GitHub Pages-compatible prototype with no backend and 
 ## Judge
 
 Validation dashboard, review patch workflow, decision patches, and Dev Mode summaries are the current judging mechanisms. Further schema validation and visibility tests remain to do.
+
+
+## V10 Visibility Fix
+
+Mode switching now uses an explicit panel allow-list for Author, Player, and Dev workspaces. This prevents Author sections from staying visible in Player or Dev Mode.
