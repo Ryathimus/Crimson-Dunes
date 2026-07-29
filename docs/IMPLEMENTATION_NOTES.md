@@ -113,3 +113,21 @@ Validation remains client-side only; it does not promote canon or write reposito
 - Fixed workspace visibility by adding all major panel IDs to `applyWorkspaceVisibility()`.
 - Updated `applyAuthorSectionVisibility()` to only run Author sub-workspace logic when in Author Mode.
 - Updated workspace config so Player and Dev modes do not inherit Author panels.
+
+
+## Added Since V10 — V11 Player Visibility Restore
+
+- Fixed static hidden attributes on Player/Dev panels.
+- Updated header version label to V11.
+- Added Player route previous/next controls.
+- Added player action outcomes and discovered facts persistence.
+- Added diagnostic text for Player Mode allowed panels.
+
+
+## Added Since V11 — V12 Route State Workspaces
+
+- Added `data/player/route-state-machine.v12.json`.
+- Added `data/author-section-detail-index.v12.json`.
+- Added Player Route State panel and export.
+- Added Author section detail panel.
+- Added clickable Dev schema card details.

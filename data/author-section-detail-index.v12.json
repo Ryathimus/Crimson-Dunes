@@ -1,0 +1,38 @@
+{
+  "id": "author-section-detail-index-v12",
+  "sections": {
+    "timeline": [
+      "Review migration warnings",
+      "Classify Australian impact",
+      "Move ready items to canon queue only after review"
+    ],
+    "characters": [
+      "Draft Waru character profile",
+      "Add relationship knowledge boundaries",
+      "Separate player-visible from author-only fields"
+    ],
+    "locations": [
+      "Group locations by region/Country/route usage",
+      "Identify source-import map references",
+      "Create location review queue"
+    ],
+    "factions": [
+      "Draft ICW, Ministry, Crimson Dunes, local governance entries",
+      "Track visibility and authority boundaries"
+    ],
+    "magic": [
+      "Separate source concepts from fictionalised draft systems",
+      "Track cultural safety constraints",
+      "Link magic systems to world flags"
+    ],
+    "routes-encounters": [
+      "Promote Waru opening route into route-state engine",
+      "Create encounter templates after route behavior stabilises"
+    ],
+    "source-review": [
+      "Keep source-import immutable",
+      "Export/import source-working patches",
+      "Use decision queue for alignment choices"
+    ]
+  }
+}

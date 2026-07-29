@@ -1,0 +1,51 @@
+{
+  "id": "route-state-machine-v12",
+  "routeId": "route-1810-waru-red-road-draft",
+  "canonStatus": "draft",
+  "startNodeId": "red-dust-approach",
+  "terminalStates": [
+    "reveal_self_major_contact",
+    "withdraw_route_paused"
+  ],
+  "nodeTransitions": {
+    "red-dust-approach": {
+      "next": "dry-creek-sign",
+      "previous": null
+    },
+    "dry-creek-sign": {
+      "next": "distant-smoke-hidden-track",
+      "previous": "red-dust-approach"
+    },
+    "distant-smoke-hidden-track": {
+      "next": null,
+      "previous": "dry-creek-sign"
+    }
+  },
+  "actionStateEffects": {
+    "observe": [
+      "add_context",
+      "remain_hidden"
+    ],
+    "interpret": [
+      "add_known_fact",
+      "increase_understanding"
+    ],
+    "withdraw": [
+      "pause_route",
+      "reduce_exposure"
+    ],
+    "indirectly_intervene": [
+      "add_consequence",
+      "remain_hidden"
+    ],
+    "reveal_self": [
+      "major_contact",
+      "break_hidden_status"
+    ]
+  },
+  "objectives": [
+    "Reach a stable observation point.",
+    "Understand why the outsiders are travelling toward Crimson Dunes.",
+    "Avoid revealing author-only or hidden world information in Player Mode."
+  ]
+}

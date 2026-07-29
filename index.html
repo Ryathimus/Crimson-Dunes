@@ -11,7 +11,7 @@
     <header class="topbar">
       <div>
         <h1>Crimson Dunes</h1>
-        <p>Author / Player / Dev static app shell — V10 source/draft review</p>
+        <p>Author / Player / Dev static app shell — V12 route state workspaces</p>
       </div>
       <nav class="mode-tabs" aria-label="System mode tabs">
         <button data-mode="author" class="active">Author Mode</button>
@@ -47,6 +47,11 @@
           <div id="author-worldbuilding-cards" class="worldbuilding-cards"></div>
         </section>
 
+
+        <section id="author-section-detail-panel" class="author-dashboard-panel workspace-hidden" hidden>
+          <div class="panel-header"><h3 id="author-section-detail-title">Author Section Detail</h3><span class="badge muted">sub-workspace</span></div>
+          <div id="author-section-detail-content" class="slice-card"></div>
+        </section>
 
         <section id="canon-queue-panel" class="canon-queue-panel workspace-hidden">
           <div class="panel-header"><h3>Canon Promotion Queue</h3><span class="badge muted">author-only draft</span></div>
@@ -117,19 +122,20 @@
 
 
         <section id="player-preview-panel" class="mode-extra-panel" hidden>
-          <div class="panel-header"><h3>Player Mode Preview — Waru Opening Route</h3><span class="badge muted">basic preview</span></div>
+          <div class="panel-header"><h3>Player Mode Preview — Waru Opening Route</h3><span class="badge muted">scene/player HUD</span></div>
           <p id="player-route-summary" class="small">Loading player route…</p>
           
           <section class="player-scene-card">
             <div class="panel-header"><h4>Current Scene</h4><span id="player-scene-badge" class="badge muted">route node</span></div>
             <p id="player-current-scene" class="scene-text">Loading scene…</p>
             <p id="player-current-objective" class="small"></p>
+            <div class="route-step-actions"><button id="route-prev-node">Previous node</button><button id="route-next-node">Next node</button></div>
           </section>
 
           <div class="player-grid">
             <section><h4>Character</h4><div id="player-character-card" class="slice-card"></div></section>
             <section><h4>Current Route Node</h4><label>Route position<select id="player-route-node-select"></select></label><ol id="player-route-nodes" class="compact-list"></ol></section>
-            <section><h4>Available Actions</h4><div id="player-actions" class="button-grid"></div></section>
+            <section><h4>Available Actions</h4><div id="player-actions" class="button-grid"></div><h4>Last Action Result</h4><div id="player-action-result" class="slice-card small">No player action selected yet.</div></section>
             <section><h4>Player Event Log</h4><ol id="player-event-log" class="compact-list"></ol><button id="export-player-log">Export player log</button><button id="clear-player-log">Clear log</button></section>
           </div>
         </section>
@@ -139,16 +145,23 @@
         <section id="player-knowledge-panel" class="mode-extra-panel" hidden>
           <div class="panel-header"><h3>Player-visible Knowledge</h3><span class="badge muted">filtered context</span></div>
           <p class="small">This panel replaces the raw draft timeline in Player Mode. It only shows approved preview facts for the current Waru route.</p>
-          <div id="player-visible-facts" class="slice-card"></div>
+          <div id="player-visible-facts" class="slice-card"></div><p id="player-mode-diagnostic" class="mode-diagnostic"></p>
         </section>
 
+
+
+        <section id="player-route-state-panel" class="mode-extra-panel" hidden>
+          <div class="panel-header"><h3>Route State</h3><span class="badge muted">V12 state machine</span></div>
+          <div id="player-route-state-content" class="slice-card"></div>
+          <button id="export-route-state">Export route state</button>
+        </section>
 
         <section id="dev-preview-panel" class="mode-extra-panel" hidden>
           <div class="panel-header"><h3>Dev Mode Preview</h3><span class="badge muted">system dashboard</span></div>
           <div class="dev-grid">
             <section><h4>Feature Flags</h4><div id="dev-feature-flags" class="feature-list"></div></section>
             <section><h4>Dev Tasks</h4><ol id="dev-task-list" class="compact-list"></ol></section>
-            <section><h4>Validation Summary</h4><pre id="dev-validation-summary" class="source-box"></pre><button id="export-dev-config">Export dev config</button></section><section><h4>Schema Cards</h4><div id="dev-schema-cards" class="schema-cards"></div></section>
+            <section><h4>Validation Summary</h4><pre id="dev-validation-summary" class="source-box"></pre><button id="export-dev-config">Export dev config</button></section><section><h4>Schema Cards</h4><div id="dev-schema-cards" class="schema-cards"></div><h4>Schema Detail</h4><pre id="dev-schema-detail" class="source-box">Select a schema card to inspect details.</pre></section>
           </div>
         </section>
 

@@ -64,5 +64,27 @@
     "outsiders_not_fully_revealed",
     "crimson_dunes_destination_known_as_risk_opportunity"
   ],
-  "currentObjective": "Observe the route toward Crimson Dunes without revealing more than necessary."
+  "currentObjective": "Observe the route toward Crimson Dunes without revealing more than necessary.",
+  "actionOutcomes": {
+    "observe": {
+      "result": "Waru stays hidden and gains more context from the route.",
+      "discoveredFact": "The outsiders are not reading the country carefully."
+    },
+    "interpret": {
+      "result": "Waru compares signs, track, and subtle magical pressure before acting.",
+      "discoveredFact": "The dry creek line may be a safer boundary than a path."
+    },
+    "withdraw": {
+      "result": "Waru creates distance and avoids forcing direct contact.",
+      "discoveredFact": "Withdrawal preserves secrecy but loses immediate influence."
+    },
+    "indirectly_intervene": {
+      "result": "Waru alters the situation without revealing identity.",
+      "discoveredFact": "Indirect action can protect without breaking observation-first rules."
+    },
+    "reveal_self": {
+      "result": "Waru risks direct contact and shifts the route into a different style of encounter.",
+      "discoveredFact": "Revealing identity should become a major route state change."
+    }
+  }
 }

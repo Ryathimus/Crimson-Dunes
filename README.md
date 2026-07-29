@@ -62,3 +62,16 @@ No real AI provider calls are made and no API keys are included.
 - Explicit mode visibility fix for Author/Player/Dev workspace switching.
 - Author-only Canon Promotion Queue draft panel.
 - Updated workspace configuration and docs.
+
+## V11 Additions
+
+- Fixed Player/Dev panels missing due to hidden attributes.
+- Updated visible version label to V11.
+- Added route progression controls, action result feedback, and discovered facts.
+
+## V12 Additions
+
+- Route state machine and export.
+- Author section detail sub-workspaces.
+- Clickable Dev schema detail cards.
+- Updated visible version label to V12.

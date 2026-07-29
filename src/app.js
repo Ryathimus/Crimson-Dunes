@@ -22,7 +22,11 @@ const state = {
   structuredValidation: null,
   authorWorldbuildingIndex: null,
   activeAuthorSection: localStorage.getItem('crimsonDunes.activeAuthorSection') || 'dashboard',
-  canonQueue: null
+  canonQueue: null,
+  discoveredFacts: JSON.parse(localStorage.getItem('crimsonDunes.discoveredFacts') || '[]'),
+  lastActionResult: localStorage.getItem('crimsonDunes.lastActionResult') || '',
+  routeStateMachine: null,
+  authorSectionDetailIndex: null
 };
 const modeConfig = {
   author: { title:'Author Mode', badge:'canon management', description:'Full-access source, draft, canon and migration review shell. Draft-to-canon promotion is deliberately not implemented.', agentNote:'Author Agent can help compare source/draft/canon and prepare generated suggestions, but output remains generated until saved as draft.' },
@@ -37,13 +41,13 @@ async function init(){
   ]);
   state.events = await eventsRes.json();
   state.rawSource = await srcRes.text();
-  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderCanonQueue(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
+  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadV12Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderCanonQueue(); renderRouteState(); renderAuthorSectionDetail(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
 }
 function bindEvents(){
-  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
+  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();renderPlayerPreview();renderPlayerKnowledge();renderRouteState();renderDevPreview();renderUiRecommendations();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
   ['layer-filter','category-filter','impact-filter','review-filter','search'].forEach(id=>$(id).addEventListener('input',renderTimeline));
   $('chat-form').addEventListener('submit',onChatSubmit); $('export-transcript').addEventListener('click',exportTranscript); $('clear-transcript').addEventListener('click',()=>{state.transcript=[];persistTranscript();renderTranscript();});
-  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); 
+  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); if($('route-prev-node')) $('route-prev-node').addEventListener('click',()=>stepRouteNode(-1)); if($('route-next-node')) $('route-next-node').addEventListener('click',()=>stepRouteNode(1)); if($('export-route-state')) $('export-route-state').addEventListener('click', exportRouteState); 
 }
 function populateCategories(){[...new Set(state.events.map(e=>e.timelineCategory).filter(Boolean))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;$('category-filter').appendChild(o);});}
 function renderMode(){
@@ -69,7 +73,7 @@ function saveCurrentReview(){if(!state.selectedId)return alert('Select an event 
 function exportReviewPatch(){const patch={exportedAt:new Date().toISOString(),status:'draft-review-patch',reviews:state.reviews};downloadJson(patch,`crimson-dunes-timeline-review-patch-${new Date().toISOString().slice(0,10)}.json`);}
 function tagBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><div class="tag-list">${values.map(v=>`<span class="tag">${esc(v)}</span>`).join('')}</div></section>`:'';}
 function listBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><ul>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></section>`:'';}
-function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
+function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
 
 
 function validateEvent(event){
@@ -163,18 +167,24 @@ async function loadWorkspaceConfig(){
   const res=await fetch('data/workspace-config.v7.json');
   state.workspaceConfig=await res.json();
 }
+function setPanelVisibility(id, isVisible){
+  const el=$(id);
+  if(!el) return;
+  el.classList.toggle('workspace-hidden', !isVisible);
+  el.hidden = !isVisible;
+}
 function applyWorkspaceVisibility(){
   const visible=new Set(state.workspaceConfig?.modePanels?.[state.mode] || []);
   const panelIds=[
-    'author-nav-panel','author-dashboard-panel','canon-queue-panel',
+    'author-nav-panel','author-dashboard-panel','author-section-detail-panel','canon-queue-panel',
     'validation-dashboard','patch-actions','timeline-controls','timeline-split',
     'slice-1788-panel','decision-queue-panel','author-review-panel','project-library-panel',
-    'player-preview-panel','player-knowledge-panel',
+    'player-preview-panel','player-knowledge-panel','player-route-state-panel',
     'dev-preview-panel','ui-recommendations-panel'
   ];
-  for(const id of panelIds){
-    const el=$(id);
-    if(el) el.classList.toggle('workspace-hidden', !visible.has(id));
+  for(const id of panelIds) setPanelVisibility(id, visible.has(id));
+  if($('player-mode-diagnostic') && state.mode==='player'){
+    $('player-mode-diagnostic').textContent = `V11 visibility OK: ${Array.from(visible).join(', ')}`;
   }
 }
 function renderDecisionQueue(){
@@ -218,66 +228,9 @@ function renderPlayerKnowledge(){
     '1810 context: Crimson Dunes exists locally but ICW recognition is not player-facing unless revealed in play.'
   ];
   const known=(c?.visibleKnowledge||[]).map(k=>`<li>${esc(k)}</li>`).join('');
-  $('player-visible-facts').innerHTML=`<h4>Current scene</h4><ul>${facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul><h4>Known facts</h4><ul>${known}</ul>`;
+  const discovered=(state.discoveredFacts||[]).map(k=>`<li>${esc(k)}</li>`).join('') || '<li class="small">No discovered facts logged yet.</li>';
+  $('player-visible-facts').innerHTML=`<h4>Current scene</h4><ul>${facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul><h4>Known facts</h4><ul>${known}</ul><h4>Discovered facts</h4><ul>${discovered}</ul>`;
 }
-
-
-async function loadV10Data(){
-  const res=await fetch('data/author/canon-promotion-queue.v10.json');
-  state.canonQueue=await res.json();
-}
-function renderCanonQueue(){
-  if(!state.canonQueue || !$('canon-queue-list')) return;
-  $('canon-queue-list').innerHTML=state.canonQueue.queueItems.map(item=>`<article class="world-card"><h4>${esc(item.title)}</h4><p>${esc(item.nextAction)}</p><p class="card-meta">${esc(item.status)} · ${esc(item.source)}</p></article>`).join('');
-}
-function exportCanonQueue(){
-  downloadJson({exportedAt:new Date().toISOString(),canonQueue:state.canonQueue},`crimson-dunes-canon-queue-${new Date().toISOString().slice(0,10)}.json`);
-}
-
-async function loadV9Data(){
-  const res=await fetch('data/author-worldbuilding-index.v9.json');
-  state.authorWorldbuildingIndex=await res.json();
-}
-function setAuthorSection(section){
-  state.activeAuthorSection=section;
-  localStorage.setItem('crimsonDunes.activeAuthorSection',section);
-  document.querySelectorAll('[data-author-section]').forEach(btn=>btn.classList.toggle('active',btn.dataset.authorSection===section));
-  applyAuthorSectionVisibility();
-  renderContextPreview();
-}
-function applyAuthorSectionVisibility(){
-  if(state.mode!=='author') return;
-  document.querySelectorAll('[data-author-section]').forEach(btn=>btn.classList.toggle('active',btn.dataset.authorSection===state.activeAuthorSection));
-  const sets={
-    dashboard:['author-nav-panel','author-dashboard-panel','validation-dashboard','patch-actions'],
-    timeline:['author-nav-panel','timeline-controls','timeline-split','validation-dashboard','patch-actions'],
-    'source-review':['author-nav-panel','timeline-controls','timeline-split','author-review-panel','patch-actions'],
-    'slice-1788':['author-nav-panel','slice-1788-panel'],
-    decisions:['author-nav-panel','slice-1788-panel','decision-queue-panel'],
-    'canon-queue':['author-nav-panel','canon-queue-panel'],
-    library:['author-nav-panel','project-library-panel']
-  };
-  const controlled=['author-nav-panel','author-dashboard-panel','canon-queue-panel','validation-dashboard','patch-actions','timeline-controls','timeline-split','author-review-panel','slice-1788-panel','decision-queue-panel','project-library-panel'];
-  const visible=new Set(sets[state.activeAuthorSection] || sets.dashboard);
-  controlled.forEach(id=>{const el=$(id); if(el) el.classList.toggle('workspace-hidden',!visible.has(id));});
-}
-function renderAuthorDashboard(){
-  if(!state.authorWorldbuildingIndex || !$('author-worldbuilding-cards')) return;
-  $('author-worldbuilding-cards').innerHTML=state.authorWorldbuildingIndex.sections.map(s=>`<article class="world-card"><h4>${esc(s.title)}</h4><p>${esc(s.description)}</p><p class="card-meta">${esc(String(s.currentCount))} · ${esc(s.status)}</p><button data-library-open="${esc(s.primaryPath)}">Open source</button></article>`).join('');
-  document.querySelectorAll('[data-library-open]').forEach(btn=>btn.addEventListener('click',()=>openLibraryPath(btn.dataset.libraryOpen)));
-}
-function openLibraryPath(path){
-  state.activeAuthorSection='library';
-  localStorage.setItem('crimsonDunes.activeAuthorSection','library');
-  applyAuthorSectionVisibility();
-  const file={path:path.replace(/^data\/project-library\//,''),type:'text',source:'author-dashboard'};
-  if(path.startsWith('data/project-library/')) selectLibraryFile(file);
-  else {
-    $('library-file-title').textContent=path;
-    fetch(path).then(r=>r.text()).then(t=>{$('library-file-content').textContent=t;}).catch(err=>{$('library-file-content').textContent=err.message;});
-  }
-}
-
 async function loadV8Data(){
   const [charRes, uiRes] = await Promise.all([
     fetch('data/player/waru-character-preview.draft.json'),
@@ -330,7 +283,9 @@ function renderPlayerPreview(){
   $('player-actions').innerHTML = r.availableActions.map(a=>`<button data-player-action="${esc(a)}">${esc(a.replaceAll('_',' '))}</button>`).join('');
   document.querySelectorAll('[data-player-action]').forEach(btn=>btn.addEventListener('click',()=>addPlayerAction(btn.dataset.playerAction)));
   renderPlayerLog();
+  if($('player-action-result')) $('player-action-result').textContent = state.lastActionResult || 'No player action selected yet.';
 }
+
 function renderPlayerCharacter(){
   const c=state.playerCharacter; if(!c || !$('player-character-card')) return;
   const node=state.playerRoute?.nodes?.find(n=>n.id===state.currentRouteNodeId);
@@ -347,10 +302,36 @@ function changeRouteNode(event){
   addPlayerAction(`move_to_${state.currentRouteNodeId}`);
   renderPlayerPreview(); renderPlayerKnowledge(); renderContextPreview();
 }
-function addPlayerAction(action){
-  state.playerLog.push({at:new Date().toISOString(),routeId:state.playerRoute.id,pov:state.playerRoute.pov,currentRouteNodeId:state.currentRouteNodeId,action,visibility:'player-preview'});
+
+function stepRouteNode(direction){
+  const nodes=state.playerRoute?.nodes || [];
+  if(!nodes.length) return;
+  const currentIndex=Math.max(0,nodes.findIndex(n=>n.id===state.currentRouteNodeId));
+  const nextIndex=Math.min(nodes.length-1,Math.max(0,currentIndex+direction));
+  state.currentRouteNodeId=nodes[nextIndex].id;
+  localStorage.setItem('crimsonDunes.currentRouteNodeId',state.currentRouteNodeId);
+  state.lastActionResult=`Moved to route node: ${nodes[nextIndex].title}`;
+  localStorage.setItem('crimsonDunes.lastActionResult',state.lastActionResult);
+  state.playerLog.push({at:new Date().toISOString(),routeId:state.playerRoute.id,pov:state.playerRoute.pov,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,action:`move_to_${state.currentRouteNodeId}`,visibility:'player-preview'});
   localStorage.setItem('crimsonDunes.playerLog',JSON.stringify(state.playerLog));
-  renderPlayerLog(); renderContextPreview();
+  renderPlayerPreview(); renderPlayerKnowledge(); renderContextPreview();
+}
+function addPlayerAction(action){
+  const outcome=state.playerRoute?.actionOutcomes?.[action];
+  if(outcome){
+    state.lastActionResult=outcome.result;
+    localStorage.setItem('crimsonDunes.lastActionResult',state.lastActionResult);
+    if(outcome.discoveredFact && !state.discoveredFacts.includes(outcome.discoveredFact)){
+      state.discoveredFacts.push(outcome.discoveredFact);
+      localStorage.setItem('crimsonDunes.discoveredFacts',JSON.stringify(state.discoveredFacts));
+    }
+  } else {
+    state.lastActionResult=`Action recorded: ${action.replaceAll('_',' ')}`;
+    localStorage.setItem('crimsonDunes.lastActionResult',state.lastActionResult);
+  }
+  state.playerLog.push({at:new Date().toISOString(),routeId:state.playerRoute.id,pov:state.playerRoute.pov,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,action,visibility:'player-preview'});
+  localStorage.setItem('crimsonDunes.playerLog',JSON.stringify(state.playerLog));
+  renderPlayerLog(); renderPlayerPreview(); renderPlayerKnowledge(); renderContextPreview();
 }
 function renderPlayerLog(){
   $('player-event-log').innerHTML = state.playerLog.slice(-10).map(e=>`<li><b>${esc(e.action.replaceAll('_',' '))}</b><br><span class="small">${esc(e.at)} · ${esc(e.pov)}</span></li>`).join('') || '<li class="small">No player actions logged yet.</li>';
@@ -362,7 +343,7 @@ function renderDevPreview(){
   $('dev-feature-flags').innerHTML = Object.entries(cfg.featureFlags).map(([k,v])=>`<div class="feature-row"><code>${esc(k)}</code><span>${v?'enabled':'disabled'}</span></div>`).join('');
   $('dev-task-list').innerHTML = cfg.devTasks.map(t=>`<li><b>${esc(t.title)}</b><br><span class="small">${esc(t.id)} · ${esc(t.status)}</span></li>`).join('');
   $('dev-validation-summary').textContent = JSON.stringify({timeline: state.validationReport ? {eventCount:state.validationReport.eventCount,errorCount:state.validationReport.errorCount,warningCount:state.validationReport.warningCount} : {}, structured: state.structuredValidation}, null, 2);
-  if($('dev-schema-cards') && state.structuredValidation){ $('dev-schema-cards').innerHTML=state.structuredValidation.checks.map(c=>`<article class="schema-card ${esc(c.status)}"><b>${esc(c.name)}</b><br><span class="small">${esc(c.status)}${c.missing.length?': missing '+esc(c.missing.join(', ')):''}</span></article>`).join(''); }
+  if($('dev-schema-cards') && state.structuredValidation){ $('dev-schema-cards').innerHTML=state.structuredValidation.checks.map((c,i)=>`<article class="schema-card ${esc(c.status)}" data-schema-index="${i}"><b>${esc(c.name)}</b><br><span class="small">${esc(c.status)}${c.missing.length?': missing '+esc(c.missing.join(', ')):''}</span></article>`).join(''); document.querySelectorAll('[data-schema-index]').forEach(card=>card.addEventListener('click',()=>{const c=state.structuredValidation.checks[Number(card.dataset.schemaIndex)]; if($('dev-schema-detail')) $('dev-schema-detail').textContent=JSON.stringify(c,null,2);})); }
 }
 function exportDevConfig(){ downloadJson({exportedAt:new Date().toISOString(),devConfig:state.devConfig,validationSummary:state.validationReport,structuredValidation:state.structuredValidation},`crimson-dunes-dev-config-${new Date().toISOString().slice(0,10)}.json`); }
 
@@ -454,3 +435,29 @@ function persistTranscript(){localStorage.setItem('crimsonDunes.agentTranscript'
 function exportTranscript(){downloadJson(state.transcript,`crimson-dunes-agent-transcript-${new Date().toISOString().slice(0,10)}.json`);}function downloadJson(data,name){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url);}
 function esc(v){return String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));}
 init().catch(err=>{console.error(err);document.body.innerHTML=`<pre>Failed to initialise Crimson Dunes app shell: ${esc(err.message)}</pre>`;});
+async function loadV12Data(){
+  const [routeStateRes, detailRes] = await Promise.all([
+    fetch('data/player/route-state-machine.v12.json'),
+    fetch('data/author-section-detail-index.v12.json')
+  ]);
+  state.routeStateMachine = await routeStateRes.json();
+  state.authorSectionDetailIndex = await detailRes.json();
+}
+function renderRouteState(){
+  if(!$('player-route-state-content') || !state.routeStateMachine || !state.playerRoute) return;
+  const nodeId=state.currentRouteNodeId || state.routeStateMachine.startNodeId;
+  const transition=state.routeStateMachine.nodeTransitions[nodeId] || {};
+  $('player-route-state-content').innerHTML=`<div class="route-state-grid"><article class="route-state-card"><b>Active node</b><p>${esc(nodeId)}</p></article><article class="route-state-card"><b>Previous</b><p>${esc(transition.previous || 'none')}</p></article><article class="route-state-card"><b>Next</b><p>${esc(transition.next || 'none')}</p></article></div><h4>Objectives</h4><ul>${state.routeStateMachine.objectives.map(o=>`<li>${esc(o)}</li>`).join('')}</ul>`;
+}
+function exportRouteState(){
+  downloadJson({exportedAt:new Date().toISOString(),activeNode:state.currentRouteNodeId,discoveredFacts:state.discoveredFacts,playerLog:state.playerLog,routeStateMachine:state.routeStateMachine},`crimson-dunes-route-state-${new Date().toISOString().slice(0,10)}.json`);
+}
+function renderAuthorSectionDetail(){
+  if(!$('author-section-detail-content') || !state.authorSectionDetailIndex) return;
+  const key=state.activeAuthorSection;
+  const items=state.authorSectionDetailIndex.sections[key] || [];
+  $('author-section-detail-title').textContent=`Author Section Detail: ${key.replaceAll('-',' ')}`;
+  $('author-section-detail-content').innerHTML=items.length?`<ul class="author-detail-list">${items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul>`:'<p class="small">No detail written for this section yet.</p>';
+}
+
+

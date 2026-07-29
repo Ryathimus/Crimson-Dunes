@@ -55,3 +55,21 @@ No app shell currently promotes canon, mutates source-import, writes repository 
 - Added robust workspace panel visibility mapping for all major panels.
 - Added Author-only Canon Promotion Queue draft panel and data file.
 - Updated workspace configuration so Player Mode only shows Player preview/knowledge panels and Dev Mode only shows Dev/system panels.
+
+
+## V11 Additions
+
+- Fixed missing Player/Dev panels caused by static `hidden` attributes.
+- Visibility now toggles both `.workspace-hidden` and the HTML `hidden` property.
+- Updated visible app version name to V11.
+- Added Player route previous/next controls.
+- Added action outcome text and discovered facts tracking in Player Mode.
+
+
+## V12 Additions
+
+- Added route state machine data and Route State panel.
+- Added route state export.
+- Added Author section detail sub-workspaces from dashboard cards.
+- Added clickable Dev schema cards with JSON detail output.
+- Updated visible version label to V12.

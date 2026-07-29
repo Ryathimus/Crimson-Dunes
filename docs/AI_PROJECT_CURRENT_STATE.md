@@ -51,3 +51,13 @@ V9 starts turning the app from a single long review page into mode-specific work
 ## V10 Current State Addendum
 
 V10 addresses the screenshot issue where the UI appeared unchanged from Author Mode after switching modes. The mode visibility system now explicitly controls every major workspace panel. Player Mode should now hide Author dashboard/timeline/source panels, and Dev Mode should hide Author dashboard/source panels.
+
+
+## V11 Current State Addendum
+
+V11 fixes the Player/Dev panel issue by ensuring mode switching controls the HTML `hidden` attribute as well as CSS classes. Player Mode now has route progression controls, action outcomes, and discovered facts.
+
+
+## V12 Current State Addendum
+
+V12 adds route-state structure, author sub-workspace detail panels, and clickable Dev schema details. Player Mode now has a route state panel that can export current route state, discovered facts, and player log.

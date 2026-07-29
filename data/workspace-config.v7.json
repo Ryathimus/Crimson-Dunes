@@ -1,5 +1,5 @@
 {
-  "id": "workspace-config-v7",
+  "id": "workspace-config-v12",
   "purpose": "Define which panels belong to Author, Player, and Dev Mode to reduce cross-over and duplication.",
   "modePanels": {
     "author": [
@@ -14,11 +14,13 @@
       "author-review-panel",
       "project-library-panel",
       "ui-recommendations-panel",
-      "canon-queue-panel"
+      "canon-queue-panel",
+      "author-section-detail-panel"
     ],
     "player": [
       "player-preview-panel",
-      "player-knowledge-panel"
+      "player-knowledge-panel",
+      "player-route-state-panel"
     ],
     "dev": [
       "validation-dashboard",
@@ -37,6 +39,8 @@
     "Player character HUD and route node state replace generic timeline browsing in Player Mode.",
     "Author Mode should use sub-workspace navigation so narrative/worldbuilding, source review, timelines, and decisions are not all competing at once.",
     "V10 fixes mode visibility by explicitly hiding all author-only panels outside Author Mode.",
-    "Canon Promotion Queue is visible in Author Mode only and remains non-operative until a future controlled promotion workflow is implemented."
+    "Canon Promotion Queue is visible in Author Mode only and remains non-operative until a future controlled promotion workflow is implemented.",
+    "V11 updates visibility logic to set both class and hidden attributes, fixing missing Player/Dev panels caused by static hidden attributes in HTML.",
+    "V12 adds route-state and author-section detail workspaces while retaining strict per-mode panel visibility."
   ]
 }

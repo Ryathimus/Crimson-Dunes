@@ -29,3 +29,10 @@
 
 - [x] V10 explicit mode visibility fix.
 - [x] Author-only Canon Promotion Queue draft panel.
+
+- [x] V11 hidden-attribute visibility fix for Player/Dev panels.
+- [x] Basic route progression controls and action outcome feedback.
+
+- [x] V12 route state machine prototype.
+- [x] Author sub-workspace detail prototype.
+- [x] Clickable Dev schema detail prototype.

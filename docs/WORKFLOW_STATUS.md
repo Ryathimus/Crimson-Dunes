@@ -24,3 +24,8 @@ Validation dashboard, review patch workflow, decision patches, and Dev Mode summ
 ## V10 Visibility Fix
 
 Mode switching now uses an explicit panel allow-list for Author, Player, and Dev workspaces. This prevents Author sections from staying visible in Player or Dev Mode.
+
+
+## V11 Panel Visibility Fix
+
+Previous Player/Dev panels remained invisible because HTML `hidden` attributes were not being cleared. V11 toggles both CSS class and `hidden` property for all workspace panels.
