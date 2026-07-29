@@ -26,7 +26,9 @@ const state = {
   discoveredFacts: JSON.parse(localStorage.getItem('crimsonDunes.discoveredFacts') || '[]'),
   lastActionResult: localStorage.getItem('crimsonDunes.lastActionResult') || '',
   routeStateMachine: null,
-  authorSectionDetailIndex: null
+  authorSectionDetailIndex: null,
+  buildManifest: null,
+  routeTestFixture: null
 };
 const modeConfig = {
   author: { title:'Author Mode', badge:'canon management', description:'Full-access source, draft, canon and migration review shell. Draft-to-canon promotion is deliberately not implemented.', agentNote:'Author Agent can help compare source/draft/canon and prepare generated suggestions, but output remains generated until saved as draft.' },
@@ -41,13 +43,13 @@ async function init(){
   ]);
   state.events = await eventsRes.json();
   state.rawSource = await srcRes.text();
-  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadV12Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderCanonQueue(); renderRouteState(); renderAuthorSectionDetail(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
+  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadV12Data(); await loadV13Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderCanonQueue(); renderRouteState(); renderAuthorSectionDetail(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
 }
 function bindEvents(){
-  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();renderPlayerPreview();renderPlayerKnowledge();renderRouteState();renderDevPreview();renderUiRecommendations();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
+  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();renderPlayerPreview();renderPlayerKnowledge();renderRouteState();renderDevPreview();renderRouteTestSummary();renderUiRecommendations();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
   ['layer-filter','category-filter','impact-filter','review-filter','search'].forEach(id=>$(id).addEventListener('input',renderTimeline));
   $('chat-form').addEventListener('submit',onChatSubmit); $('export-transcript').addEventListener('click',exportTranscript); $('clear-transcript').addEventListener('click',()=>{state.transcript=[];persistTranscript();renderTranscript();});
-  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); if($('route-prev-node')) $('route-prev-node').addEventListener('click',()=>stepRouteNode(-1)); if($('route-next-node')) $('route-next-node').addEventListener('click',()=>stepRouteNode(1)); if($('export-route-state')) $('export-route-state').addEventListener('click', exportRouteState); 
+  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); if($('route-prev-node')) $('route-prev-node').addEventListener('click',()=>stepRouteNode(-1)); if($('route-next-node')) $('route-next-node').addEventListener('click',()=>stepRouteNode(1)); if($('export-route-state')) $('export-route-state').addEventListener('click', exportRouteState); if($('run-route-tests')) $('run-route-tests').addEventListener('click', runRouteTests); 
 }
 function populateCategories(){[...new Set(state.events.map(e=>e.timelineCategory).filter(Boolean))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;$('category-filter').appendChild(o);});}
 function renderMode(){
@@ -73,7 +75,7 @@ function saveCurrentReview(){if(!state.selectedId)return alert('Select an event 
 function exportReviewPatch(){const patch={exportedAt:new Date().toISOString(),status:'draft-review-patch',reviews:state.reviews};downloadJson(patch,`crimson-dunes-timeline-review-patch-${new Date().toISOString().slice(0,10)}.json`);}
 function tagBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><div class="tag-list">${values.map(v=>`<span class="tag">${esc(v)}</span>`).join('')}</div></section>`:'';}
 function listBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><ul>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></section>`:'';}
-function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
+function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,build:state.buildManifest?{version:state.buildManifest.version,name:state.buildManifest.name}:null,modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
 
 
 function validateEvent(event){
@@ -180,7 +182,7 @@ function applyWorkspaceVisibility(){
     'validation-dashboard','patch-actions','timeline-controls','timeline-split',
     'slice-1788-panel','decision-queue-panel','author-review-panel','project-library-panel',
     'player-preview-panel','player-knowledge-panel','player-route-state-panel',
-    'dev-preview-panel','ui-recommendations-panel'
+    'dev-preview-panel','dev-route-test-panel','ui-recommendations-panel'
   ];
   for(const id of panelIds) setPanelVisibility(id, visible.has(id));
   if($('player-mode-diagnostic') && state.mode==='player'){
@@ -435,6 +437,58 @@ function persistTranscript(){localStorage.setItem('crimsonDunes.agentTranscript'
 function exportTranscript(){downloadJson(state.transcript,`crimson-dunes-agent-transcript-${new Date().toISOString().slice(0,10)}.json`);}function downloadJson(data,name){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url);}
 function esc(v){return String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));}
 init().catch(err=>{console.error(err);document.body.innerHTML=`<pre>Failed to initialise Crimson Dunes app shell: ${esc(err.message)}</pre>`;});
+
+async function loadV10Data(){
+  try{
+    const res=await fetch('data/author/canon-promotion-queue.v10.json');
+    state.canonQueue=await res.json();
+  }catch(err){
+    state.canonQueue={id:'canon-promotion-queue-fallback',canonStatus:'draft',queueItems:[],loadError:err.message};
+  }
+}
+function renderCanonQueue(){
+  if(!$('canon-queue-list')) return;
+  const q=state.canonQueue || {queueItems:[]};
+  const items=q.queueItems || [];
+  $('canon-queue-list').innerHTML=items.length?items.map(item=>`<article class="world-card"><h4>${esc(item.title||item.id)}</h4><p>${esc(item.nextAction||'No next action recorded.')}</p><p class="card-meta">${esc(item.status||'draft')} · ${esc(item.source||'no source')}</p></article>`).join(''):'<p class="small">No canon queue items loaded.</p>';
+}
+function exportCanonQueue(){
+  downloadJson({exportedAt:new Date().toISOString(),canonQueue:state.canonQueue||{}},`crimson-dunes-canon-queue-${new Date().toISOString().slice(0,10)}.json`);
+}
+async function loadV13Data(){
+  const [manifestRes, routeTestRes] = await Promise.all([
+    fetch('data/build-manifest.json'),
+    fetch('data/player/route-test-fixture.v13.json')
+  ]);
+  state.buildManifest = await manifestRes.json();
+  state.routeTestFixture = await routeTestRes.json();
+}
+function renderRouteTestSummary(){
+  if(!$('route-test-output') || !state.routeTestFixture) return;
+  $('route-test-output').textContent=`Loaded ${state.routeTestFixture.tests.length} route tests. Click Run route tests.`;
+}
+function runRouteTests(){
+  if(!$('route-test-output')) return;
+  const sm=state.routeStateMachine;
+  const fixture=state.routeTestFixture;
+  if(!sm || !fixture){ $('route-test-output').textContent='Route state machine or fixture not loaded.'; return; }
+  const results=fixture.tests.map(t=>{
+    let pass=true; const notes=[];
+    if(t.nodeId){
+      const tr=sm.nodeTransitions[t.nodeId] || {};
+      if('expectNext' in t && tr.next!==t.expectNext){ pass=false; notes.push(`expected next ${t.expectNext}, got ${tr.next}`); }
+      if('expectPrevious' in t && tr.previous!==t.expectPrevious){ pass=false; notes.push(`expected previous ${t.expectPrevious}, got ${tr.previous}`); }
+    }
+    if(t.action){
+      const effects=sm.actionStateEffects[t.action] || [];
+      if(!effects.includes(t.expectEffect)){ pass=false; notes.push(`expected effect ${t.expectEffect}, got ${effects.join(', ')}`); }
+    }
+    return {id:t.id,pass,notes};
+  });
+  const summary={generatedAt:new Date().toISOString(),passed:results.filter(r=>r.pass).length,failed:results.filter(r=>!r.pass).length,results};
+  $('route-test-output').textContent=JSON.stringify(summary,null,2);
+}
+
 async function loadV12Data(){
   const [routeStateRes, detailRes] = await Promise.all([
     fetch('data/player/route-state-machine.v12.json'),

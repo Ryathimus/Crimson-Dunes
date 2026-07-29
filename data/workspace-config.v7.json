@@ -1,5 +1,5 @@
 {
-  "id": "workspace-config-v12",
+  "id": "workspace-config-v13",
   "purpose": "Define which panels belong to Author, Player, and Dev Mode to reduce cross-over and duplication.",
   "modePanels": {
     "author": [
@@ -26,6 +26,7 @@
       "validation-dashboard",
       "patch-actions",
       "dev-preview-panel",
+      "dev-route-test-panel",
       "ui-recommendations-panel",
       "project-library-panel"
     ]
@@ -41,6 +42,7 @@
     "V10 fixes mode visibility by explicitly hiding all author-only panels outside Author Mode.",
     "Canon Promotion Queue is visible in Author Mode only and remains non-operative until a future controlled promotion workflow is implemented.",
     "V11 updates visibility logic to set both class and hidden attributes, fixing missing Player/Dev panels caused by static hidden attributes in HTML.",
-    "V12 adds route-state and author-section detail workspaces while retaining strict per-mode panel visibility."
+    "V12 adds route-state and author-section detail workspaces while retaining strict per-mode panel visibility.",
+    "V13 fixes missing canon queue runtime functions and adds route-state test fixture panel in Dev Mode."
   ]
 }

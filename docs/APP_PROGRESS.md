@@ -73,3 +73,11 @@ No app shell currently promotes canon, mutates source-import, writes repository 
 - Added Author section detail sub-workspaces from dashboard cards.
 - Added clickable Dev schema cards with JSON detail output.
 - Updated visible version label to V12.
+
+
+## V13 Additions
+
+- Fixed runtime initialisation error: `exportCanonQueue is not defined`.
+- Added robust canon queue load/render/export runtime functions.
+- Added build manifest for version consistency.
+- Added Dev Mode route-state test fixture and test runner panel.

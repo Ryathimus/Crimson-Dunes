@@ -131,3 +131,11 @@ Validation remains client-side only; it does not promote canon or write reposito
 - Added Player Route State panel and export.
 - Added Author section detail panel.
 - Added clickable Dev schema card details.
+
+
+## Added Since V12 — V13 Runtime Fix + Route Tests
+
+- Added missing `loadV10Data`, `renderCanonQueue`, and `exportCanonQueue` functions.
+- Added `data/build-manifest.json`.
+- Added `data/player/route-test-fixture.v13.json`.
+- Added Dev Mode Route State Test Runner panel.

@@ -61,3 +61,8 @@ V11 fixes the Player/Dev panel issue by ensuring mode switching controls the HTM
 ## V12 Current State Addendum
 
 V12 adds route-state structure, author sub-workspace detail panels, and clickable Dev schema details. Player Mode now has a route state panel that can export current route state, discovered facts, and player log.
+
+
+## V13 Current State Addendum
+
+V13 fixes the V12 startup failure caused by missing canon queue runtime functions. V13 also adds `data/build-manifest.json` and the first route-state test fixture for Dev Mode.

@@ -36,3 +36,7 @@
 - [x] V12 route state machine prototype.
 - [x] Author sub-workspace detail prototype.
 - [x] Clickable Dev schema detail prototype.
+
+- [x] V13 runtime fix for missing canon queue functions.
+- [x] Build manifest for consistent version tracking.
+- [x] Route-state test fixture and Dev test runner.

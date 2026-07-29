@@ -75,3 +75,9 @@ No real AI provider calls are made and no API keys are included.
 - Author section detail sub-workspaces.
 - Clickable Dev schema detail cards.
 - Updated visible version label to V12.
+
+## V13 Additions
+
+- Runtime fix for missing canon queue functions.
+- Build manifest for version consistency.
+- Dev Mode route-state test fixture and test runner.

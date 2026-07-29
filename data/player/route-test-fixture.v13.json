@@ -1,0 +1,32 @@
+{
+  "id": "route-test-fixture-v13",
+  "routeStateMachinePath": "data/player/route-state-machine.v12.json",
+  "tests": [
+    {
+      "id": "start-node-has-next",
+      "nodeId": "red-dust-approach",
+      "expectNext": "dry-creek-sign"
+    },
+    {
+      "id": "middle-node-has-prev-next",
+      "nodeId": "dry-creek-sign",
+      "expectPrevious": "red-dust-approach",
+      "expectNext": "distant-smoke-hidden-track"
+    },
+    {
+      "id": "end-node-has-no-next",
+      "nodeId": "distant-smoke-hidden-track",
+      "expectNext": null
+    },
+    {
+      "id": "reveal-self-terminal-effect",
+      "action": "reveal_self",
+      "expectEffect": "major_contact"
+    },
+    {
+      "id": "withdraw-terminal-effect",
+      "action": "withdraw",
+      "expectEffect": "pause_route"
+    }
+  ]
+}
