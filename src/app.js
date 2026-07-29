@@ -28,7 +28,9 @@ const state = {
   routeStateMachine: null,
   authorSectionDetailIndex: null,
   buildManifest: null,
-  routeTestFixture: null
+  routeTestFixture: null,
+  runtimeComparison: null,
+  runtimeContractReport: null
 };
 const modeConfig = {
   author: { title:'Author Mode', badge:'canon management', description:'Full-access source, draft, canon and migration review shell. Draft-to-canon promotion is deliberately not implemented.', agentNote:'Author Agent can help compare source/draft/canon and prepare generated suggestions, but output remains generated until saved as draft.' },
@@ -43,13 +45,13 @@ async function init(){
   ]);
   state.events = await eventsRes.json();
   state.rawSource = await srcRes.text();
-  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadV12Data(); await loadV13Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderCanonQueue(); renderRouteState(); renderAuthorSectionDetail(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
+  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadV12Data(); await loadV13Data(); await loadV14Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderRuntimeContract(); renderCanonQueue(); renderRouteState(); renderAuthorSectionDetail(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
 }
 function bindEvents(){
-  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();renderPlayerPreview();renderPlayerKnowledge();renderRouteState();renderDevPreview();renderRouteTestSummary();renderUiRecommendations();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
+  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();renderPlayerPreview();renderPlayerKnowledge();renderRouteState();renderDevPreview();renderRouteTestSummary();renderRuntimeContract();renderUiRecommendations();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
   ['layer-filter','category-filter','impact-filter','review-filter','search'].forEach(id=>$(id).addEventListener('input',renderTimeline));
   $('chat-form').addEventListener('submit',onChatSubmit); $('export-transcript').addEventListener('click',exportTranscript); $('clear-transcript').addEventListener('click',()=>{state.transcript=[];persistTranscript();renderTranscript();});
-  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); if($('route-prev-node')) $('route-prev-node').addEventListener('click',()=>stepRouteNode(-1)); if($('route-next-node')) $('route-next-node').addEventListener('click',()=>stepRouteNode(1)); if($('export-route-state')) $('export-route-state').addEventListener('click', exportRouteState); if($('run-route-tests')) $('run-route-tests').addEventListener('click', runRouteTests); 
+  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); if($('route-prev-node')) $('route-prev-node').addEventListener('click',()=>stepRouteNode(-1)); if($('route-next-node')) $('route-next-node').addEventListener('click',()=>stepRouteNode(1)); if($('export-route-state')) $('export-route-state').addEventListener('click', exportRouteState); if($('run-route-tests')) $('run-route-tests').addEventListener('click', runRouteTests); if($('rerun-runtime-contract')) $('rerun-runtime-contract').addEventListener('click', renderRuntimeContract); 
 }
 function populateCategories(){[...new Set(state.events.map(e=>e.timelineCategory).filter(Boolean))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;$('category-filter').appendChild(o);});}
 function renderMode(){
@@ -75,7 +77,7 @@ function saveCurrentReview(){if(!state.selectedId)return alert('Select an event 
 function exportReviewPatch(){const patch={exportedAt:new Date().toISOString(),status:'draft-review-patch',reviews:state.reviews};downloadJson(patch,`crimson-dunes-timeline-review-patch-${new Date().toISOString().slice(0,10)}.json`);}
 function tagBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><div class="tag-list">${values.map(v=>`<span class="tag">${esc(v)}</span>`).join('')}</div></section>`:'';}
 function listBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><ul>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></section>`:'';}
-function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,build:state.buildManifest?{version:state.buildManifest.version,name:state.buildManifest.name}:null,modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
+function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,build:state.buildManifest?{version:state.buildManifest.version,name:state.buildManifest.name}:null,runtimeMissing:state.runtimeContractReport?state.runtimeContractReport.missing:[],modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
 
 
 function validateEvent(event){
@@ -182,7 +184,7 @@ function applyWorkspaceVisibility(){
     'validation-dashboard','patch-actions','timeline-controls','timeline-split',
     'slice-1788-panel','decision-queue-panel','author-review-panel','project-library-panel',
     'player-preview-panel','player-knowledge-panel','player-route-state-panel',
-    'dev-preview-panel','dev-route-test-panel','ui-recommendations-panel'
+    'runtime-contract-panel','dev-preview-panel','dev-route-test-panel','ui-recommendations-panel'
   ];
   for(const id of panelIds) setPanelVisibility(id, visible.has(id));
   if($('player-mode-diagnostic') && state.mode==='player'){
@@ -438,6 +440,66 @@ function exportTranscript(){downloadJson(state.transcript,`crimson-dunes-agent-t
 function esc(v){return String(v??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));}
 init().catch(err=>{console.error(err);document.body.innerHTML=`<pre>Failed to initialise Crimson Dunes app shell: ${esc(err.message)}</pre>`;});
 
+
+async function loadV9Data(){
+  try{
+    const res=await fetch('data/author-worldbuilding-index.v9.json');
+    state.authorWorldbuildingIndex=await res.json();
+  }catch(err){
+    state.authorWorldbuildingIndex={id:'author-worldbuilding-index-fallback',generatedAt:new Date().toISOString(),sections:[],loadError:err.message};
+  }
+}
+function renderAuthorDashboard(){
+  if(!$('author-worldbuilding-cards')) return;
+  const idx=state.authorWorldbuildingIndex || {sections:[]};
+  const sections=idx.sections || [];
+  $('author-worldbuilding-cards').innerHTML=sections.length?sections.map(s=>`<article class="world-card"><h4>${esc(s.title||s.id)}</h4><p>${esc(s.description||'No description recorded.')}</p><p class="card-meta">${esc(String(s.currentCount??'n/a'))} · ${esc(s.status||'draft')}</p><button data-author-detail="${esc(s.id)}">Open section</button><button data-library-open="${esc(s.primaryPath||'' )}">Open source</button></article>`).join(''):'<p class="small">Author worldbuilding index did not load.</p>';
+  document.querySelectorAll('[data-author-detail]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorDetail)));
+  document.querySelectorAll('[data-library-open]').forEach(btn=>btn.addEventListener('click',()=>openLibraryPath(btn.dataset.libraryOpen)));
+}
+function setAuthorSection(section){
+  state.activeAuthorSection=section||'dashboard';
+  localStorage.setItem('crimsonDunes.activeAuthorSection',state.activeAuthorSection);
+  document.querySelectorAll('[data-author-section]').forEach(btn=>btn.classList.toggle('active',btn.dataset.authorSection===state.activeAuthorSection));
+  renderAuthorSectionDetail();
+  applyAuthorSectionVisibility();
+  renderContextPreview();
+}
+function applyAuthorSectionVisibility(){
+  if(state.mode!=='author') return;
+  document.querySelectorAll('[data-author-section]').forEach(btn=>btn.classList.toggle('active',btn.dataset.authorSection===state.activeAuthorSection));
+  const sets={
+    dashboard:['author-nav-panel','author-dashboard-panel','validation-dashboard','patch-actions'],
+    timeline:['author-nav-panel','timeline-controls','timeline-split','validation-dashboard','patch-actions'],
+    'source-review':['author-nav-panel','timeline-controls','timeline-split','author-review-panel','patch-actions'],
+    'slice-1788':['author-nav-panel','slice-1788-panel'],
+    decisions:['author-nav-panel','slice-1788-panel','decision-queue-panel'],
+    'canon-queue':['author-nav-panel','canon-queue-panel'],
+    library:['author-nav-panel','project-library-panel'],
+    characters:['author-nav-panel','author-section-detail-panel'],
+    locations:['author-nav-panel','author-section-detail-panel'],
+    factions:['author-nav-panel','author-section-detail-panel'],
+    magic:['author-nav-panel','author-section-detail-panel'],
+    'routes-encounters':['author-nav-panel','author-section-detail-panel'],
+    'source-review':['author-nav-panel','timeline-controls','timeline-split','author-review-panel','patch-actions']
+  };
+  const controlled=['author-nav-panel','author-dashboard-panel','author-section-detail-panel','canon-queue-panel','validation-dashboard','patch-actions','timeline-controls','timeline-split','author-review-panel','slice-1788-panel','decision-queue-panel','project-library-panel'];
+  const visible=new Set(sets[state.activeAuthorSection]||sets.dashboard);
+  controlled.forEach(id=>setPanelVisibility(id,visible.has(id)));
+}
+function openLibraryPath(path){
+  if(!path) return;
+  state.activeAuthorSection='library';
+  localStorage.setItem('crimsonDunes.activeAuthorSection','library');
+  applyAuthorSectionVisibility();
+  if(path.startsWith('data/project-library/') && typeof selectLibraryFile==='function'){
+    selectLibraryFile({path:path.replace(/^data\/project-library\//,''),type:'text',source:'author-dashboard'});
+    return;
+  }
+  if($('library-file-title')) $('library-file-title').textContent=path;
+  if($('library-file-content')) fetch(path).then(r=>r.text()).then(t=>{$('library-file-content').textContent=t;}).catch(err=>{$('library-file-content').textContent=err.message;});
+}
+
 async function loadV10Data(){
   try{
     const res=await fetch('data/author/canon-promotion-queue.v10.json');
@@ -455,6 +517,27 @@ function renderCanonQueue(){
 function exportCanonQueue(){
   downloadJson({exportedAt:new Date().toISOString(),canonQueue:state.canonQueue||{}},`crimson-dunes-canon-queue-${new Date().toISOString().slice(0,10)}.json`);
 }
+
+async function loadV14Data(){
+  try{
+    const res=await fetch('data/runtime-comparison.v14.json');
+    state.runtimeComparison=await res.json();
+  }catch(err){
+    state.runtimeComparison={id:'runtime-comparison-fallback',loadError:err.message};
+  }
+}
+function runRuntimeContract(){
+  const required=['loadV6Data','loadV8Data','loadV9Data','loadV10Data','loadV12Data','loadV13Data','loadV14Data','renderAuthorDashboard','setAuthorSection','applyAuthorSectionVisibility','renderCanonQueue','exportCanonQueue','renderRouteState','renderRouteTestSummary'];
+  const checks=required.map(name=>({name,status:typeof window[name]==='function'||typeof eval(name)==='function'?'ok':'missing'}));
+  const missing=checks.filter(c=>c.status!=='ok').map(c=>c.name);
+  state.runtimeContractReport={generatedAt:new Date().toISOString(),missingCount:missing.length,missing,checks,comparison:state.runtimeComparison};
+  return state.runtimeContractReport;
+}
+function renderRuntimeContract(){
+  if(!$('runtime-contract-output')) return;
+  $('runtime-contract-output').textContent=JSON.stringify(runRuntimeContract(),null,2);
+}
+
 async function loadV13Data(){
   const [manifestRes, routeTestRes] = await Promise.all([
     fetch('data/build-manifest.json'),

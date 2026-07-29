@@ -1,0 +1,134 @@
+{
+  "id": "runtime-comparison-v14",
+  "generatedAt": "2026-07-29T22:56:07.538757+00:00",
+  "baselineZip": "crimson_dunes_app_shell_v12_route_state_workspaces.zip",
+  "currentZip": "crimson_dunes_app_shell_v13_runtime_fix_route_tests.zip",
+  "summary": "V13 fixed the V12 canon queue error, but still lacked V9 Author workspace runtime functions. V14 restores those functions and adds runtime contract diagnostics.",
+  "v12": {
+    "loadV6Data": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "loadV8Data": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "loadV9Data": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "loadV10Data": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "loadV12Data": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "renderAuthorDashboard": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "setAuthorSection": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "applyAuthorSectionVisibility": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "renderCanonQueue": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "renderRouteState": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    }
+  },
+  "v13": {
+    "loadV6Data": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "loadV8Data": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "loadV9Data": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "loadV10Data": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "loadV12Data": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "loadV13Data": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "renderAuthorDashboard": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "setAuthorSection": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "applyAuthorSectionVisibility": {
+      "called": true,
+      "defined": false,
+      "missing": true
+    },
+    "renderCanonQueue": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "exportCanonQueue": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "renderRouteState": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    },
+    "renderRouteTestSummary": {
+      "called": true,
+      "defined": true,
+      "missing": false
+    }
+  },
+  "v14Fixes": [
+    "loadV9Data",
+    "renderAuthorDashboard",
+    "setAuthorSection",
+    "applyAuthorSectionVisibility",
+    "openLibraryPath fallback",
+    "runtime contract diagnostics"
+  ]
+}

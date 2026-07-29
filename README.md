@@ -81,3 +81,9 @@ No real AI provider calls are made and no API keys are included.
 - Runtime fix for missing canon queue functions.
 - Build manifest for version consistency.
 - Dev Mode route-state test fixture and test runner.
+
+## V14 Additions
+
+- Runtime contract repair for missing V9 Author workspace functions.
+- Runtime comparison report against V12 and V13.
+- Dev Mode Runtime Contract panel.

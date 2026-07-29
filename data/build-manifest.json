@@ -1,12 +1,15 @@
 {
-  "version": "V13",
-  "name": "runtime fix + guarded route tests",
-  "generatedAt": "2026-07-29T22:18:40.551826+00:00",
-  "baseBuild": "V12 route state workspaces",
+  "version": "V14",
+  "name": "runtime contract repair",
+  "generatedAt": "2026-07-29T22:56:07.538757+00:00",
+  "baseBuild": "V13 runtime fix + guarded route tests",
   "fixes": [
     "Defines missing canon queue runtime functions: loadV10Data, renderCanonQueue, exportCanonQueue.",
     "Adds build manifest for version consistency.",
-    "Adds guarded route transition test fixture."
+    "Adds guarded route transition test fixture.",
+    "Defines missing V9 Author workspace functions: loadV9Data, renderAuthorDashboard, setAuthorSection, applyAuthorSectionVisibility.",
+    "Adds runtime comparison report against V12 and V13.",
+    "Adds runtime contract panel and function self-check."
   ],
   "canonSafety": [
     "No canon promotion implemented.",

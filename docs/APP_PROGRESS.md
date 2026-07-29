@@ -81,3 +81,12 @@ No app shell currently promotes canon, mutates source-import, writes repository 
 - Added robust canon queue load/render/export runtime functions.
 - Added build manifest for version consistency.
 - Added Dev Mode route-state test fixture and test runner panel.
+
+
+## V14 Additions
+
+- Compared V12 and V13 runtime contracts.
+- Fixed latest blocker: `loadV9Data is not defined`.
+- Restored missing V9 Author workspace functions: `loadV9Data`, `renderAuthorDashboard`, `setAuthorSection`, and `applyAuthorSectionVisibility`.
+- Added `data/runtime-comparison.v14.json`.
+- Added Dev Mode Runtime Contract panel.

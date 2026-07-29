@@ -66,3 +66,8 @@ V12 adds route-state structure, author sub-workspace detail panels, and clickabl
 ## V13 Current State Addendum
 
 V13 fixes the V12 startup failure caused by missing canon queue runtime functions. V13 also adds `data/build-manifest.json` and the first route-state test fixture for Dev Mode.
+
+
+## V14 Current State Addendum
+
+V14 addresses runtime/version drift by comparing V12 and V13, restoring missing V9 Author workspace runtime functions, and adding a Runtime Contract panel. V14 is intended to prevent the next missing-function runtime failure from being invisible until browser execution.

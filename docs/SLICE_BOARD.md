@@ -40,3 +40,7 @@
 - [x] V13 runtime fix for missing canon queue functions.
 - [x] Build manifest for consistent version tracking.
 - [x] Route-state test fixture and Dev test runner.
+
+- [x] V14 runtime contract comparison against V12 and V13.
+- [x] Restored missing V9 Author workspace functions.
+- [x] Added Runtime Contract panel.

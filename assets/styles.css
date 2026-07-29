@@ -22,3 +22,5 @@
 .route-state-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}.route-state-card{background:#120c0a;border:1px solid var(--border);border-radius:.7rem;padding:.7rem}.schema-card{cursor:pointer}.author-detail-list{margin-left:1rem;display:grid;gap:.35rem}@media(max-width:900px){.route-state-grid{grid-template-columns:1fr}}
 
 .test-pass{color:#7ed17e}.test-fail{color:#ff9f80}
+
+.runtime-ok{color:#7ed17e}.runtime-missing{color:#ff9f80}

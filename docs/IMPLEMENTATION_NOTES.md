@@ -139,3 +139,11 @@ Validation remains client-side only; it does not promote canon or write reposito
 - Added `data/build-manifest.json`.
 - Added `data/player/route-test-fixture.v13.json`.
 - Added Dev Mode Route State Test Runner panel.
+
+
+## Added Since V13 — V14 Runtime Contract Repair
+
+- Added `data/runtime-comparison.v14.json`.
+- Fixed `loadV9Data is not defined`.
+- Restored `renderAuthorDashboard`, `setAuthorSection`, `applyAuthorSectionVisibility`, and `openLibraryPath`.
+- Added Dev Mode Runtime Contract panel and self-check.
