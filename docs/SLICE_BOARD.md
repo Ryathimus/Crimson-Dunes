@@ -12,11 +12,17 @@
 - [x] 1788 Historical Foundation Workspace.
 - [x] Basic Player Mode preview.
 - [x] Basic Dev Mode preview.
-- [ ] 1788 decision queue review and selected option handling.
-- [ ] Source-working file import/export.
+- [x] V7 workspace consolidation to reduce cross-over.
+- [x] Editable 1788 decision queue with local patch export.
+- [x] Import 1788 decision patches.
+- [x] Source-working patch import/export.
 - [ ] Route/encounter schema hardening.
 - [ ] Waru Player Mode visibility filter.
 - [ ] Semi-procedural route instance generation.
 - [ ] Encounter template migration.
 - [ ] Save/load full world state.
 - [ ] Secure optional AI provider integration.
+
+- [x] Author worldbuilding dashboard / navigation prototype.
+- [x] Player scene-first layout prototype.
+- [x] Dev schema cards prototype.

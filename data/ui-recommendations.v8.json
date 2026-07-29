@@ -1,0 +1,75 @@
+{
+  "id": "ui-recommendations-v8",
+  "purpose": "Mode-specific UI improvements to reduce clutter and enforce clearer workflows.",
+  "authorMode": {
+    "recommendedLayout": [
+      "Author dashboard landing page",
+      "Worldbuilding sections",
+      "Narrative/timeline workspace",
+      "Source review workspace",
+      "Decision queue",
+      "Project library",
+      "Export/patch tools"
+    ],
+    "worldbuildingSections": [
+      "Timeline",
+      "Characters",
+      "Locations",
+      "Factions",
+      "Magic systems",
+      "Creatures/plants",
+      "Institutions/schools",
+      "Transport/routes",
+      "World flags",
+      "Encounters",
+      "Source-working notes"
+    ],
+    "recommendations": [
+      "Use a left navigation rail or tabs within Author Mode so the timeline does not dominate every task.",
+      "Treat source/draft/canon comparison as one workspace, not the whole Author UI.",
+      "Add card summaries for world areas with counts, review status, and unresolved decisions.",
+      "Separate narrative design from data validation to reduce cognitive load."
+    ]
+  },
+  "playerMode": {
+    "recommendedLayout": [
+      "Character HUD",
+      "Current location/route scene",
+      "Available actions",
+      "Known information",
+      "Event log",
+      "Optional narrator/agent panel"
+    ],
+    "characterPanelFields": [
+      "name",
+      "current location",
+      "route node",
+      "equipment",
+      "known facts",
+      "status flags"
+    ],
+    "recommendations": [
+      "Hide raw draft data completely by default.",
+      "Show one primary scene/current node at a time rather than a full timeline.",
+      "Keep buttons action-oriented and player-facing.",
+      "Move validation and patch tools out of Player Mode."
+    ]
+  },
+  "devMode": {
+    "recommendedLayout": [
+      "System health dashboard",
+      "Feature flags",
+      "Schema validation",
+      "Test fixtures",
+      "Provider configuration",
+      "Dev task board",
+      "Project library"
+    ],
+    "recommendations": [
+      "Keep Dev Mode technical and avoid duplicating Author source review.",
+      "Add validator cards for each data type.",
+      "Show feature flags and their consequences clearly.",
+      "Keep AI provider configuration isolated from Player/Author UX."
+    ]
+  }
+}

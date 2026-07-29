@@ -1,0 +1,76 @@
+{
+  "id": "author-worldbuilding-index-v9",
+  "generatedAt": "2026-07-29T06:47:27.265201+00:00",
+  "purpose": "Author Mode landing index for narrative/worldbuilding areas.",
+  "sections": [
+    {
+      "id": "timeline",
+      "title": "Timeline / History",
+      "description": "Draft historical, playable, and future-reference timeline review.",
+      "currentCount": 69,
+      "primaryPath": "data/timelines/full-world-timeline.draft.json",
+      "status": "active-draft"
+    },
+    {
+      "id": "characters",
+      "title": "Characters",
+      "description": "Character and POV data, including Waru preview data.",
+      "currentCount": 1,
+      "primaryPath": "data/player/waru-character-preview.draft.json",
+      "status": "prototype"
+    },
+    {
+      "id": "locations",
+      "title": "Locations / Regions",
+      "description": "Locations, routes, and geographic/place-based worldbuilding.",
+      "currentCount": "source-linked",
+      "primaryPath": "data/project-library/source-import/markdown/Crimson Dunes/Jonathan Giya/Maps a13e6b70ca204193851259682302f651.md",
+      "status": "source-import"
+    },
+    {
+      "id": "factions",
+      "title": "Factions / Institutions",
+      "description": "Crimson Dunes, ICW, British Ministry, local Australian magical governance, and other organisations.",
+      "currentCount": "draft-linked",
+      "primaryPath": "data/slices/1788-historical-foundation.draft.json",
+      "status": "draft"
+    },
+    {
+      "id": "magic",
+      "title": "Magic Systems",
+      "description": "Australian fusion magic, land-based magic, British/European assumptions, and related constraints.",
+      "currentCount": "source-linked",
+      "primaryPath": "data/project-library/source-import/markdown/Crimson Dunes/Jonathan Giya/Magic System f2de5fb96d4d48b9a7e077ce881402f9.md",
+      "status": "source-import"
+    },
+    {
+      "id": "creatures-plants",
+      "title": "Creatures / Plants / Materials",
+      "description": "Magical creatures, plants, materials, and environmental encounter ingredients.",
+      "currentCount": "source-linked",
+      "primaryPath": "data/project-library/source-import/markdown/Crimson Dunes/Jonathan Giya/Magical Creatures 02417d64446647d7975a68aca50a5da8.md",
+      "status": "source-import"
+    },
+    {
+      "id": "routes-encounters",
+      "title": "Routes / Encounters",
+      "description": "Opening Waru route, possible 1788 foundation encounters, later encounter templates.",
+      "currentCount": 3,
+      "primaryPath": "data/player/opening-route-waru.draft.json",
+      "status": "prototype"
+    },
+    {
+      "id": "source-review",
+      "title": "Source Review",
+      "description": "Source-import, source-working notes, migration reviews, and patch workflow.",
+      "currentCount": 88,
+      "primaryPath": "data/project-library/source-import/README.md",
+      "status": "active"
+    }
+  ],
+  "dashboardRecommendations": [
+    "Use this as Author Mode landing instead of starting directly in the raw timeline.",
+    "Each section should eventually become its own tab or route.",
+    "Cards should link to review queues, source paths, validation warnings, and canon-promotion readiness."
+  ]
+}

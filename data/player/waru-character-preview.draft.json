@@ -1,0 +1,41 @@
+{
+  "id": "character-waru-preview",
+  "canonStatus": "draft",
+  "name": "Waru",
+  "mode": "player-preview",
+  "currentYear": 1810,
+  "currentLocation": "Red road approach toward Crimson Dunes",
+  "currentRouteNodeId": "red-dust-approach",
+  "equipment": [
+    "water skin",
+    "travel bundle",
+    "observation notes",
+    "small practical tool kit"
+  ],
+  "visibleKnowledge": [
+    "Crimson Dunes exists as an emerging local magical school",
+    "outsiders may misread Country and signs",
+    "revealing too much too early may create risk"
+  ],
+  "hiddenFromPlayer": [
+    "author-only 1788 decision queue",
+    "source-import notes",
+    "ICW envoy details unless revealed in play",
+    "unreviewed draft timeline records"
+  ],
+  "statusFlags": [
+    "waru_locked_pov",
+    "observation_first_gameplay"
+  ],
+  "currentObjective": "Observe outsiders and protect route knowledge without unnecessary exposure.",
+  "healthStatus": "stable",
+  "focusStatus": "alert / observing",
+  "relationships": [
+    "community obligations unresolved in prototype",
+    "outsiders unknown / not yet trusted"
+  ],
+  "knownFactions": [
+    "Crimson Dunes School of Sorcery: known as emerging destination",
+    "outsider travelling group: observed but not understood"
+  ]
+}

@@ -13,7 +13,15 @@ const state = {
   decisionQueue1788: null,
   playerRoute: null,
   playerLog: JSON.parse(localStorage.getItem('crimsonDunes.playerLog') || '[]'),
-  devConfig: null
+  devConfig: null,
+  decisionSelections: JSON.parse(localStorage.getItem('crimsonDunes.decisionSelections') || '{}'),
+  workspaceConfig: null,
+  playerCharacter: null,
+  uiRecommendations: null,
+  currentRouteNodeId: localStorage.getItem('crimsonDunes.currentRouteNodeId') || null,
+  structuredValidation: null,
+  authorWorldbuildingIndex: null,
+  activeAuthorSection: localStorage.getItem('crimsonDunes.activeAuthorSection') || 'dashboard'
 };
 const modeConfig = {
   author: { title:'Author Mode', badge:'canon management', description:'Full-access source, draft, canon and migration review shell. Draft-to-canon promotion is deliberately not implemented.', agentNote:'Author Agent can help compare source/draft/canon and prepare generated suggestions, but output remains generated until saved as draft.' },
@@ -28,16 +36,28 @@ async function init(){
   ]);
   state.events = await eventsRes.json();
   state.rawSource = await srcRes.text();
-  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); runValidation(); renderMode(); renderDashboard(); render1788Slice(); renderPlayerPreview(); renderDevPreview(); renderTimeline(); renderTranscript(); renderLibraryList();
+  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
 }
 function bindEvents(){
-  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();renderTimeline();renderContextPreview();}));
+  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
   ['layer-filter','category-filter','impact-filter','review-filter','search'].forEach(id=>$(id).addEventListener('input',renderTimeline));
   $('chat-form').addEventListener('submit',onChatSubmit); $('export-transcript').addEventListener('click',exportTranscript); $('clear-transcript').addEventListener('click',()=>{state.transcript=[];persistTranscript();renderTranscript();});
-  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig);
+  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); 
 }
 function populateCategories(){[...new Set(state.events.map(e=>e.timelineCategory).filter(Boolean))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;$('category-filter').appendChild(o);});}
-function renderMode(){const c=modeConfig[state.mode];$('mode-title').textContent=c.title;$('mode-badge').textContent=c.badge;$('mode-description').textContent=c.description;$('agent-mode-note').textContent=c.agentNote;$('author-review-panel').hidden=state.mode!=='author'; $('slice-1788-panel').hidden=state.mode!=='author'; $('project-library-panel').hidden=state.mode==='player'; $('player-preview-panel').hidden=state.mode!=='player'; $('dev-preview-panel').hidden=state.mode!=='dev';}
+function renderMode(){
+  const c=modeConfig[state.mode];
+  $('mode-title').textContent=c.title;
+  $('mode-badge').textContent=c.badge;
+  $('mode-description').textContent=c.description;
+  $('agent-mode-note').textContent=c.agentNote;
+  const summaries={
+    author:'Author workspace: timeline/source review, 1788 slice, decision queue, project library, and exportable review patches.',
+    player:'Player workspace: Waru route preview, local player event log, and filtered player-visible knowledge only.',
+    dev:'Dev workspace: validation dashboard, feature flags, dev tasks, schemas, and project library. No canon promotion.'
+  };
+  $('workspace-summary').textContent=summaries[state.mode];
+}
 function reviewStatus(id){return state.reviews[id]?.status || 'unreviewed';}
 function visibleEvents(){const layer=$('layer-filter').value, category=$('category-filter').value, impact=$('impact-filter').value, review=$('review-filter').value, q=$('search').value.trim().toLowerCase();return state.events.filter(e=>{if(layer!=='all'&&e.timelineLayer!==layer)return false;if(category!=='all'&&e.timelineCategory!==category)return false;if(impact!=='all'&&e.australianImpactScope!==impact)return false;if(review!=='all'){ const vr=state.validation[e.id]||{errors:[],warnings:[]}; if(review==='has-validation-errors'&&vr.errors.length===0)return false; else if(review==='has-review-warnings'&&vr.warnings.length===0)return false; else if(!['has-validation-errors','has-review-warnings'].includes(review)&&reviewStatus(e.id)!==review)return false; }if(!q)return true;return [e.dateText,e.title,e.summary,e.timelineLayer,e.timelineCategory,e.australianImpactScope,...(e.resultingWorldFlags||[])].filter(Boolean).join(' ').toLowerCase().includes(q);});}
 function renderTimeline(){const events=visibleEvents();$('timeline-count').textContent=`${events.length} of ${state.events.length} draft events shown`;const list=$('timeline-events');list.innerHTML='';events.forEach(event=>{const li=document.createElement('li');const btn=document.createElement('button');const vr=state.validation[event.id]||{errors:[],warnings:[]}; btn.className='event-card'+(event.id===state.selectedId?' selected':'')+(vr.errors.length?' has-errors':'')+(vr.warnings.length?' has-warnings':'');btn.innerHTML=`<strong>${esc(event.dateText||'Undated')} — ${esc(event.title||event.id)}</strong><span class="meta">${esc(event.timelineLayer)} · ${esc(event.timelineCategory)} · ${esc(event.canonStatus)} · impact: ${esc(event.australianImpactScope||'n/a')} · review: ${esc(reviewStatus(event.id))}</span>`;btn.addEventListener('click',()=>{state.selectedId=event.id;renderTimeline();renderEventDetail(event);renderReviewPanel(event);renderContextPreview();});li.appendChild(btn);list.appendChild(li);});renderContextPreview();}
@@ -48,7 +68,7 @@ function saveCurrentReview(){if(!state.selectedId)return alert('Select an event 
 function exportReviewPatch(){const patch={exportedAt:new Date().toISOString(),status:'draft-review-patch',reviews:state.reviews};downloadJson(patch,`crimson-dunes-timeline-review-patch-${new Date().toISOString().slice(0,10)}.json`);}
 function tagBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><div class="tag-list">${values.map(v=>`<span class="tag">${esc(v)}</span>`).join('')}</div></section>`:'';}
 function listBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><ul>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></section>`:'';}
-function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
+function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
 
 
 function validateEvent(event){
@@ -137,6 +157,134 @@ async function copy1788Flags(){
 }
 
 
+
+async function loadWorkspaceConfig(){
+  const res=await fetch('data/workspace-config.v7.json');
+  state.workspaceConfig=await res.json();
+}
+function applyWorkspaceVisibility(){
+  const visible=new Set(state.workspaceConfig?.modePanels?.[state.mode] || []);
+  const panelIds=['validation-dashboard','patch-actions','timeline-controls','timeline-split','slice-1788-panel','decision-queue-panel','author-review-panel','project-library-panel','player-preview-panel','player-knowledge-panel','dev-preview-panel'];
+  for(const id of panelIds){ const el=$(id); if(el) el.classList.toggle('workspace-hidden', !visible.has(id)); }
+}
+function renderDecisionQueue(){
+  const q=state.decisionQueue1788; if(!q) return;
+  const list=$('decision-queue-list'); if(!list) return;
+  list.innerHTML=q.items.map(item=>{
+    const sel=state.decisionSelections[item.id] || {status:item.status || 'open', selectedOption:'', note:''};
+    return `<article class="decision-card" data-decision-id="${esc(item.id)}"><h5>${esc(item.question)}</h5><div class="decision-grid"><label>Selected option<select data-decision-option="${esc(item.id)}"><option value="">Unselected</option>${item.options.map(o=>`<option value="${esc(o)}" ${sel.selectedOption===o?'selected':''}>${esc(o)}</option>`).join('')}</select></label><label>Status<select data-decision-status="${esc(item.id)}"><option value="open" ${sel.status==='open'?'selected':''}>Open</option><option value="tentative" ${sel.status==='tentative'?'selected':''}>Tentative</option><option value="decided-draft" ${sel.status==='decided-draft'?'selected':''}>Decided Draft</option><option value="needs-more-source" ${sel.status==='needs-more-source'?'selected':''}>Needs More Source</option></select></label><label>Note<textarea data-decision-note="${esc(item.id)}" rows="3" placeholder="Decision note…">${esc(sel.note||'')}</textarea></label></div></article>`;
+  }).join('');
+  list.querySelectorAll('select, textarea').forEach(el=>el.addEventListener('input', saveDecisionSelections));
+}
+function saveDecisionSelections(){
+  const next={...state.decisionSelections};
+  document.querySelectorAll('[data-decision-id]').forEach(card=>{
+    const id=card.dataset.decisionId;
+    next[id]={
+      selectedOption:card.querySelector(`[data-decision-option="${CSS.escape(id)}"]`)?.value || '',
+      status:card.querySelector(`[data-decision-status="${CSS.escape(id)}"]`)?.value || 'open',
+      note:card.querySelector(`[data-decision-note="${CSS.escape(id)}"]`)?.value || '',
+      updatedAt:new Date().toISOString()
+    };
+  });
+  state.decisionSelections=next;
+  localStorage.setItem('crimsonDunes.decisionSelections',JSON.stringify(next));
+  renderContextPreview();
+}
+function exportDecisionPatch(){
+  downloadJson({exportedAt:new Date().toISOString(),status:'1788-decision-patch',sliceId:state.decisionQueue1788?.sliceId,decisions:state.decisionSelections},`crimson-dunes-1788-decision-patch-${new Date().toISOString().slice(0,10)}.json`);
+}
+function renderPlayerKnowledge(){
+  if(!$('player-visible-facts') || !state.playerRoute) return;
+  const c=state.playerCharacter;
+  const node=state.playerRoute.nodes.find(n=>n.id===state.currentRouteNodeId);
+  const facts=[
+    `POV is locked to ${state.playerRoute.pov}.`,
+    `Current route is ${state.playerRoute.title}.`,
+    `Current location: ${c?.currentLocation || 'route location unknown'}.`,
+    `Current node: ${node?.title || state.currentRouteNodeId || 'not selected'}.`,
+    'Player Mode must not show source-import, source-working, hidden draft review, dev-test, or author-only notes.',
+    'Available information is limited to route nodes, player log, equipment, status flags, and approved player-visible facts.',
+    '1810 context: Crimson Dunes exists locally but ICW recognition is not player-facing unless revealed in play.'
+  ];
+  const known=(c?.visibleKnowledge||[]).map(k=>`<li>${esc(k)}</li>`).join('');
+  $('player-visible-facts').innerHTML=`<h4>Current scene</h4><ul>${facts.map(f=>`<li>${esc(f)}</li>`).join('')}</ul><h4>Known facts</h4><ul>${known}</ul>`;
+}
+
+async function loadV9Data(){
+  const res=await fetch('data/author-worldbuilding-index.v9.json');
+  state.authorWorldbuildingIndex=await res.json();
+}
+function setAuthorSection(section){
+  state.activeAuthorSection=section;
+  localStorage.setItem('crimsonDunes.activeAuthorSection',section);
+  document.querySelectorAll('[data-author-section]').forEach(btn=>btn.classList.toggle('active',btn.dataset.authorSection===section));
+  applyAuthorSectionVisibility();
+  renderContextPreview();
+}
+function applyAuthorSectionVisibility(){
+  if(state.mode!=='author') return;
+  document.querySelectorAll('[data-author-section]').forEach(btn=>btn.classList.toggle('active',btn.dataset.authorSection===state.activeAuthorSection));
+  const sets={
+    dashboard:['author-dashboard-panel','validation-dashboard','patch-actions'],
+    timeline:['timeline-controls','timeline-split','validation-dashboard','patch-actions'],
+    'source-review':['timeline-controls','timeline-split','author-review-panel','patch-actions'],
+    'slice-1788':['slice-1788-panel'],
+    decisions:['slice-1788-panel'],
+    library:['project-library-panel']
+  };
+  const controlled=['author-dashboard-panel','validation-dashboard','patch-actions','timeline-controls','timeline-split','author-review-panel','slice-1788-panel','project-library-panel'];
+  const visible=new Set(sets[state.activeAuthorSection] || sets.dashboard);
+  controlled.forEach(id=>{const el=$(id); if(el) el.classList.toggle('workspace-hidden',!visible.has(id));});
+  if(state.activeAuthorSection==='decisions'){
+    const dq=$('decision-queue-panel'); if(dq) dq.classList.remove('workspace-hidden');
+  }
+}
+function renderAuthorDashboard(){
+  if(!state.authorWorldbuildingIndex || !$('author-worldbuilding-cards')) return;
+  $('author-worldbuilding-cards').innerHTML=state.authorWorldbuildingIndex.sections.map(s=>`<article class="world-card"><h4>${esc(s.title)}</h4><p>${esc(s.description)}</p><p class="card-meta">${esc(String(s.currentCount))} · ${esc(s.status)}</p><button data-library-open="${esc(s.primaryPath)}">Open source</button></article>`).join('');
+  document.querySelectorAll('[data-library-open]').forEach(btn=>btn.addEventListener('click',()=>openLibraryPath(btn.dataset.libraryOpen)));
+}
+function openLibraryPath(path){
+  state.activeAuthorSection='library';
+  localStorage.setItem('crimsonDunes.activeAuthorSection','library');
+  applyAuthorSectionVisibility();
+  const file={path:path.replace(/^data\/project-library\//,''),type:'text',source:'author-dashboard'};
+  if(path.startsWith('data/project-library/')) selectLibraryFile(file);
+  else {
+    $('library-file-title').textContent=path;
+    fetch(path).then(r=>r.text()).then(t=>{$('library-file-content').textContent=t;}).catch(err=>{$('library-file-content').textContent=err.message;});
+  }
+}
+
+async function loadV8Data(){
+  const [charRes, uiRes] = await Promise.all([
+    fetch('data/player/waru-character-preview.draft.json'),
+    fetch('data/ui-recommendations.v8.json')
+  ]);
+  state.playerCharacter = await charRes.json();
+  state.uiRecommendations = await uiRes.json();
+  if(!state.currentRouteNodeId) state.currentRouteNodeId = state.playerCharacter.currentRouteNodeId || state.playerRoute?.nodes?.[0]?.id || '';
+}
+function renderUiRecommendations(){
+  if(!$('ui-recommendations-content') || !state.uiRecommendations) return;
+  const rec=state.uiRecommendations;
+  const block=(title,items)=>`<h4>${esc(title)}</h4><ul class="mode-note-list">${items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul>`;
+  $('ui-recommendations-content').innerHTML = block('Author Mode',rec.authorMode.recommendations)+block('Player Mode',rec.playerMode.recommendations)+block('Dev Mode',rec.devMode.recommendations);
+}
+function runStructuredValidation(){
+  const check=(name,obj,required)=>({name,missing:required.filter(k=>!(k in obj)),status:required.every(k=>k in obj)?'ok':'missing-fields'});
+  state.structuredValidation={
+    generatedAt:new Date().toISOString(),
+    checks:[
+      check('1788 slice',state.slice1788||{},['id','title','canonStatus','worldFlagsCreatedBySlice','possible1788EncounterTemplates','openQuestions']),
+      check('player route',state.playerRoute||{},['id','title','canonStatus','pov','nodes','availableActions']),
+      check('player character',state.playerCharacter||{},['id','name','currentLocation','equipment','visibleKnowledge']),
+      check('decision queue',state.decisionQueue1788||{},['id','canonStatus','sliceId','items']),
+      check('dev config',state.devConfig||{},['id','canonStatus','featureFlags','devTasks'])
+    ]
+  };
+}
 async function loadV6Data(){
   const [routeRes, devRes, queueRes] = await Promise.all([
     fetch('data/player/opening-route-waru.draft.json'),
@@ -149,14 +297,37 @@ async function loadV6Data(){
 }
 function renderPlayerPreview(){
   const r=state.playerRoute; if(!r) return;
+  if(!state.currentRouteNodeId) state.currentRouteNodeId=r.nodes[0]?.id || '';
   $('player-route-summary').textContent = `${r.title} — ${r.summary}`;
-  $('player-route-nodes').innerHTML = r.nodes.map(n=>`<li><b>${esc(n.title)}</b><br><span class="small">${esc(n.purpose)}</span></li>`).join('');
+  const currentNode=r.nodes.find(n=>n.id===state.currentRouteNodeId)||r.nodes[0];
+  if($('player-current-scene')) $('player-current-scene').textContent=currentNode?.sceneText || currentNode?.purpose || '';
+  if($('player-scene-badge')) $('player-scene-badge').textContent=currentNode?.title || 'route node';
+  if($('player-current-objective')) $('player-current-objective').textContent=`Objective: ${r.currentObjective || state.playerCharacter?.currentObjective || ''}`;
+  renderPlayerCharacter();
+  $('player-route-node-select').innerHTML = r.nodes.map(n=>`<option value="${esc(n.id)}" ${state.currentRouteNodeId===n.id?'selected':''}>${esc(n.title)}</option>`).join('');
+  $('player-route-nodes').innerHTML = r.nodes.map(n=>`<li class="${state.currentRouteNodeId===n.id?'current-node':''}"><b>${esc(n.title)}</b><br><span class="small">${esc(n.purpose)}</span></li>`).join('');
   $('player-actions').innerHTML = r.availableActions.map(a=>`<button data-player-action="${esc(a)}">${esc(a.replaceAll('_',' '))}</button>`).join('');
   document.querySelectorAll('[data-player-action]').forEach(btn=>btn.addEventListener('click',()=>addPlayerAction(btn.dataset.playerAction)));
   renderPlayerLog();
 }
+function renderPlayerCharacter(){
+  const c=state.playerCharacter; if(!c || !$('player-character-card')) return;
+  const node=state.playerRoute?.nodes?.find(n=>n.id===state.currentRouteNodeId);
+  $('player-character-card').innerHTML=`
+    <div class="character-field"><b>Name</b><span>${esc(c.name)}</span></div>
+    <div class="character-field"><b>Location</b><span>${esc(c.currentLocation)}</span></div>
+    <div class="character-field"><b>Route Node</b><span>${esc(node?.title || c.currentRouteNodeId)}</span></div>
+    <div class="character-field"><b>Equipment</b><span>${esc((c.equipment||[]).join(', '))}</span></div>
+    <div class="character-field"><b>Status</b><span>${esc(c.healthStatus || '')} · ${esc(c.focusStatus || '')}</span></div><div class="character-field"><b>Objective</b><span>${esc(c.currentObjective || '')}</span></div><div class="character-field"><b>Factions</b><span>${esc((c.knownFactions||[]).join('; '))}</span></div>`;
+}
+function changeRouteNode(event){
+  state.currentRouteNodeId=event.target.value;
+  localStorage.setItem('crimsonDunes.currentRouteNodeId',state.currentRouteNodeId);
+  addPlayerAction(`move_to_${state.currentRouteNodeId}`);
+  renderPlayerPreview(); renderPlayerKnowledge(); renderContextPreview();
+}
 function addPlayerAction(action){
-  state.playerLog.push({at:new Date().toISOString(),routeId:state.playerRoute.id,pov:state.playerRoute.pov,action,visibility:'player-preview'});
+  state.playerLog.push({at:new Date().toISOString(),routeId:state.playerRoute.id,pov:state.playerRoute.pov,currentRouteNodeId:state.currentRouteNodeId,action,visibility:'player-preview'});
   localStorage.setItem('crimsonDunes.playerLog',JSON.stringify(state.playerLog));
   renderPlayerLog(); renderContextPreview();
 }
@@ -169,9 +340,10 @@ function renderDevPreview(){
   const cfg=state.devConfig; if(!cfg) return;
   $('dev-feature-flags').innerHTML = Object.entries(cfg.featureFlags).map(([k,v])=>`<div class="feature-row"><code>${esc(k)}</code><span>${v?'enabled':'disabled'}</span></div>`).join('');
   $('dev-task-list').innerHTML = cfg.devTasks.map(t=>`<li><b>${esc(t.title)}</b><br><span class="small">${esc(t.id)} · ${esc(t.status)}</span></li>`).join('');
-  $('dev-validation-summary').textContent = JSON.stringify(state.validationReport ? {eventCount:state.validationReport.eventCount,errorCount:state.validationReport.errorCount,warningCount:state.validationReport.warningCount} : {}, null, 2);
+  $('dev-validation-summary').textContent = JSON.stringify({timeline: state.validationReport ? {eventCount:state.validationReport.eventCount,errorCount:state.validationReport.errorCount,warningCount:state.validationReport.warningCount} : {}, structured: state.structuredValidation}, null, 2);
+  if($('dev-schema-cards') && state.structuredValidation){ $('dev-schema-cards').innerHTML=state.structuredValidation.checks.map(c=>`<article class="schema-card ${esc(c.status)}"><b>${esc(c.name)}</b><br><span class="small">${esc(c.status)}${c.missing.length?': missing '+esc(c.missing.join(', ')):''}</span></article>`).join(''); }
 }
-function exportDevConfig(){ downloadJson({exportedAt:new Date().toISOString(),devConfig:state.devConfig,validationSummary:state.validationReport},`crimson-dunes-dev-config-${new Date().toISOString().slice(0,10)}.json`); }
+function exportDevConfig(){ downloadJson({exportedAt:new Date().toISOString(),devConfig:state.devConfig,validationSummary:state.validationReport,structuredValidation:state.structuredValidation},`crimson-dunes-dev-config-${new Date().toISOString().slice(0,10)}.json`); }
 
 async function loadProjectLibrary(){
   const res = await fetch('data/project-library-manifest.json');
@@ -216,6 +388,43 @@ async function selectLibraryFile(file){
     $('library-file-content').textContent=`Could not load file content. This may be an index-only/binary record.\n\n${err.message}`;
   }
   renderContextPreview();
+}
+
+
+async function importDecisionPatch(event){
+  const file=event.target.files?.[0]; if(!file) return;
+  try{
+    const patch=JSON.parse(await file.text());
+    const incoming=patch.decisions || patch.decisionSelections;
+    if(!incoming || typeof incoming!=='object') throw new Error('Decision patch must contain decisions.');
+    state.decisionSelections={...state.decisionSelections,...incoming};
+    localStorage.setItem('crimsonDunes.decisionSelections',JSON.stringify(state.decisionSelections));
+    renderDecisionQueue(); renderContextPreview();
+    alert(`Imported ${Object.keys(incoming).length} decision records.`);
+  }catch(err){ alert(`Could not import decision patch: ${err.message}`); }
+  event.target.value='';
+}
+function exportSourceWorkingPatch(){
+  const sourceWorking={};
+  for(const [id,review] of Object.entries(state.reviews)){
+    if(review.sourceWorkingNote) sourceWorking[id]={sourceWorkingNote:review.sourceWorkingNote,updatedAt:review.updatedAt};
+  }
+  downloadJson({exportedAt:new Date().toISOString(),status:'source-working-patch',sourceWorking},`crimson-dunes-source-working-patch-${new Date().toISOString().slice(0,10)}.json`);
+}
+async function importSourceWorkingPatch(event){
+  const file=event.target.files?.[0]; if(!file) return;
+  try{
+    const patch=JSON.parse(await file.text());
+    const incoming=patch.sourceWorking || patch.reviews;
+    if(!incoming || typeof incoming!=='object') throw new Error('Source-working patch must contain sourceWorking or reviews.');
+    for(const [id,value] of Object.entries(incoming)){
+      state.reviews[id]={...(state.reviews[id]||{}),sourceWorkingNote:value.sourceWorkingNote||value.note||'',updatedAt:new Date().toISOString()};
+    }
+    localStorage.setItem('crimsonDunes.timelineReviews',JSON.stringify(state.reviews));
+    renderTimeline(); renderContextPreview();
+    alert(`Imported ${Object.keys(incoming).length} source-working records.`);
+  }catch(err){ alert(`Could not import source-working patch: ${err.message}`); }
+  event.target.value='';
 }
 
 function onChatSubmit(e){e.preventDefault();const input=$('chat-input'),text=input.value.trim();if(!text)return;state.transcript.push({at:new Date().toISOString(),mode:state.mode,role:'user-note',text,provider:'disabled/no-op'});state.transcript.push({at:new Date().toISOString(),mode:state.mode,role:'agent-placeholder',text:'Provider disabled. This note has been recorded locally only. Future implementation should route this through the mode-aware Agent Orchestrator.',provider:'disabled/no-op'});input.value='';persistTranscript();renderTranscript();}

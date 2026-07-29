@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "player-route.schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "canonStatus",
+    "pov",
+    "nodes",
+    "availableActions"
+  ]
+}

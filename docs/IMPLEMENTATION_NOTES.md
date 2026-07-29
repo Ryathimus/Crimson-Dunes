@@ -73,3 +73,34 @@ Validation remains client-side only; it does not promote canon or write reposito
 - Added basic Player Mode preview with Waru route nodes, action buttons, and local player event log.
 - Added basic Dev Mode preview with feature flags, dev tasks, and validation summary.
 - Added documentation updates: APP_PROGRESS, AI_PROJECT_CURRENT_STATE, SLICE_BOARD, WORKFLOW_STATUS.
+
+
+## Added Since V6 — V7 Consolidated Workspaces
+
+- Added `data/workspace-config.v7.json`.
+- Reduced cross-over by hiding raw draft timeline/source review in Player Mode.
+- Reduced cross-over by hiding Author source/draft review in Dev Mode.
+- Added Player-visible Knowledge panel as the Player Mode replacement for raw draft/source browsing.
+- Added editable 1788 decision queue UI.
+- Added local decision patch export.
+- Updated progress/current-state/slice-board/workflow documentation.
+
+
+## Added Since V7 — V8 Visibility + UI Improvements
+
+- Added `data/player/waru-character-preview.draft.json`.
+- Added route node selector and current route node persistence.
+- Added Player character HUD and Player-visible Knowledge panel.
+- Added 1788 decision patch import.
+- Added source-working patch export/import.
+- Added structured validation for slice, route, character, decision queue, and dev config.
+- Added `docs/UI_RECOMMENDATIONS.md` and `data/ui-recommendations.v8.json`.
+
+
+## Added Since V8 — V9 Mode UI Refinement
+
+- Added `data/author-worldbuilding-index.v9.json`.
+- Added Author workspace navigation and dashboard cards.
+- Added Player current scene card and richer character HUD.
+- Added Dev Mode schema cards from structured validation.
+- Updated UI recommendation docs to reflect implemented V9 direction.

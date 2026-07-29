@@ -33,3 +33,26 @@ No real AI provider calls are made and no API keys are included.
 - Basic Player Mode route preview and local player event log.
 - Basic Dev Mode feature flag/task/validation dashboard.
 - Updated project progress, current state, slice board, and workflow status docs.
+
+## V7 Additions
+
+- Consolidated mode workspaces to reduce duplication/cross-over.
+- Player Mode now hides raw draft timeline/source review by default.
+- Dev Mode now hides Author source-working review by default.
+- Editable 1788 decision queue and decision patch export.
+- Workspace config file added.
+
+## V8 Additions
+
+- Player character interface with location/equipment/status.
+- Route node selector/progression.
+- Decision patch import.
+- Source-working patch import/export.
+- Structured data validation summary.
+- UI recommendations for Author, Player, and Dev modes.
+
+## V9 Additions
+
+- Author workspace navigation and worldbuilding dashboard.
+- Player scene-first layout and improved character HUD.
+- Dev schema-card validation view.

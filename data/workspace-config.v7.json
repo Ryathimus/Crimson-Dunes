@@ -1,0 +1,39 @@
+{
+  "id": "workspace-config-v7",
+  "purpose": "Define which panels belong to Author, Player, and Dev Mode to reduce cross-over and duplication.",
+  "modePanels": {
+    "author": [
+      "author-dashboard-panel",
+      "author-nav-panel",
+      "validation-dashboard",
+      "patch-actions",
+      "timeline-controls",
+      "slice-1788-panel",
+      "decision-queue-panel",
+      "timeline-split",
+      "author-review-panel",
+      "project-library-panel",
+      "ui-recommendations-panel"
+    ],
+    "player": [
+      "player-preview-panel",
+      "player-knowledge-panel"
+    ],
+    "dev": [
+      "validation-dashboard",
+      "patch-actions",
+      "dev-preview-panel",
+      "ui-recommendations-panel",
+      "project-library-panel"
+    ]
+  },
+  "consolidationRules": [
+    "Timeline/source review is Author Mode only by default.",
+    "Player Mode should not show the raw draft timeline browser.",
+    "Dev Mode uses validation summaries and project library rather than duplicating Author source review.",
+    "1788 decision queue belongs to Author Mode.",
+    "Project Library is visible to Author and Dev only.",
+    "Player character HUD and route node state replace generic timeline browsing in Player Mode.",
+    "Author Mode should use sub-workspace navigation so narrative/worldbuilding, source review, timelines, and decisions are not all competing at once."
+  ]
+}

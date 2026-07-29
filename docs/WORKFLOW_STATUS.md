@@ -6,11 +6,11 @@ Core alignment established for three systems, source-working, Author-only canon 
 
 ## Decide
 
-Meaningful decisions captured or drafted in ADRs and timeline/slice data.
+Meaningful decisions are captured in ADRs, draft timeline data, 1788 slice data, and the editable Author Mode decision queue.
 
 ## Shape
 
-Current app shell shapes Author review, Player preview, Dev preview, timeline migration, and 1788 foundation structure.
+V7 consolidates UI responsibilities so Author, Player, and Dev modes have clearer workflows and less duplicated surface area.
 
 ## Build
 
@@ -18,4 +18,4 @@ Current build is a static GitHub Pages-compatible prototype with no backend and 
 
 ## Judge
 
-Validation dashboard, review patch workflow, and decision queue are the current judging mechanisms. Further schema validation and visibility tests remain to do.
+Validation dashboard, review patch workflow, decision patches, and Dev Mode summaries are the current judging mechanisms. Further schema validation and visibility tests remain to do.

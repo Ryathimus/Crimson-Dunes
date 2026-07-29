@@ -11,7 +11,7 @@
     <header class="topbar">
       <div>
         <h1>Crimson Dunes</h1>
-        <p>Author / Player / Dev static app shell — V6 source/draft review</p>
+        <p>Author / Player / Dev static app shell — V9 source/draft review</p>
       </div>
       <nav class="mode-tabs" aria-label="System mode tabs">
         <button data-mode="author" class="active">Author Mode</button>
@@ -26,21 +26,40 @@
           <h2 id="mode-title">Author Mode</h2>
           <span id="mode-badge" class="badge">canon management</span>
         </div>
-        <p id="mode-description"></p>
+        <p id="mode-description"></p><p id="workspace-summary" class="small"></p>
 
-        <section class="validation-dashboard" id="validation-dashboard">
+
+        <section id="author-nav-panel" class="author-nav-panel">
+          <div class="panel-header"><h3>Author Workspace</h3><span class="badge muted">worldbuilding studio</span></div>
+          <div class="author-nav-buttons">
+            <button data-author-section="dashboard" class="active">Dashboard</button>
+            <button data-author-section="timeline">Timeline</button>
+            <button data-author-section="source-review">Source Review</button>
+            <button data-author-section="slice-1788">1788 Slice</button>
+            <button data-author-section="decisions">Decisions</button>
+            <button data-author-section="library">Project Library</button>
+          </div>
+        </section>
+
+        <section id="author-dashboard-panel" class="author-dashboard-panel">
+          <div class="panel-header"><h3>Narrative / Worldbuilding Dashboard</h3><span class="badge muted">author overview</span></div>
+          <p class="small">Use this dashboard as the Author Mode starting point. It groups timeline, characters, locations, factions, magic systems, routes, encounters, and source review so the app does not become only a timeline screen.</p>
+          <div id="author-worldbuilding-cards" class="worldbuilding-cards"></div>
+        </section>
+
+        <section class="validation-dashboard workspace-shared" id="validation-dashboard">
           <div class="stat-card"><b id="stat-total">0</b><span>Total draft events</span></div>
           <div class="stat-card"><b id="stat-errors">0</b><span>Validation errors</span></div>
           <div class="stat-card"><b id="stat-warnings">0</b><span>Review warnings</span></div>
           <div class="stat-card"><b id="stat-ready">0</b><span>Ready for draft save</span></div>
         </section>
-        <section class="patch-actions">
+        <section class="patch-actions workspace-shared" id="patch-actions">
           <button id="export-ready-queue">Export ready queue</button>
           <label class="file-button">Import review patch<input id="import-review-patch" type="file" accept="application/json" hidden /></label>
           <button id="export-validation-report">Export validation report</button>
         </section>
 
-        <div class="controls">
+        <div class="controls" id="timeline-controls">
           <label>Layer<select id="layer-filter"><option value="all">All</option><option value="historicalFoundation">Historical Foundation</option><option value="playable">Playable</option><option value="futureReference">Future Reference</option></select></label>
           <label>Category<select id="category-filter"><option value="all">All</option></select></label>
           <label>Impact<select id="impact-filter"><option value="all">All</option><option value="direct">Direct</option><option value="indirect">Indirect</option><option value="ambient">Ambient</option><option value="unknown">Unknown</option><option value="none-likely">None likely</option></select></label>
@@ -74,6 +93,13 @@
               <ol id="slice-encounters" class="compact-list"></ol>
             </section>
           </div>
+
+          <section id="decision-queue-panel" class="decision-panel">
+            <div class="panel-header"><h4>1788 Decision Queue</h4><span class="button-row"><button id="export-1788-decisions">Export decision patch</button><label class="file-button">Import decision patch<input id="import-1788-decisions" type="file" accept="application/json" hidden /></label></span></div>
+            <p class="small">Use this queue to record alignment decisions without scattering notes across timeline, source-working, and chat transcripts.</p>
+            <div id="decision-queue-list" class="decision-list"></div>
+          </section>
+
           <details class="slice-details">
             <summary>Open full 1788 draft structure</summary>
             <pre id="slice-json" class="source-box"></pre>
@@ -85,23 +111,40 @@
         <section id="player-preview-panel" class="mode-extra-panel" hidden>
           <div class="panel-header"><h3>Player Mode Preview — Waru Opening Route</h3><span class="badge muted">basic preview</span></div>
           <p id="player-route-summary" class="small">Loading player route…</p>
+          
+          <section class="player-scene-card">
+            <div class="panel-header"><h4>Current Scene</h4><span id="player-scene-badge" class="badge muted">route node</span></div>
+            <p id="player-current-scene" class="scene-text">Loading scene…</p>
+            <p id="player-current-objective" class="small"></p>
+          </section>
+
           <div class="player-grid">
-            <section><h4>Route Nodes</h4><ol id="player-route-nodes" class="compact-list"></ol></section>
+            <section><h4>Character</h4><div id="player-character-card" class="slice-card"></div></section>
+            <section><h4>Current Route Node</h4><label>Route position<select id="player-route-node-select"></select></label><ol id="player-route-nodes" class="compact-list"></ol></section>
             <section><h4>Available Actions</h4><div id="player-actions" class="button-grid"></div></section>
             <section><h4>Player Event Log</h4><ol id="player-event-log" class="compact-list"></ol><button id="export-player-log">Export player log</button><button id="clear-player-log">Clear log</button></section>
           </div>
         </section>
+
+
+
+        <section id="player-knowledge-panel" class="mode-extra-panel" hidden>
+          <div class="panel-header"><h3>Player-visible Knowledge</h3><span class="badge muted">filtered context</span></div>
+          <p class="small">This panel replaces the raw draft timeline in Player Mode. It only shows approved preview facts for the current Waru route.</p>
+          <div id="player-visible-facts" class="slice-card"></div>
+        </section>
+
 
         <section id="dev-preview-panel" class="mode-extra-panel" hidden>
           <div class="panel-header"><h3>Dev Mode Preview</h3><span class="badge muted">system dashboard</span></div>
           <div class="dev-grid">
             <section><h4>Feature Flags</h4><div id="dev-feature-flags" class="feature-list"></div></section>
             <section><h4>Dev Tasks</h4><ol id="dev-task-list" class="compact-list"></ol></section>
-            <section><h4>Validation Summary</h4><pre id="dev-validation-summary" class="source-box"></pre><button id="export-dev-config">Export dev config</button></section>
+            <section><h4>Validation Summary</h4><pre id="dev-validation-summary" class="source-box"></pre><button id="export-dev-config">Export dev config</button></section><section><h4>Schema Cards</h4><div id="dev-schema-cards" class="schema-cards"></div></section>
           </div>
         </section>
 
-        <div class="split">
+        <div class="split" id="timeline-split">
           <section class="timeline-list" aria-label="Timeline events">
             <h3>Draft Timeline</h3>
             <div id="timeline-count" class="small"></div>
@@ -118,7 +161,7 @@
         <section id="author-review-panel" class="comparison-panel">
           <div class="panel-header">
             <h3>Author Source / Draft Review</h3>
-            <button id="export-review-patch">Export review patch</button>
+            <span class="button-row"><button id="export-review-patch">Export review patch</button><button id="export-source-working">Export source-working</button><label class="file-button">Import source-working<input id="import-source-working" type="file" accept="application/json" hidden /></label></span>
           </div>
           <p class="small">Original source remains read-only. Use source-working notes and draft review notes for editable migration decisions.</p>
           <div class="comparison-grid">

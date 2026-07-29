@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "slice-1788.schema.json",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "canonStatus",
+    "worldFlagsCreatedBySlice",
+    "possible1788EncounterTemplates",
+    "openQuestions"
+  ]
+}

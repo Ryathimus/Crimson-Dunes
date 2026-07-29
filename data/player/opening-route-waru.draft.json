@@ -12,19 +12,43 @@
       "id": "red-dust-approach",
       "title": "Red Dust Approach",
       "purpose": "Opening threshold; establish heat, distance, signs of travel, and Waru’s observation-first position.",
-      "visibleToPlayer": true
+      "visibleToPlayer": true,
+      "sceneText": "Heat shimmers over the red road. Waru keeps distance from the travelling outsiders and reads the country before acting.",
+      "consequencesPreview": [
+        "observe: gain more context",
+        "interpret: update known facts",
+        "withdraw: reduce exposure",
+        "indirectly_intervene: alter route without revealing self",
+        "reveal_self: shift encounter into direct contact"
+      ]
     },
     {
       "id": "dry-creek-sign",
       "title": "Dry Creek Sign",
       "purpose": "First environmental/magical sign that outsiders may misread.",
-      "visibleToPlayer": true
+      "visibleToPlayer": true,
+      "sceneText": "A dry creek line cuts across the route. Small signs suggest the outsiders may misread the place and the safest path through it.",
+      "consequencesPreview": [
+        "observe: gain more context",
+        "interpret: update known facts",
+        "withdraw: reduce exposure",
+        "indirectly_intervene: alter route without revealing self",
+        "reveal_self: shift encounter into direct contact"
+      ]
     },
     {
       "id": "distant-smoke-hidden-track",
       "title": "Distant Smoke / Hidden Track",
       "purpose": "First decision pressure: continue observing, interpret, withdraw, indirectly intervene, or reveal.",
-      "visibleToPlayer": true
+      "visibleToPlayer": true,
+      "sceneText": "Smoke rises at a distance near a hidden track. Continuing unseen may preserve safety, but inaction may allow a mistake to grow.",
+      "consequencesPreview": [
+        "observe: gain more context",
+        "interpret: update known facts",
+        "withdraw: reduce exposure",
+        "indirectly_intervene: alter route without revealing self",
+        "reveal_self: shift encounter into direct contact"
+      ]
     }
   ],
   "availableActions": [
@@ -39,5 +63,6 @@
     "observation_first_gameplay",
     "outsiders_not_fully_revealed",
     "crimson_dunes_destination_known_as_risk_opportunity"
-  ]
+  ],
+  "currentObjective": "Observe the route toward Crimson Dunes without revealing more than necessary."
 }
