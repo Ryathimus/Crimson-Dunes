@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crimson Dunes Encounter Engine</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>Crimson Dunes</h1>
+        <p>Author / Player / Dev static app shell — V2 source/draft review</p>
+      </div>
+      <nav class="mode-tabs" aria-label="System mode tabs">
+        <button data-mode="author" class="active">Author Mode</button>
+        <button data-mode="player">Player Mode</button>
+        <button data-mode="dev">Dev Mode</button>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="panel mode-panel">
+        <div class="panel-header">
+          <h2 id="mode-title">Author Mode</h2>
+          <span id="mode-badge" class="badge">canon management</span>
+        </div>
+        <p id="mode-description"></p>
+
+        <div class="controls">
+          <label>Layer<select id="layer-filter"><option value="all">All</option><option value="historicalFoundation">Historical Foundation</option><option value="playable">Playable</option><option value="futureReference">Future Reference</option></select></label>
+          <label>Category<select id="category-filter"><option value="all">All</option></select></label>
+          <label>Impact<select id="impact-filter"><option value="all">All</option><option value="direct">Direct</option><option value="indirect">Indirect</option><option value="ambient">Ambient</option><option value="unknown">Unknown</option><option value="none-likely">None likely</option></select></label>
+          <label>Review<select id="review-filter"><option value="all">All</option><option value="unreviewed">Unreviewed</option><option value="reviewed">Reviewed</option><option value="needs-decision">Needs Decision</option><option value="ready-for-draft-save">Ready for Draft Save</option></select></label>
+          <input id="search" type="search" placeholder="Search timeline…" />
+        </div>
+
+        <div class="split">
+          <section class="timeline-list" aria-label="Timeline events">
+            <h3>Draft Timeline</h3>
+            <div id="timeline-count" class="small"></div>
+            <ol id="timeline-events"></ol>
+          </section>
+
+          <section class="event-detail" aria-label="Selected timeline event">
+            <h3>Selected Event</h3>
+            <div id="event-detail-empty" class="empty">Select an event to inspect it.</div>
+            <article id="event-detail" hidden></article>
+          </section>
+        </div>
+
+        <section id="author-review-panel" class="comparison-panel">
+          <div class="panel-header">
+            <h3>Author Source / Draft Review</h3>
+            <button id="export-review-patch">Export review patch</button>
+          </div>
+          <p class="small">Original source remains read-only. Use source-working notes and draft review notes for editable migration decisions.</p>
+          <div class="comparison-grid">
+            <div>
+              <h4>Source-import excerpt</h4>
+              <pre id="source-excerpt" class="source-box">Select an event to view source excerpt.</pre>
+            </div>
+            <div>
+              <h4>Source-working note</h4>
+              <textarea id="source-working-note" rows="10" placeholder="Editable source-working note for this event…"></textarea>
+            </div>
+            <div>
+              <h4>Draft review</h4>
+              <label>Review status<select id="review-status"><option value="unreviewed">Unreviewed</option><option value="reviewed">Reviewed</option><option value="needs-decision">Needs Decision</option><option value="ready-for-draft-save">Ready for Draft Save</option></select></label>
+              <textarea id="draft-review-note" rows="7" placeholder="Draft migration review note…"></textarea>
+              <button id="save-review">Save review locally</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="project-library-panel" class="library-panel">
+          <div class="panel-header">
+            <h3>Project Library</h3>
+            <span id="library-count" class="badge muted">loading</span>
+          </div>
+          <p class="small">Consolidated source-import, world, docs, ADRs, schemas, and latest write-back files for iterative Author/Dev review.</p>
+          <div class="library-controls">
+            <input id="library-search" type="search" placeholder="Search project files…" />
+            <select id="library-group-filter">
+              <option value="all">All groups</option>
+              <option value="source-import">source-import</option>
+              <option value="world">world</option>
+              <option value="docs">docs</option>
+              <option value="adrs">adrs</option>
+              <option value="schemas">schemas</option>
+              <option value="_latest-writebacks">latest write-backs</option>
+            </select>
+          </div>
+          <div class="library-grid">
+            <ol id="library-files" class="library-files"></ol>
+            <section class="library-viewer">
+              <h4 id="library-file-title">Select a file</h4>
+              <pre id="library-file-content" class="source-box">Choose a project file to inspect it here.</pre>
+            </section>
+          </div>
+        </section>
+
+      </section>
+
+      <aside class="panel agent-panel">
+        <div class="panel-header"><h2>AI Agent</h2><span class="badge muted">disabled provider</span></div>
+        <p id="agent-mode-note" class="small"></p>
+        <div class="context-box"><h3>Context Preview</h3><pre id="context-preview"></pre></div>
+        <div class="chat-log" id="chat-log" aria-live="polite"></div>
+        <form id="chat-form" class="chat-form"><textarea id="chat-input" rows="4" placeholder="Ask the mode-aware agent…"></textarea><button type="submit">Add Note</button></form>
+        <div class="agent-actions"><button id="export-transcript">Export transcript</button><button id="clear-transcript">Clear</button></div>
+      </aside>
+    </main>
+  </div>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

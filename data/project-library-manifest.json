@@ -1,0 +1,879 @@
+{
+  "generatedAt": "2026-07-28T23:50:35.021095+00:00",
+  "description": "Consolidated project library for app iteration. Includes source-import, world, docs, ADRs, schemas, AI_PROJECT/README, parsed bundle inventory, and latest write-back packages.",
+  "counts": {
+    "bundleIndexedFiles": 394,
+    "includedLibraryFiles": 144,
+    "sourceImportFiles": 88,
+    "worldFiles": 15,
+    "docsFiles": 8,
+    "adrFiles": 8,
+    "schemaFiles": 6
+  },
+  "files": [
+    {
+      "path": "adrs/ADR-0001-static-github-pages-application.md",
+      "type": "text",
+      "size": 630,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "adrs/ADR-0002-data-driven-world-model.md",
+      "type": "text",
+      "size": 608,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "adrs/ADR-0003-shared-world-seed.md",
+      "type": "text",
+      "size": 579,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "adrs/ADR-0004-canon-draft-generated-separation.md",
+      "type": "text",
+      "size": 622,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "adrs/ADR-0005-semi-procedural-opening-route.md",
+      "type": "text",
+      "size": 634,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "adrs/ADR-0006-waru-first-locked-pov.md",
+      "type": "text",
+      "size": 579,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "adrs/ADR-0007-mixed-school-connected-outsiders.md",
+      "type": "text",
+      "size": 578,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "adrs/ADR-0008-1788-historical-foundation-slice.md",
+      "type": "text",
+      "size": 646,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "AI_PROJECT.md",
+      "type": "text",
+      "size": 9383,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "docs/1788-historical-foundation-slice.md",
+      "type": "text",
+      "size": 1719,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "docs/architecture.md",
+      "type": "text",
+      "size": 1219,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "docs/data-model.md",
+      "type": "text",
+      "size": 799,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "docs/migration-plan.md",
+      "type": "text",
+      "size": 1181,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "docs/next-alignment-questions.md",
+      "type": "text",
+      "size": 1938,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "docs/opening-route.md",
+      "type": "text",
+      "size": 1464,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "docs/security-and-repo-hygiene.md",
+      "type": "text",
+      "size": 733,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "docs/viewer-modes.md",
+      "type": "text",
+      "size": 867,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "README.md",
+      "type": "text",
+      "size": 1730,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "schemas/character.schema.json",
+      "type": "text",
+      "size": 198,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "schemas/encounter-template.schema.json",
+      "type": "text",
+      "size": 207,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "schemas/event-log.schema.json",
+      "type": "text",
+      "size": 198,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "schemas/route-instance.schema.json",
+      "type": "text",
+      "size": 203,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "schemas/route-template.schema.json",
+      "type": "text",
+      "size": 203,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "schemas/world.schema.json",
+      "type": "text",
+      "size": 194,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/IMPORT_SUMMARY.json",
+      "type": "text",
+      "size": 675,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/index/binary-assets-index.json",
+      "type": "text",
+      "size": 11922,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/index/bundle-file-index.json",
+      "type": "text",
+      "size": 49101,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/index/markdown-catalog.json",
+      "type": "text",
+      "size": 35034,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Character Sheets bc78266535c7470ab9b5b9094efedc2b.md",
+      "type": "text",
+      "size": 679,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Crimson Dunes Academy becc15c1e6d848ef918c68742043e03b.md",
+      "type": "text",
+      "size": 2935,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Foundational Concepts of Australian Fusion Magic f b9a16adfca1347df807b4bebfdf3fa60.md",
+      "type": "text",
+      "size": 10104,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Game Adaptation fb7f4901b14d48eb8f209e2a2c0bfd1c.md",
+      "type": "text",
+      "size": 122,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Magic System f2de5fb96d4d48b9a7e077ce881402f9.md",
+      "type": "text",
+      "size": 1876,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Magical Creatures 02417d64446647d7975a68aca50a5da8.md",
+      "type": "text",
+      "size": 6211,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Magical Plants e72bbf2fbc25407bad4acc87809356f9.md",
+      "type": "text",
+      "size": 2034,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Magical Vehicles Transportation 365250ba603c4ce089774ce7f60789b5.md",
+      "type": "text",
+      "size": 1163,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Maps a13e6b70ca204193851259682302f651.md",
+      "type": "text",
+      "size": 833,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Plot Outline 3890d718aacb47a7ba05e48eae22a5a0.md",
+      "type": "text",
+      "size": 2226,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Plot Outline/Major Sites in Aus 52c8b6c3baa14cdcb34b464131ad1b79.md",
+      "type": "text",
+      "size": 339,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Politics 1c7e9331a6df44858723404a09ec9cac.md",
+      "type": "text",
+      "size": 11,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Thoughts 6e4db8fcac2e4ecabe3008e4a6e00a74.md",
+      "type": "text",
+      "size": 3337,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/Working with Indigenous Australians 00aa89833a2d44b2ad54ee81e42394e6.md",
+      "type": "text",
+      "size": 6155,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/Crimson Dunes/Jonathan Giya/World Timelines 348fc257cb21494e8dd79f892ff030ee.md",
+      "type": "text",
+      "size": 5297,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/!Game/Outline.md",
+      "type": "text",
+      "size": 916,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/!Game/Settings.md",
+      "type": "text",
+      "size": 1,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/00_Overview/Flowchart.md",
+      "type": "text",
+      "size": 2206,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/00_Overview/Plot - Main Arc.md",
+      "type": "text",
+      "size": 1,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/00_Overview/README.md",
+      "type": "text",
+      "size": 1277,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/10_Systems/Systems - Checks.md",
+      "type": "text",
+      "size": 974,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/10_Systems/Systems - Reputation.md",
+      "type": "text",
+      "size": 685,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/10_Systems/Systems - Rewards.md",
+      "type": "text",
+      "size": 785,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/10_Systems/Systems - Variables & Modifiers.md",
+      "type": "text",
+      "size": 1037,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/20_Characters/Character - Player.md",
+      "type": "text",
+      "size": 258,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/20_Characters/Character Profile Template.md",
+      "type": "text",
+      "size": 243,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/20_Characters/Dashboard.md",
+      "type": "text",
+      "size": 105,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/20_Characters/NPC - Powerful Figure.md",
+      "type": "text",
+      "size": 1157,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/30_Encounters/Dashboard.md",
+      "type": "text",
+      "size": 126,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/30_Encounters/Encounter - Forest Clearing - Bandits.md",
+      "type": "text",
+      "size": 1431,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/30_Encounters/Encounter - Inn Attack.md",
+      "type": "text",
+      "size": 2552,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/30_Encounters/Encounter Template.md",
+      "type": "text",
+      "size": 511,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/30_Encounters/Untitled.md",
+      "type": "text",
+      "size": 473,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/40_Logs/Encounter Log.md",
+      "type": "text",
+      "size": 1019,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/40_Logs/Session Notes.md",
+      "type": "text",
+      "size": 1,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/90_Indexes/Index - Encounters.md",
+      "type": "text",
+      "size": 1,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/90_Indexes/Index - NPCs.md",
+      "type": "text",
+      "size": 99,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/90_Indexes/Index - Rewards.md",
+      "type": "text",
+      "size": 322,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-conversations/Can_you_read_and_review_the_files_within_this_RPG@20260109_070545.md",
+      "type": "text",
+      "size": 11258,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Emojify.md",
+      "type": "text",
+      "size": 471,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Explain like I am 5.md",
+      "type": "text",
+      "size": 389,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+      "type": "text",
+      "size": 351,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Generate glossary.md",
+      "type": "text",
+      "size": 354,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Generate table of contents.md",
+      "type": "text",
+      "size": 358,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Make longer.md",
+      "type": "text",
+      "size": 380,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Make shorter.md",
+      "type": "text",
+      "size": 374,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Remove URLs.md",
+      "type": "text",
+      "size": 348,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+      "type": "text",
+      "size": 501,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Rewrite as tweet.md",
+      "type": "text",
+      "size": 377,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Simplify.md",
+      "type": "text",
+      "size": 371,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Summarize.md",
+      "type": "text",
+      "size": 308,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/copilot/copilot-custom-prompts/Translate to Chinese.md",
+      "type": "text",
+      "size": 370,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Factions/Oceanside Kingdom.md",
+      "type": "text",
+      "size": 793,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Factions/The League.md",
+      "type": "text",
+      "size": 2074,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Factions/Thieves Guild.md",
+      "type": "text",
+      "size": 774,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Focus Balance.md",
+      "type": "text",
+      "size": 988,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Focus Influence.md",
+      "type": "text",
+      "size": 4418,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Focus Madness.md",
+      "type": "text",
+      "size": 646,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Framework - Focus.md",
+      "type": "text",
+      "size": 6265,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Focus/Tiers of Power.md",
+      "type": "text",
+      "size": 93,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Class/Class Titles.md",
+      "type": "text",
+      "size": 1025,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Class/Class.md",
+      "type": "text",
+      "size": 5202,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Class/Known Class Perks.md",
+      "type": "text",
+      "size": 5475,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Class/Known Classes.md",
+      "type": "text",
+      "size": 2642,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Aspects.md",
+      "type": "text",
+      "size": 2969,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Paths.md",
+      "type": "text",
+      "size": 1112,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Perks.md",
+      "type": "text",
+      "size": 14076,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation Titles.md",
+      "type": "text",
+      "size": 1103,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Cultivation/Cultivation.md",
+      "type": "text",
+      "size": 5721,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Paths.md",
+      "type": "text",
+      "size": 10995,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Perks.md",
+      "type": "text",
+      "size": 2788,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Skills/Skill Titles.md",
+      "type": "text",
+      "size": 1874,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/Progression/Skills/Skills.md",
+      "type": "text",
+      "size": 4275,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/Dealmaker.md",
+      "type": "text",
+      "size": 1565,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/Iterations.md",
+      "type": "text",
+      "size": 2035,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/Rarities.md",
+      "type": "text",
+      "size": 1179,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/The Infinite Realm.md",
+      "type": "text",
+      "size": 1224,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/The Infinite Realm World/The Infinite Realm/The Three.md",
+      "type": "text",
+      "size": 1095,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/Theory of Magic/Theory of Magic.md",
+      "type": "text",
+      "size": 213,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/Theory of Magic/ToM Adventures.md",
+      "type": "text",
+      "size": 126416,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/Theory of Magic/ToM Encounters.md",
+      "type": "text",
+      "size": 112411,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/Theory of Magic/ToM Monsters.md",
+      "type": "text",
+      "size": 77934,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/markdown/RPG Encounters/Theory of Magic/ToM Skills.md",
+      "type": "text",
+      "size": 11733,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "source-import/README.md",
+      "type": "text",
+      "size": 617,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/characters/outsider-group-school-connected.json",
+      "type": "text",
+      "size": 607,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/characters/waru.json",
+      "type": "text",
+      "size": 923,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/locations.json",
+      "type": "text",
+      "size": 816,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/magic-systems.json",
+      "type": "text",
+      "size": 497,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/timelines.json",
+      "type": "text",
+      "size": 26560,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/timelines/full-world-timeline.json",
+      "type": "text",
+      "size": 26560,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/timelines/full-world-timeline.raw.md",
+      "type": "text",
+      "size": 5297,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/world-flags.json",
+      "type": "text",
+      "size": 911,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/canon/world.json",
+      "type": "text",
+      "size": 515,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/discoveries/land-remembers-old-crossing.json",
+      "type": "text",
+      "size": 487,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/encounters/templates/outsiders-disturb-route-sign.json",
+      "type": "text",
+      "size": 1615,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/event-log/example-event-log.json",
+      "type": "text",
+      "size": 3,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/reference/source-extraction-notes.md",
+      "type": "text",
+      "size": 823,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/routes/instances/dev-red-road-instance.json",
+      "type": "text",
+      "size": 665,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "world/routes/templates/red-road-to-crimson-dunes.json",
+      "type": "text",
+      "size": 1233,
+      "source": "BUNDLE.md"
+    },
+    {
+      "path": "BUNDLE_FILE_INVENTORY.json",
+      "type": "index",
+      "size": 394,
+      "source": "parsed-bundle"
+    },
+    {
+      "path": "_latest-writebacks/step-a-architecture/adrs/ADR-0009-three-system-mode-architecture.md",
+      "type": "text",
+      "size": 4006,
+      "source": "crimson_dunes_step_a_writeback.zip"
+    },
+    {
+      "path": "_latest-writebacks/step-a-architecture/AI_PROJECT.update-notes.md",
+      "type": "text",
+      "size": 4515,
+      "source": "crimson_dunes_step_a_writeback.zip"
+    },
+    {
+      "path": "_latest-writebacks/step-a-architecture/docs/architecture.updated.md",
+      "type": "text",
+      "size": 3786,
+      "source": "crimson_dunes_step_a_writeback.zip"
+    },
+    {
+      "path": "_latest-writebacks/step-a-architecture/docs/data-model.updated.md",
+      "type": "text",
+      "size": 2223,
+      "source": "crimson_dunes_step_a_writeback.zip"
+    },
+    {
+      "path": "_latest-writebacks/step-a-architecture/docs/viewer-modes.updated.md",
+      "type": "text",
+      "size": 2388,
+      "source": "crimson_dunes_step_a_writeback.zip"
+    },
+    {
+      "path": "_latest-writebacks/step-a-architecture/IMPLEMENTATION_SUMMARY.md",
+      "type": "text",
+      "size": 1768,
+      "source": "crimson_dunes_step_a_writeback.zip"
+    },
+    {
+      "path": "_latest-writebacks/ai-agent-architecture/adrs/ADR-0010-ai-agent-chat-integration.md",
+      "type": "text",
+      "size": 3809,
+      "source": "crimson_dunes_ai_agent_architecture_package.zip"
+    },
+    {
+      "path": "_latest-writebacks/ai-agent-architecture/docs/ai-agent-chat.md",
+      "type": "text",
+      "size": 4248,
+      "source": "crimson_dunes_ai_agent_architecture_package.zip"
+    },
+    {
+      "path": "_latest-writebacks/ai-agent-architecture/AI_PROJECT.ai-agent-update-notes.md",
+      "type": "text",
+      "size": 2016,
+      "source": "crimson_dunes_ai_agent_architecture_package.zip"
+    },
+    {
+      "path": "_latest-writebacks/ai-agent-architecture/AI_AGENT_PACKAGE_SUMMARY.md",
+      "type": "text",
+      "size": 699,
+      "source": "crimson_dunes_ai_agent_architecture_package.zip"
+    },
+    {
+      "path": "_latest-writebacks/timeline-v4/full-world-timeline.ambiguous-events.v4.json",
+      "type": "text",
+      "size": 21924,
+      "source": "crimson_dunes_timeline_migration_v4_direct_icw_envoy.zip"
+    },
+    {
+      "path": "_latest-writebacks/timeline-v4/full-world-timeline.migration-report.v4.json",
+      "type": "text",
+      "size": 560,
+      "source": "crimson_dunes_timeline_migration_v4_direct_icw_envoy.zip"
+    },
+    {
+      "path": "_latest-writebacks/timeline-v4/MIGRATION_REPORT_V4.md",
+      "type": "text",
+      "size": 1532,
+      "source": "crimson_dunes_timeline_migration_v4_direct_icw_envoy.zip"
+    },
+    {
+      "path": "_latest-writebacks/timeline-v4/full-world-timeline.raw.md",
+      "type": "text",
+      "size": 5297,
+      "source": "crimson_dunes_timeline_migration_v4_direct_icw_envoy.zip"
+    },
+    {
+      "path": "_latest-writebacks/timeline-v4/full-world-timeline.draft.v4.json",
+      "type": "text",
+      "size": 96343,
+      "source": "crimson_dunes_timeline_migration_v4_direct_icw_envoy.zip"
+    },
+    {
+      "path": "_latest-writebacks/timeline-v4/full-world-timeline.source-import.json",
+      "type": "text",
+      "size": 26559,
+      "source": "crimson_dunes_timeline_migration_v4_direct_icw_envoy.zip"
+    }
+  ]
+}

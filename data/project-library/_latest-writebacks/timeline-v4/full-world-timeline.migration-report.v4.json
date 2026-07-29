@@ -1,0 +1,27 @@
+{
+  "sourceEventCount": 66,
+  "draftEventCount": 69,
+  "addedDraftEventsTotal": 3,
+  "byTimelineLayer": {
+    "historicalFoundation": 20,
+    "playable": 1,
+    "futureReference": 48
+  },
+  "byTimelineCategory": {
+    "other": 5,
+    "culturalContact": 3,
+    "wizardingHistory": 23,
+    "magicalConflict": 2,
+    "settlementHistory": 14,
+    "schoolHistory": 2,
+    "muggleHistory": 14,
+    "transportInfrastructure": 6
+  },
+  "byAustralianImpactScope": {
+    "unknown": 13,
+    "direct": 41,
+    "indirect": 3,
+    "ambient": 12
+  },
+  "ambiguousCount": 52
+}

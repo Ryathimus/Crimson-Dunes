@@ -1,0 +1,588 @@
+[
+  {
+    "id": "timeline-1606",
+    "dateText": "1606",
+    "title": "The Spaniard, Vaez de Torres has explored the Strait which today bears his name.",
+    "proposedTimelineLayer": "historicalFoundation",
+    "proposedTimelineCategory": "other",
+    "ambiguities": [
+      "timelineCategory"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1688",
+    "dateText": "1688",
+    "title": "The first English visitor, William Dampier, arrived at Cygnet Bay on the West coast of Aus",
+    "proposedTimelineLayer": "historicalFoundation",
+    "proposedTimelineCategory": "other",
+    "ambiguities": [
+      "timelineCategory"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1709",
+    "dateText": "1709",
+    "title": "Dragon breeding outlawed",
+    "proposedTimelineLayer": "historicalFoundation",
+    "proposedTimelineCategory": "other",
+    "ambiguities": [
+      "timelineCategory"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1810",
+    "dateText": "1810",
+    "title": "Crimson Dunes School of Sorcery established",
+    "proposedTimelineLayer": "playable",
+    "proposedTimelineCategory": "schoolHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1817",
+    "dateText": "1817",
+    "title": "First Bank of NSW",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1824",
+    "dateText": "1824",
+    "title": "Brisbane Settlement",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "settlementHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1826",
+    "dateText": "1826",
+    "title": "Western Aus (Albany) Settlement",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "settlementHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1829",
+    "dateText": "1829",
+    "title": "WA Perth Settlement",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "settlementHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1830",
+    "dateText": "1830",
+    "title": "Hogwarts Express is created",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation",
+      "australian-impact-scope-review"
+    ],
+    "question": "External Wizarding World event is active context; confirm how it is felt in Australia (direct, indirect, ambient, unknown, or none-likely)."
+  },
+  {
+    "id": "timeline-1832-1839",
+    "dateText": "1832 - 1839",
+    "title": "Complicated instructions and abstruse concepts in \"old-fashioned textbooks”",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "other",
+    "ambiguities": [
+      "timelineCategory",
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1833",
+    "dateText": "1833",
+    "title": "Van Diemen's Land, Port Arthur Settlement",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "settlementHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1835",
+    "dateText": "1835",
+    "title": "Port Phillip (Melbourne) Settlement",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "settlementHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1836",
+    "dateText": "1836",
+    "title": "South Aus proclaimed",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "settlementHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1838",
+    "dateText": "1838",
+    "title": "First Prussian immigrants in SA",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "other",
+    "ambiguities": [
+      "timelineCategory",
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1839",
+    "dateText": "1839",
+    "title": "Port Darwin Settlement",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "settlementHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1850",
+    "dateText": "1850",
+    "title": "University of Sydney",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1851",
+    "dateText": "1851",
+    "title": "Victoria separated from NSW",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1865",
+    "dateText": "1865",
+    "title": "The Knight Bus is created.",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1869",
+    "dateText": "1869",
+    "title": "Stolen Generation",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1873",
+    "dateText": "1873",
+    "title": "Uluru sighted (Ayers Rock)",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "culturalContact",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1875",
+    "dateText": "1875",
+    "title": "Decree for the Reasonable Restriction of Underage Sorcery",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1880",
+    "dateText": "1880",
+    "title": "Ned Kelly Hanged",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1883",
+    "dateText": "1883",
+    "title": "Sydney to Melbourne Railway",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "transportInfrastructure",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1889",
+    "dateText": "1889",
+    "title": "Adelaide, Brisbane, Melbourne, Sydney Railway line.",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "transportInfrastructure",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1890",
+    "dateText": "1890",
+    "title": "Ranrok’s Goblin Rebellion (Hogwarts Legacy Plot)",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation",
+      "australian-impact-scope-review"
+    ],
+    "question": "External Wizarding World event is active context; confirm how it is felt in Australia (direct, indirect, ambient, unknown, or none-likely)."
+  },
+  {
+    "id": "timeline-1891",
+    "dateText": "1891",
+    "title": "Commonwealth of Australia",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1901",
+    "dateText": "1901",
+    "title": "Federation of Australia",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1913",
+    "dateText": "1913",
+    "title": "Canberra is named Capital of Australia",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1914",
+    "dateText": "1914",
+    "title": "First World War Start",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1917",
+    "dateText": "1917",
+    "title": "Adelaide to Perth Railway",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "transportInfrastructure",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1918",
+    "dateText": "1918",
+    "title": "First World War End",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1923-1932",
+    "dateText": "1923 - 1932",
+    "title": "Sydney Harbour Bridge Built",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "transportInfrastructure",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1930",
+    "dateText": "1930",
+    "title": "Sydney to Brisbane Railway",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "transportInfrastructure",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1939",
+    "dateText": "1939",
+    "title": "Second World War Start",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1939-1945",
+    "dateText": "1939 - 1945",
+    "title": "Grindelwald's Revolution",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1940-1950",
+    "dateText": "1940 - 1950",
+    "title": "Book of Spells published by Miranda Goshhawk",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1945",
+    "dateText": "1945",
+    "title": "Second World War End",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1956",
+    "dateText": "1956",
+    "title": "Television",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1959-1973",
+    "dateText": "1959 - 1973",
+    "title": "Sydney Opera House",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "transportInfrastructure",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1966",
+    "dateText": "1966",
+    "title": "Aus Dollar replaces Aus Pound",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "muggleHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1969-1981",
+    "dateText": "1969 - 1981",
+    "title": "Voldemort's First Reign (First Wizarding War)",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation",
+      "australian-impact-scope-review"
+    ],
+    "question": "External Wizarding World event is active context; confirm how it is felt in Australia (direct, indirect, ambient, unknown, or none-likely)."
+  },
+  {
+    "id": "timeline-1991",
+    "dateText": "1991",
+    "title": "Break in at British Gringotts",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1992",
+    "dateText": "1992",
+    "title": "Chamber of Secrets Opens",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1993",
+    "dateText": "1993",
+    "title": "Sirius Black breaks out of Azkaban",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1994",
+    "dateText": "1994",
+    "title": "6 June - Sirius Black disappears.",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1995",
+    "dateText": "1995",
+    "title": "24 June - Voldemort’s Return (Second Wizarding War)",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation",
+      "australian-impact-scope-review"
+    ],
+    "question": "External Wizarding World event is active context; confirm how it is felt in Australia (direct, indirect, ambient, unknown, or none-likely)."
+  },
+  {
+    "id": "timeline-1996",
+    "dateText": "1996",
+    "title": "Dolores Umbridge now Headmistress of Hogwarts",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation",
+      "australian-impact-scope-review"
+    ],
+    "question": "External Wizarding World event is active context; confirm how it is felt in Australia (direct, indirect, ambient, unknown, or none-likely)."
+  },
+  {
+    "id": "timeline-1997",
+    "dateText": "1997",
+    "title": "30 June - Battle of Astronomy Tower, Dumbledore is killed.",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation"
+    ],
+    "question": "Confirm classification and whether this remains timeline reference or becomes usable Crimson Dunes canon/draft."
+  },
+  {
+    "id": "timeline-1998",
+    "dateText": "1998",
+    "title": "2 May - Battle of Hogwarts",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "timelineLayer-normalisation",
+      "australian-impact-scope-review"
+    ],
+    "question": "External Wizarding World event is active context; confirm how it is felt in Australia (direct, indirect, ambient, unknown, or none-likely)."
+  },
+  {
+    "id": "timeline-draft-post-1810-australian-icw-recognition-thread",
+    "dateText": "Early 1810s, date TBD",
+    "title": "Australian magical community begins path toward ICW recognition",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "date-tbd",
+      "draft-governance-thread",
+      "draft-registry-mechanism"
+    ],
+    "question": "Confirm exact timing and recognition conditions. Current draft assumes early 1810s contact, not immediate recognition."
+  },
+  {
+    "id": "timeline-draft-crimson-dunes-icw-school-registration",
+    "dateText": "Early 1810s, date TBD",
+    "title": "Crimson Dunes considered for ICW wizarding school registration",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "schoolHistory",
+    "ambiguities": [
+      "date-tbd",
+      "draft-governance-thread",
+      "draft-registry-mechanism"
+    ],
+    "question": "Confirm exact timing and recognition conditions. Current draft assumes early 1810s contact, not immediate recognition."
+  },
+  {
+    "id": "timeline-draft-1811-icw-initial-inquiry-to-crimson-dunes",
+    "dateText": "1811, proposed",
+    "title": "Direct ICW envoy makes initial inquiry after Crimson Dunes local founding",
+    "proposedTimelineLayer": "futureReference",
+    "proposedTimelineCategory": "wizardingHistory",
+    "ambiguities": [
+      "draft-registry-mechanism",
+      "trace-wand-registry-mechanism",
+      "confirm-envoy-details"
+    ],
+    "question": "Confirm envoy identity/mandate and whether 1811 remains the preferred year. Registry and Trace-linked wand mechanisms remain draft."
+  }
+]

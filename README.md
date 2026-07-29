@@ -1,39 +1,15 @@
-# Crimson Dunes Encounter Engine — Architecture Draft
+# Crimson Dunes App Shell V2
 
-This package is a **non-code architecture and data-organisation draft** for the Crimson Dunes web-based interactive encounter system.
+Generated: 2026-07-28T23:42:05.786506+00:00
 
-It consolidates the agreed direction so far:
+Static GitHub Pages-compatible app shell with:
 
-- GitHub Pages-compatible static web app.
-- Data-driven Crimson Dunes world model.
-- Default playable timeline starts in **1810**.
-- Pre-1810 events act as a realised **Historical Foundation**.
-- Opening experience starts on a **semi-procedural Outback travel route**.
-- First locked Single Character POV is **Waru**, a **local initiate**.
-- Waru begins by cautiously observing a **mixed outsider group connected to the emerging Crimson Dunes School**.
-- Separate canon, draft, generated, deprecated, and reference content.
-- No implementation/code yet.
+- Author / Player / Dev modes.
+- Draft timeline viewer using the V4 direct-ICW-envoy timeline.
+- Author Mode source/draft comparison panel.
+- `source-working` local notes per event.
+- Draft review status per event.
+- Exportable review patch JSON.
+- Disabled/no-op AI Agent panel with mode-aware context preview.
 
-## How to use this draft
-
-1. Read `AI_PROJECT.md` first.
-2. Review `docs/architecture.md`, `docs/data-model.md`, and `docs/viewer-modes.md`.
-3. Review ADRs in `adrs/`.
-4. Review structured data under `world/`.
-5. Answer the questions in `docs/next-alignment-questions.md` before implementation begins.
-
-## Current status
-
-Architecture/outline stage only. This package is intended to become the durable source of truth before coding starts.
-
-
-## Bundle Import Update
-
-This revision imports all markdown documentation from `BUNDLE.md` as raw source data.
-
-- Markdown files imported: 83
-- Binary assets indexed: 60
-- Full World Timelines markdown extracted to `world/canon/timelines/full-world-timeline.raw.md`.
-- Full parsed timeline extracted to `world/canon/timelines/full-world-timeline.json` and `world/canon/timelines.json`.
-
-The source-import layer is intentionally separate from canon so nothing becomes accepted canon by accident.
+No real AI provider calls are made and no API keys are included.
