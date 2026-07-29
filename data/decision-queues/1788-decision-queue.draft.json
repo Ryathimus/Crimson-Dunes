@@ -1,0 +1,63 @@
+{
+  "id": "decision-queue-1788-slice",
+  "canonStatus": "draft",
+  "sliceId": "slice-1788-historical-foundation",
+  "items": [
+    {
+      "id": "dq-1788-stowaway-identity",
+      "question": "Who exactly is the original magical stowaway or hidden magical presence?",
+      "status": "open",
+      "options": [
+        "one concealed stowaway",
+        "accidental magical convict",
+        "official-but-secret British wizarding observer",
+        "small hidden family/group"
+      ]
+    },
+    {
+      "id": "dq-1788-contact-style",
+      "question": "Is first Indigenous magical contact direct or indirect?",
+      "status": "open",
+      "options": [
+        "indirect investigation first",
+        "direct contact early",
+        "contact only after misunderstanding",
+        "no direct contact until after harm"
+      ]
+    },
+    {
+      "id": "dq-1788-harm-level",
+      "question": "What harm, if any, does early misunderstanding cause?",
+      "status": "open",
+      "options": [
+        "minor tension only",
+        "serious magical mistake",
+        "disease/plague/fusion-magic conditions",
+        "mostly avoided through restraint"
+      ]
+    },
+    {
+      "id": "dq-1788-record-keeper",
+      "question": "Who preserves the most reliable account of 1788 by 1810?",
+      "status": "open",
+      "options": [
+        "Waru’s community/tradition",
+        "stowaway journal",
+        "Crimson Dunes founders",
+        "ICW envoy records",
+        "conflicting records"
+      ]
+    },
+    {
+      "id": "dq-1811-icw-envoy",
+      "question": "Who is the direct ICW envoy and what mandate do they carry?",
+      "status": "open",
+      "options": [
+        "cooperative advisor",
+        "suspicious compliance auditor",
+        "politically careful envoy",
+        "multiple-envoy delegation"
+      ]
+    }
+  ]
+}

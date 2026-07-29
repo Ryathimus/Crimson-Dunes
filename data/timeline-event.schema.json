@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Crimson Dunes Timeline Event Draft Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "dateText",
+    "title",
+    "summary",
+    "timelineLayer",
+    "timelineCategory",
+    "canonStatus",
+    "sourcePath",
+    "details",
+    "resultingWorldFlags",
+    "affectedLocations",
+    "affectedCharacters",
+    "affectedFactions",
+    "notes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dateText": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "startYear": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "endYear": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string"
+    },
+    "timelineLayer": {
+      "enum": [
+        "historicalFoundation",
+        "playable",
+        "futureReference"
+      ]
+    },
+    "timelineCategory": {
+      "enum": [
+        "muggleHistory",
+        "wizardingHistory",
+        "crimsonDunesHistory",
+        "characterHistory",
+        "schoolHistory",
+        "settlementHistory",
+        "magicalConflict",
+        "culturalContact",
+        "transportInfrastructure",
+        "other"
+      ]
+    },
+    "canonStatus": {
+      "enum": [
+        "source-import",
+        "source-working",
+        "draft",
+        "canon",
+        "generated",
+        "dev-test",
+        "reference",
+        "deprecated"
+      ]
+    },
+    "sourcePath": {
+      "type": "string"
+    },
+    "details": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resultingWorldFlags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affectedLocations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affectedCharacters": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "affectedFactions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "globalContextRole": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "australianImpactScope": {
+      "enum": [
+        "direct",
+        "indirect",
+        "ambient",
+        "unknown",
+        "none-likely",
+        null
+      ]
+    },
+    "australianImpactNotes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

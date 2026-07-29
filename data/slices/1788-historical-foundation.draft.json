@@ -1,0 +1,270 @@
+{
+  "id": "slice-1788-historical-foundation",
+  "title": "1788 Historical Foundation Slice",
+  "canonStatus": "draft",
+  "timelineLayer": "historicalFoundation",
+  "sourcePaths": [
+    "source-import/markdown/Crimson Dunes/Jonathan Giya/World Timelines 348fc257cb21494e8dd79f892ff030ee.md",
+    "source-import/markdown/Crimson Dunes/Jonathan Giya/Plot Outline 3890d718aacb47a7ba05e48eae22a5a0.md",
+    "source-import/markdown/Crimson Dunes/Jonathan Giya/Magic System f2de5fb96d4d48b9a7e077ce881402f9.md",
+    "source-import/markdown/Crimson Dunes/Jonathan Giya/Thoughts 6e4db8fcac2e4ecabe3008e4a6e00a74.md",
+    "source-import/markdown/Crimson Dunes/Jonathan Giya/Working with Indigenous Australians 00aa89833a2d44b2ad54ee81e42394e6.md"
+  ],
+  "purpose": "Define the First Fleet / original magical stowaway foundation that creates durable world flags influencing the 1810 playable start.",
+  "scopeBoundaries": [
+    "Preserve source-import material separately; do not overwrite raw source.",
+    "All structures in this file are draft until Author Mode promotion.",
+    "Indigenous magical systems should be handled through respectful constraints and local knowledge boundaries.",
+    "1788 events create foundation flags, not fixed player choices unless later adapted into playable historical encounters."
+  ],
+  "overview": {
+    "dateRange": "1788 to early post-arrival period, with consequences extending to 1810",
+    "premise": "A magical stowaway or hidden magical presence arrives with or around the First Fleet. This presence interprets Australia through British/European wizarding assumptions and begins encountering evidence of local land-based magical systems that do not fit those assumptions.",
+    "currentDecisionState": {
+      "stowawayIdentity": "unresolved",
+      "contactStyle": "unresolved; indirect investigation is currently safest default until decided",
+      "canonStatus": "draft",
+      "linked1810Outcome": "Crimson Dunes is locally founded by 1810 but not yet ICW-recognised; direct ICW envoy/correspondence begins soon after."
+    }
+  },
+  "originalMagicalStowawayProfile": {
+    "status": "draft-options",
+    "recommendedDefault": "one concealed magical stowaway, identity unresolved",
+    "identityOptions": [
+      {
+        "id": "one-stowaway",
+        "label": "One concealed stowaway",
+        "pros": [
+          "Strong POV focus",
+          "Easy to tie to guilt, secrecy, discovery, and records"
+        ],
+        "risks": [
+          "May over-centralise foundation history around one outsider"
+        ]
+      },
+      {
+        "id": "accidental-magical-convict",
+        "label": "Accidental magical convict",
+        "pros": [
+          "Ties directly to penal colony",
+          "Clear reason to hide and survive"
+        ],
+        "risks": [
+          "Needs careful handling around coercion and agency"
+        ]
+      },
+      {
+        "id": "secret-observer",
+        "label": "Official-but-secret British wizarding observer",
+        "pros": [
+          "Connects ICW/Ministry concerns early",
+          "Explains record-keeping and secrecy pressure"
+        ],
+        "risks": [
+          "Could overemphasise British institutional control too early"
+        ]
+      },
+      {
+        "id": "small-hidden-group",
+        "label": "Small hidden family/group",
+        "pros": [
+          "Creates more social dynamics",
+          "Supports multiple traditions or views"
+        ],
+        "risks": [
+          "More complex to validate and canonise"
+        ]
+      }
+    ],
+    "initialCapabilities": [
+      "British/European wand-based or intent-based magic",
+      "Statute of Secrecy assumptions",
+      "Limited knowledge of land-based Australian magic",
+      "Survival-focused concealment"
+    ],
+    "initialLimitations": [
+      "Misreads local magic through British categories",
+      "Limited language/cultural understanding",
+      "No local authority",
+      "Risk of exposing magic among Muggle settlement"
+    ]
+  },
+  "firstFleetMagicalArrivalContext": {
+    "status": "draft",
+    "muggleAnchorEvents": [
+      "1787 First Fleet departs Portsmouth",
+      "1788 First Fleet arrival",
+      "1788 New South Wales settlement"
+    ],
+    "magicalContext": [
+      "International Statute of Secrecy exists as active global context",
+      "British wizarding governance expectations may influence behaviour",
+      "Australia is not yet integrated into ICW recognition in this draft model"
+    ],
+    "draftQuestions": [
+      "Did the stowaway plan to reach Australia, flee Britain, or accidentally arrive?",
+      "Does the stowaway possess an official wand/registered wand?",
+      "Does any school/Ministry/ICW record know the stowaway exists?"
+    ]
+  },
+  "initialMuggleSettlementIntegration": {
+    "status": "draft",
+    "coverOptions": [
+      "Pretending to be a convict",
+      "Pretending to be crew/support labour",
+      "Hidden entirely except for survival interventions",
+      "Quietly useful to settlement leadership but not openly magical"
+    ],
+    "pressures": [
+      "Food scarcity",
+      "Disease and injury",
+      "Secrecy breaches",
+      "Fear of punishment",
+      "Unfamiliar landscape",
+      "Moral pressure to intervene"
+    ],
+    "possibleWorldFlags": [
+      "muggle_settlement_magically_shadowed",
+      "settler_magic_detected",
+      "first_fleet_magic_contact",
+      "wizarding_stowaway_present_1788"
+    ]
+  },
+  "firstInvestigationOfIndigenousMagicalSystems": {
+    "status": "draft-sensitive",
+    "recommendedStartingApproach": "indirect investigation through signs, tracks, environmental effects, stories, route changes, dreams, failed spells, and protected places before direct practitioner contact",
+    "sourceAlignedConcepts": [
+      "Connection to land",
+      "Ritual/ceremonial practice",
+      "Ochre/instrument-enhanced ritual effects",
+      "Language/intent focus",
+      "Songline-style long-distance magic",
+      "Strict knowledge/story responsibilities"
+    ],
+    "safetyConstraints": [
+      "Do not invent sacred specifics as canon",
+      "Keep restricted knowledge out of Player Mode unless authorised by worldbuilding rules",
+      "Use fictionalised systems with clear respect and boundaries",
+      "Mark uncertain cultural material as reference/adaptation/draft"
+    ]
+  },
+  "earlyMisunderstandingsAndDiscoveries": {
+    "status": "draft",
+    "misunderstandings": [
+      "Mistaking land-based magic for wandless magic",
+      "Assuming Country can be mapped like British magical territory",
+      "Trying to classify ritual practice as charms/wards",
+      "Assuming secrecy law is universal in the same form everywhere",
+      "Mistaking story/song obligations for folklore rather than law/record/technology"
+    ],
+    "discoveries": [
+      "Land remembers and responds",
+      "Movement through Country follows obligations and knowledge chains",
+      "Magic can be relational and place-specific",
+      "British spells may behave differently around older local systems",
+      "Survival requires listening before acting"
+    ]
+  },
+  "worldFlagsCreatedBySlice": [
+    {
+      "id": "first_fleet_magic_contact",
+      "description": "Magical presence arrives with or around First Fleet context.",
+      "status": "draft"
+    },
+    {
+      "id": "wizarding_stowaway_present_1788",
+      "description": "At least one hidden magical outsider is present in 1788 foundation period.",
+      "status": "draft"
+    },
+    {
+      "id": "settler_magic_detected",
+      "description": "Local magical systems or practitioners detect outsider magic.",
+      "status": "draft"
+    },
+    {
+      "id": "local_magic_observed_not_understood",
+      "description": "Outsider observes local magic but cannot correctly classify it.",
+      "status": "draft"
+    },
+    {
+      "id": "muggle_settlement_magically_shadowed",
+      "description": "Muggle settlement develops under hidden magical observation or intervention.",
+      "status": "draft"
+    },
+    {
+      "id": "first_contact_misinterpretations",
+      "description": "Early misunderstandings create long-lived tensions and later teaching needs.",
+      "status": "draft"
+    },
+    {
+      "id": "fusion_magic_conditions_seeded",
+      "description": "Conditions are created for later Australian fusion magic development.",
+      "status": "draft"
+    },
+    {
+      "id": "crimson_dunes_school_need_emerging",
+      "description": "Need for an Australian magical teaching institution begins to emerge.",
+      "status": "draft"
+    }
+  ],
+  "possible1788EncounterTemplates": [
+    {
+      "id": "enc-1788-concealed-wand-use-aboard-ship",
+      "title": "Concealed Wand Use Aboard Ship",
+      "mode": "historicalFoundation",
+      "focus": "secrecy/survival",
+      "status": "draft"
+    },
+    {
+      "id": "enc-1788-first-landfall-detection",
+      "title": "First Detection After Landfall",
+      "mode": "historicalFoundation",
+      "focus": "land-based magical response",
+      "status": "draft"
+    },
+    {
+      "id": "enc-1788-misread-protected-place",
+      "title": "Misreading a Protected Place",
+      "mode": "historicalFoundation",
+      "focus": "misinterpretation and restraint",
+      "status": "draft"
+    },
+    {
+      "id": "enc-1788-stay-hidden-or-intervene",
+      "title": "Stay Hidden or Intervene",
+      "mode": "historicalFoundation",
+      "focus": "secrecy versus harm reduction",
+      "status": "draft"
+    },
+    {
+      "id": "enc-1788-map-country-wrongly",
+      "title": "Attempting to Map Country Wrongly",
+      "mode": "historicalFoundation",
+      "focus": "classification failure",
+      "status": "draft"
+    }
+  ],
+  "influenceOn1810PlayableStart": {
+    "status": "draft",
+    "influences": [
+      "Crimson Dunes exists because earlier history created a need for local teaching and negotiated magical practice",
+      "Waru’s 1810 perspective can inherit warnings, obligations, stories, or consequences from early contact",
+      "Outsider groups connected to the emerging school may carry incomplete or biased historical records",
+      "ICW recognition pressure soon after 1810 can create institutional stakes",
+      "Direct ICW envoy thread can pressure the school to document, classify, and prove itself"
+    ],
+    "1810Flags": [
+      "crimson_dunes_locally_founded_1810",
+      "crimson_dunes_not_yet_icw_recognised",
+      "australian_magical_governance_unsettled",
+      "direct_icw_envoy_contact_1811_proposed"
+    ]
+  },
+  "openQuestions": [
+    "Who exactly is the original magical stowaway or hidden magical presence?",
+    "Is the first 1788 contact direct or indirect?",
+    "What harm, if any, does early misunderstanding cause?",
+    "Who preserves the most reliable account of 1788 by 1810?",
+    "How much does Waru know or inherit about this period?"
+  ]
+}

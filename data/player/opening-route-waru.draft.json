@@ -1,0 +1,43 @@
+{
+  "id": "route-1810-waru-red-road-draft",
+  "title": "The Red Road to Crimson Dunes",
+  "canonStatus": "draft",
+  "mode": "player-preview",
+  "pov": "Waru",
+  "startYear": 1810,
+  "summary": "A basic Player Mode preview route where Waru cautiously observes a mixed outsider group connected to the emerging Crimson Dunes School.",
+  "visibilityRule": "Only Waru-visible or player-approved context should be shown in Player Mode.",
+  "nodes": [
+    {
+      "id": "red-dust-approach",
+      "title": "Red Dust Approach",
+      "purpose": "Opening threshold; establish heat, distance, signs of travel, and Waru’s observation-first position.",
+      "visibleToPlayer": true
+    },
+    {
+      "id": "dry-creek-sign",
+      "title": "Dry Creek Sign",
+      "purpose": "First environmental/magical sign that outsiders may misread.",
+      "visibleToPlayer": true
+    },
+    {
+      "id": "distant-smoke-hidden-track",
+      "title": "Distant Smoke / Hidden Track",
+      "purpose": "First decision pressure: continue observing, interpret, withdraw, indirectly intervene, or reveal.",
+      "visibleToPlayer": true
+    }
+  ],
+  "availableActions": [
+    "observe",
+    "interpret",
+    "withdraw",
+    "indirectly_intervene",
+    "reveal_self"
+  ],
+  "playerFlags": [
+    "waru_locked_pov",
+    "observation_first_gameplay",
+    "outsiders_not_fully_revealed",
+    "crimson_dunes_destination_known_as_risk_opportunity"
+  ]
+}

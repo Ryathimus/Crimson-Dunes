@@ -11,7 +11,7 @@
     <header class="topbar">
       <div>
         <h1>Crimson Dunes</h1>
-        <p>Author / Player / Dev static app shell — V2 source/draft review</p>
+        <p>Author / Player / Dev static app shell — V6 source/draft review</p>
       </div>
       <nav class="mode-tabs" aria-label="System mode tabs">
         <button data-mode="author" class="active">Author Mode</button>
@@ -28,13 +28,78 @@
         </div>
         <p id="mode-description"></p>
 
+        <section class="validation-dashboard" id="validation-dashboard">
+          <div class="stat-card"><b id="stat-total">0</b><span>Total draft events</span></div>
+          <div class="stat-card"><b id="stat-errors">0</b><span>Validation errors</span></div>
+          <div class="stat-card"><b id="stat-warnings">0</b><span>Review warnings</span></div>
+          <div class="stat-card"><b id="stat-ready">0</b><span>Ready for draft save</span></div>
+        </section>
+        <section class="patch-actions">
+          <button id="export-ready-queue">Export ready queue</button>
+          <label class="file-button">Import review patch<input id="import-review-patch" type="file" accept="application/json" hidden /></label>
+          <button id="export-validation-report">Export validation report</button>
+        </section>
+
         <div class="controls">
           <label>Layer<select id="layer-filter"><option value="all">All</option><option value="historicalFoundation">Historical Foundation</option><option value="playable">Playable</option><option value="futureReference">Future Reference</option></select></label>
           <label>Category<select id="category-filter"><option value="all">All</option></select></label>
           <label>Impact<select id="impact-filter"><option value="all">All</option><option value="direct">Direct</option><option value="indirect">Indirect</option><option value="ambient">Ambient</option><option value="unknown">Unknown</option><option value="none-likely">None likely</option></select></label>
-          <label>Review<select id="review-filter"><option value="all">All</option><option value="unreviewed">Unreviewed</option><option value="reviewed">Reviewed</option><option value="needs-decision">Needs Decision</option><option value="ready-for-draft-save">Ready for Draft Save</option></select></label>
+          <label>Review<select id="review-filter"><option value="all">All</option><option value="unreviewed">Unreviewed</option><option value="reviewed">Reviewed</option><option value="needs-decision">Needs Decision</option><option value="ready-for-draft-save">Ready for Draft Save</option><option value="has-validation-errors">Has Validation Errors</option><option value="has-review-warnings">Has Review Warnings</option></select></label>
           <input id="search" type="search" placeholder="Search timeline…" />
         </div>
+
+        
+
+        <section id="slice-1788-panel" class="slice-panel">
+          <div class="panel-header">
+            <h3>1788 Historical Foundation Workspace</h3>
+            <span class="badge muted">draft slice</span>
+          </div>
+          <p id="slice-purpose" class="small">Loading 1788 slice…</p>
+          <div class="slice-actions">
+            <button id="export-1788-slice">Export 1788 slice draft</button>
+            <button id="copy-1788-flags">Copy world flags</button>
+          </div>
+          <div class="slice-grid">
+            <section>
+              <h4>Overview</h4>
+              <div id="slice-overview" class="slice-card"></div>
+            </section>
+            <section>
+              <h4>World Flags</h4>
+              <ol id="slice-flags" class="compact-list"></ol>
+            </section>
+            <section>
+              <h4>Encounter Templates</h4>
+              <ol id="slice-encounters" class="compact-list"></ol>
+            </section>
+          </div>
+          <details class="slice-details">
+            <summary>Open full 1788 draft structure</summary>
+            <pre id="slice-json" class="source-box"></pre>
+          </details>
+        </section>
+
+
+
+        <section id="player-preview-panel" class="mode-extra-panel" hidden>
+          <div class="panel-header"><h3>Player Mode Preview — Waru Opening Route</h3><span class="badge muted">basic preview</span></div>
+          <p id="player-route-summary" class="small">Loading player route…</p>
+          <div class="player-grid">
+            <section><h4>Route Nodes</h4><ol id="player-route-nodes" class="compact-list"></ol></section>
+            <section><h4>Available Actions</h4><div id="player-actions" class="button-grid"></div></section>
+            <section><h4>Player Event Log</h4><ol id="player-event-log" class="compact-list"></ol><button id="export-player-log">Export player log</button><button id="clear-player-log">Clear log</button></section>
+          </div>
+        </section>
+
+        <section id="dev-preview-panel" class="mode-extra-panel" hidden>
+          <div class="panel-header"><h3>Dev Mode Preview</h3><span class="badge muted">system dashboard</span></div>
+          <div class="dev-grid">
+            <section><h4>Feature Flags</h4><div id="dev-feature-flags" class="feature-list"></div></section>
+            <section><h4>Dev Tasks</h4><ol id="dev-task-list" class="compact-list"></ol></section>
+            <section><h4>Validation Summary</h4><pre id="dev-validation-summary" class="source-box"></pre><button id="export-dev-config">Export dev config</button></section>
+          </div>
+        </section>
 
         <div class="split">
           <section class="timeline-list" aria-label="Timeline events">
@@ -67,7 +132,7 @@
             </div>
             <div>
               <h4>Draft review</h4>
-              <label>Review status<select id="review-status"><option value="unreviewed">Unreviewed</option><option value="reviewed">Reviewed</option><option value="needs-decision">Needs Decision</option><option value="ready-for-draft-save">Ready for Draft Save</option></select></label>
+              <label>Review status<select id="review-status"><option value="unreviewed">Unreviewed</option><option value="reviewed">Reviewed</option><option value="needs-decision">Needs Decision</option><option value="ready-for-draft-save">Ready for Draft Save</option><option value="has-validation-errors">Has Validation Errors</option><option value="has-review-warnings">Has Review Warnings</option></select></label>
               <textarea id="draft-review-note" rows="7" placeholder="Draft migration review note…"></textarea>
               <button id="save-review">Save review locally</button>
             </div>

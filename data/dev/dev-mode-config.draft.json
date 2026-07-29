@@ -1,0 +1,50 @@
+{
+  "id": "dev-mode-config-draft",
+  "canonStatus": "draft",
+  "featureFlags": {
+    "authorMode": true,
+    "playerModePreview": true,
+    "devModePreview": true,
+    "aiAgentPlaceholder": true,
+    "realAiProvider": false,
+    "timelineValidation": true,
+    "sourceDraftReview": true,
+    "projectLibrary": true,
+    "slice1788Workspace": true,
+    "canonPromotion": false,
+    "repoWriteBack": false
+  },
+  "validationTargets": [
+    "timeline events",
+    "1788 slice draft",
+    "opening route draft",
+    "review patches"
+  ],
+  "devTasks": [
+    {
+      "id": "dev-task-schema-hardening",
+      "title": "Harden schemas for timeline, slice, route, encounter, world flags",
+      "status": "todo"
+    },
+    {
+      "id": "dev-task-patch-application",
+      "title": "Add controlled patch application workflow",
+      "status": "todo"
+    },
+    {
+      "id": "dev-task-player-visibility-filter",
+      "title": "Implement proper Player Mode visibility filtering",
+      "status": "todo"
+    },
+    {
+      "id": "dev-task-ai-provider-abstraction",
+      "title": "Add disabled/local/proxy provider abstraction for AI Agent",
+      "status": "todo"
+    },
+    {
+      "id": "dev-task-source-working-files",
+      "title": "Persist source-working notes as files/patches",
+      "status": "todo"
+    }
+  ]
+}

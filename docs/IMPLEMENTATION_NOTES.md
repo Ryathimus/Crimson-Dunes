@@ -42,3 +42,34 @@ Library counts at build time:
   "schemaFiles": 6
 }
 ```
+
+
+## Added Since V3 — Validation + Patch Workflow
+
+- Added runtime timeline validation checks.
+- Added validation dashboard.
+- Added review patch import.
+- Added ready-for-draft-save queue export.
+- Added validation report export.
+- Added `data/timeline-event.schema.json` as a draft reference schema.
+
+Validation remains client-side only; it does not promote canon or write repository files.
+
+
+## Added Since V4 — 1788 Historical Foundation Workspace
+
+- Added `data/slices/1788-historical-foundation.draft.json`.
+- Added 1788 slice workspace to Author Mode shell.
+- Added export for 1788 slice draft.
+- Added copy/export world flags action.
+- 1788 structure remains draft and requires Author Mode review before canon promotion.
+
+
+## Added Since V5 — Player / Dev Preview + Decision Queue
+
+- Added `data/decision-queues/1788-decision-queue.draft.json`.
+- Added `data/player/opening-route-waru.draft.json`.
+- Added `data/dev/dev-mode-config.draft.json`.
+- Added basic Player Mode preview with Waru route nodes, action buttons, and local player event log.
+- Added basic Dev Mode preview with feature flags, dev tasks, and validation summary.
+- Added documentation updates: APP_PROGRESS, AI_PROJECT_CURRENT_STATE, SLICE_BOARD, WORKFLOW_STATUS.

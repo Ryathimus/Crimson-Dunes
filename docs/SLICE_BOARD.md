@@ -1,0 +1,22 @@
+# Slice Board — Current Draft
+
+- [x] Architecture consolidation and durable data structure draft.
+- [x] Three-system mode architecture: Author / Player / Dev.
+- [x] Source-import/source-working/draft/canon lifecycle.
+- [x] Full timeline draft migration.
+- [x] ICW active-context timeline update.
+- [x] Direct ICW envoy draft event.
+- [x] Static app shell with Author / Player / Dev modes.
+- [x] Project Library browser.
+- [x] Timeline validation and review patch workflow.
+- [x] 1788 Historical Foundation Workspace.
+- [x] Basic Player Mode preview.
+- [x] Basic Dev Mode preview.
+- [ ] 1788 decision queue review and selected option handling.
+- [ ] Source-working file import/export.
+- [ ] Route/encounter schema hardening.
+- [ ] Waru Player Mode visibility filter.
+- [ ] Semi-procedural route instance generation.
+- [ ] Encounter template migration.
+- [ ] Save/load full world state.
+- [ ] Secure optional AI provider integration.

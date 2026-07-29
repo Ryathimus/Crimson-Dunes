@@ -13,3 +13,23 @@ Static GitHub Pages-compatible app shell with:
 - Disabled/no-op AI Agent panel with mode-aware context preview.
 
 No real AI provider calls are made and no API keys are included.
+
+## V4 Additions
+
+- Timeline event validation.
+- Validation dashboard.
+- Review patch import.
+- Ready-for-draft-save queue export.
+- Validation report export.
+
+## V5 Additions
+
+- 1788 Historical Foundation Workspace.
+- Draft 1788 slice JSON with overview, stowaway options, investigation model, world flags, encounter templates, and 1810 influences.
+
+## V6 Additions
+
+- 1788 decision queue draft data.
+- Basic Player Mode route preview and local player event log.
+- Basic Dev Mode feature flag/task/validation dashboard.
+- Updated project progress, current state, slice board, and workflow status docs.
