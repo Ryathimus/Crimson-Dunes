@@ -12,7 +12,7 @@
   "azureOpenAIApiDeploymentName": "",
   "azureOpenAIApiVersion": "",
   "azureOpenAIApiEmbeddingDeploymentName": "",
-  "googleApiKey": "AIzaSyAruGqmm2mdembkwikvBdAkgi22HrulusY",
+  "googleApiKey": "",
   "openRouterAiApiKey": "",
   "xaiApiKey": "",
   "mistralApiKey": "",
