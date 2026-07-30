@@ -87,3 +87,17 @@ No real AI provider calls are made and no API keys are included.
 - Runtime contract repair for missing V9 Author workspace functions.
 - Runtime comparison report against V12 and V13.
 - Dev Mode Runtime Contract panel.
+
+## V15 Additions
+
+- Secret hygiene scan and known sensitive path cleanup.
+- Security remediation documentation and local scanning scripts.
+- Dev Mode Secret Hygiene panel.
+- Comprehensive app overview.
+
+## V16 Additions
+
+- Manifest-driven build label.
+- Mode interaction smoke tests.
+- Dev Mode Mode Interaction Test Runner.
+- Mode interaction guide.

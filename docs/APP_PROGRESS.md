@@ -90,3 +90,21 @@ No app shell currently promotes canon, mutates source-import, writes repository 
 - Restored missing V9 Author workspace functions: `loadV9Data`, `renderAuthorDashboard`, `setAuthorSection`, and `applyAuthorSectionVisibility`.
 - Added `data/runtime-comparison.v14.json`.
 - Added Dev Mode Runtime Contract panel.
+
+
+## V15 Additions
+
+- Added secret hygiene cleanup for generated package.
+- Removed known sensitive imported paths if present.
+- Added secret scan report, `.gitignore`, `.gitleaks.toml`, and local scan/sanitize scripts.
+- Added Dev Mode Secret Hygiene panel.
+- Added comprehensive overview document.
+
+
+## V16 Additions
+
+- Added manifest-driven build label rendering.
+- Added Dev Mode Mode Interaction Test Runner.
+- Added mode interaction fixture at `data/dev/mode-interaction-tests.v16.json`.
+- Added `docs/MODE_INTERACTION_GUIDE_V16.md`.
+- Refreshed generated-package secret scan report for V16.

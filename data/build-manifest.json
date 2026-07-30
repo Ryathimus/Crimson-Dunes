@@ -1,15 +1,22 @@
 {
-  "version": "V14",
-  "name": "runtime contract repair",
-  "generatedAt": "2026-07-29T22:56:07.538757+00:00",
-  "baseBuild": "V13 runtime fix + guarded route tests",
+  "version": "V16",
+  "name": "mode interaction tests + manifest label",
+  "generatedAt": "2026-07-30T01:15:25.872450+00:00",
+  "baseBuild": "V15 secret hygiene + app overview",
   "fixes": [
     "Defines missing canon queue runtime functions: loadV10Data, renderCanonQueue, exportCanonQueue.",
     "Adds build manifest for version consistency.",
     "Adds guarded route transition test fixture.",
     "Defines missing V9 Author workspace functions: loadV9Data, renderAuthorDashboard, setAuthorSection, applyAuthorSectionVisibility.",
     "Adds runtime comparison report against V12 and V13.",
-    "Adds runtime contract panel and function self-check."
+    "Adds runtime contract panel and function self-check.",
+    "Sanitized generated package for known secret paths and Google API key patterns.",
+    "Added secret scan report, security remediation documentation, .gitignore, gitleaks config, and local scan/sanitize scripts.",
+    "Added Dev Mode Secret Hygiene panel.",
+    "Adds manifest-driven build label rendering.",
+    "Adds Dev Mode mode-interaction smoke test runner.",
+    "Adds mode interaction guide for Author, Player, and Dev workflows.",
+    "Refreshes secret scan report for V16 generated package."
   ],
   "canonSafety": [
     "No canon promotion implemented.",

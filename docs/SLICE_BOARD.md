@@ -44,3 +44,11 @@
 - [x] V14 runtime contract comparison against V12 and V13.
 - [x] Restored missing V9 Author workspace functions.
 - [x] Added Runtime Contract panel.
+
+- [x] V15 generated-package secret hygiene scan.
+- [x] V15 security remediation docs and scripts.
+- [x] V15 comprehensive app overview.
+
+- [x] V16 mode interaction smoke test fixture.
+- [x] V16 manifest-driven build label rendering.
+- [x] V16 mode interaction guide.

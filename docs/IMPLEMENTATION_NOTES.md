@@ -147,3 +147,20 @@ Validation remains client-side only; it does not promote canon or write reposito
 - Fixed `loadV9Data is not defined`.
 - Restored `renderAuthorDashboard`, `setAuthorSection`, `applyAuthorSectionVisibility`, and `openLibraryPath`.
 - Added Dev Mode Runtime Contract panel and self-check.
+
+
+## Added Since V14 — V15 Secret Hygiene + App Overview
+
+- Added `data/security/secret-scan-report.v15.json`.
+- Added `.gitignore`, `.gitleaks.toml`, and `scripts/security_scan.py`.
+- Added `docs/SECURITY_SECRET_REMEDIATION.md`.
+- Added `docs/APP_OVERVIEW_V15.md`.
+- Added Dev Mode Secret Hygiene panel.
+
+
+## Added Since V15 — V16 Mode Interaction Tests
+
+- Added `data/dev/mode-interaction-tests.v16.json`.
+- Added Dev Mode Mode Interaction Test Runner.
+- Added `renderBuildLabel()` to reduce visible version drift.
+- Added `docs/MODE_INTERACTION_GUIDE_V16.md`.

@@ -1,5 +1,5 @@
 {
-  "id": "workspace-config-v14",
+  "id": "workspace-config-v16",
   "purpose": "Define which panels belong to Author, Player, and Dev Mode to reduce cross-over and duplication.",
   "modePanels": {
     "author": [
@@ -23,11 +23,13 @@
       "player-route-state-panel"
     ],
     "dev": [
+      "secret-hygiene-panel",
       "runtime-contract-panel",
       "validation-dashboard",
       "patch-actions",
       "dev-preview-panel",
       "dev-route-test-panel",
+      "mode-interaction-test-panel",
       "ui-recommendations-panel",
       "project-library-panel"
     ]
@@ -45,6 +47,8 @@
     "V11 updates visibility logic to set both class and hidden attributes, fixing missing Player/Dev panels caused by static hidden attributes in HTML.",
     "V12 adds route-state and author-section detail workspaces while retaining strict per-mode panel visibility.",
     "V13 fixes missing canon queue runtime functions and adds route-state test fixture panel in Dev Mode.",
-    "V14 adds a runtime contract panel and restores V9 author workspace functions that had drifted out of app.js."
+    "V14 adds a runtime contract panel and restores V9 author workspace functions that had drifted out of app.js.",
+    "V15 adds secret hygiene panel and generated-package scan report. Actual leaked provider keys must still be revoked outside this app.",
+    "V16 adds mode interaction smoke tests to verify the intended mode-specific panels and data are available."
   ]
 }

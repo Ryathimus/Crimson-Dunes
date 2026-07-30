@@ -71,3 +71,13 @@ V13 fixes the V12 startup failure caused by missing canon queue runtime function
 ## V14 Current State Addendum
 
 V14 addresses runtime/version drift by comparing V12 and V13, restoring missing V9 Author workspace runtime functions, and adding a Runtime Contract panel. V14 is intended to prevent the next missing-function runtime failure from being invisible until browser execution.
+
+
+## V15 Current State Addendum
+
+V15 focuses on secret hygiene and project clarity. It removes known sensitive import paths from the generated package, adds a secret scan report, and adds an overview describing the app purpose and the intended purpose of Author, Player, and Dev modes.
+
+
+## V16 Current State Addendum
+
+V16 begins verifying that each mode can be used and interacted with as expected. Dev Mode now contains a Mode Interaction Test Runner that checks expected panels, forbidden panels, required data, and manual interaction affordances for Author, Player, and Dev modes.

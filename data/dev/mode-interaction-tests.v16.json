@@ -1,0 +1,94 @@
+{
+  "id": "mode-interaction-tests-v16",
+  "generatedAt": "2026-07-30T01:15:25.872450+00:00",
+  "purpose": "Smoke tests for checking that each mode has the expected panels, data objects, and interaction affordances.",
+  "modes": {
+    "author": {
+      "requiredPanels": [
+        "author-nav-panel",
+        "author-dashboard-panel",
+        "validation-dashboard",
+        "patch-actions"
+      ],
+      "optionalPanels": [
+        "timeline-controls",
+        "timeline-split",
+        "author-review-panel",
+        "slice-1788-panel",
+        "decision-queue-panel",
+        "canon-queue-panel",
+        "project-library-panel",
+        "author-section-detail-panel"
+      ],
+      "requiredData": [
+        "events",
+        "authorWorldbuildingIndex",
+        "workspaceConfig"
+      ],
+      "interactionChecks": [
+        "top mode button exists",
+        "author section buttons exist",
+        "dashboard cards render",
+        "review export buttons exist"
+      ]
+    },
+    "player": {
+      "requiredPanels": [
+        "player-preview-panel",
+        "player-knowledge-panel",
+        "player-route-state-panel"
+      ],
+      "forbiddenPanels": [
+        "author-dashboard-panel",
+        "timeline-split",
+        "author-review-panel",
+        "dev-preview-panel",
+        "runtime-contract-panel"
+      ],
+      "requiredData": [
+        "playerRoute",
+        "playerCharacter",
+        "routeStateMachine",
+        "workspaceConfig"
+      ],
+      "interactionChecks": [
+        "top mode button exists",
+        "route node selector exists",
+        "player actions render",
+        "player log controls exist",
+        "route state export exists"
+      ]
+    },
+    "dev": {
+      "requiredPanels": [
+        "secret-hygiene-panel",
+        "runtime-contract-panel",
+        "validation-dashboard",
+        "dev-preview-panel",
+        "dev-route-test-panel",
+        "mode-interaction-test-panel",
+        "ui-recommendations-panel",
+        "project-library-panel"
+      ],
+      "forbiddenPanels": [
+        "player-preview-panel",
+        "player-knowledge-panel",
+        "author-dashboard-panel"
+      ],
+      "requiredData": [
+        "devConfig",
+        "structuredValidation",
+        "routeTestFixture",
+        "secretScanReport",
+        "workspaceConfig"
+      ],
+      "interactionChecks": [
+        "top mode button exists",
+        "runtime contract output exists",
+        "route test runner exists",
+        "mode interaction runner exists",
+        "project library filter exists"
+      ]
+    }
+  }
+}

@@ -24,3 +24,7 @@
 .test-pass{color:#7ed17e}.test-fail{color:#ff9f80}
 
 .runtime-ok{color:#7ed17e}.runtime-missing{color:#ff9f80}
+
+.secret-pass{color:#7ed17e}.secret-review{color:#ff9f80}
+
+.mode-test-pass{color:#7ed17e}.mode-test-fail{color:#ff9f80}

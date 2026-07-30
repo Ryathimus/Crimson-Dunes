@@ -1,0 +1,14 @@
+# Secret hygiene
+.env
+.env.*
+*.pem
+*.key
+BUNDLE.md
+bundle.md
+SS_data/
+**/.obsidian/plugins/copilot/data.json
+**/copilot/data.json
+
+# Local/editor
+.DS_Store
+.vscode/

@@ -30,7 +30,10 @@ const state = {
   buildManifest: null,
   routeTestFixture: null,
   runtimeComparison: null,
-  runtimeContractReport: null
+  runtimeContractReport: null,
+  secretScanReport: null,
+  modeInteractionTests: null,
+  modeInteractionReport: null
 };
 const modeConfig = {
   author: { title:'Author Mode', badge:'canon management', description:'Full-access source, draft, canon and migration review shell. Draft-to-canon promotion is deliberately not implemented.', agentNote:'Author Agent can help compare source/draft/canon and prepare generated suggestions, but output remains generated until saved as draft.' },
@@ -45,13 +48,13 @@ async function init(){
   ]);
   state.events = await eventsRes.json();
   state.rawSource = await srcRes.text();
-  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadV12Data(); await loadV13Data(); await loadV14Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderRuntimeContract(); renderCanonQueue(); renderRouteState(); renderAuthorSectionDetail(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
+  populateCategories(); bindEvents(); await loadProjectLibrary(); await load1788Slice(); await loadV6Data(); await loadV8Data(); await loadV9Data(); await loadV10Data(); await loadV12Data(); await loadV13Data(); await loadV14Data(); await loadV15Data(); await loadV16Data(); await loadWorkspaceConfig(); runValidation(); runStructuredValidation(); renderBuildLabel(); renderMode(); renderDashboard(); render1788Slice(); renderDecisionQueue(); renderPlayerPreview(); renderPlayerKnowledge(); renderDevPreview(); renderUiRecommendations(); renderAuthorDashboard(); renderSecretHygiene(); renderRuntimeContract(); renderCanonQueue(); renderRouteState(); renderAuthorSectionDetail(); applyWorkspaceVisibility(); applyAuthorSectionVisibility(); renderTimeline(); renderTranscript(); renderLibraryList();
 }
 function bindEvents(){
-  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();renderPlayerPreview();renderPlayerKnowledge();renderRouteState();renderDevPreview();renderRouteTestSummary();renderRuntimeContract();renderUiRecommendations();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
+  document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{state.mode=btn.dataset.mode;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b===btn));renderMode();renderDashboard();renderPlayerPreview();renderPlayerKnowledge();renderRouteState();renderDevPreview();renderRouteTestSummary();renderModeInteractionSummary();renderSecretHygiene();renderRuntimeContract();renderUiRecommendations();applyWorkspaceVisibility();applyAuthorSectionVisibility();renderTimeline();renderContextPreview();}));
   ['layer-filter','category-filter','impact-filter','review-filter','search'].forEach(id=>$(id).addEventListener('input',renderTimeline));
   $('chat-form').addEventListener('submit',onChatSubmit); $('export-transcript').addEventListener('click',exportTranscript); $('clear-transcript').addEventListener('click',()=>{state.transcript=[];persistTranscript();renderTranscript();});
-  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); if($('route-prev-node')) $('route-prev-node').addEventListener('click',()=>stepRouteNode(-1)); if($('route-next-node')) $('route-next-node').addEventListener('click',()=>stepRouteNode(1)); if($('export-route-state')) $('export-route-state').addEventListener('click', exportRouteState); if($('run-route-tests')) $('run-route-tests').addEventListener('click', runRouteTests); if($('rerun-runtime-contract')) $('rerun-runtime-contract').addEventListener('click', renderRuntimeContract); 
+  $('save-review').addEventListener('click',saveCurrentReview); $('export-review-patch').addEventListener('click',exportReviewPatch); $('library-search').addEventListener('input', renderLibraryList); $('library-group-filter').addEventListener('input', renderLibraryList); $('import-review-patch').addEventListener('change', importReviewPatch); $('export-ready-queue').addEventListener('click', exportReadyQueue); $('export-validation-report').addEventListener('click', exportValidationReport); $('export-1788-slice').addEventListener('click', export1788Slice); $('copy-1788-flags').addEventListener('click', copy1788Flags); $('export-player-log').addEventListener('click', exportPlayerLog); $('clear-player-log').addEventListener('click', clearPlayerLog); $('export-dev-config').addEventListener('click', exportDevConfig); $('export-1788-decisions').addEventListener('click', exportDecisionPatch); $('import-1788-decisions').addEventListener('change', importDecisionPatch); $('export-source-working').addEventListener('click', exportSourceWorkingPatch); $('import-source-working').addEventListener('change', importSourceWorkingPatch); $('player-route-node-select').addEventListener('change', changeRouteNode); document.querySelectorAll('[data-author-section]').forEach(btn=>btn.addEventListener('click',()=>setAuthorSection(btn.dataset.authorSection))); if($('export-canon-queue')) $('export-canon-queue').addEventListener('click', exportCanonQueue); if($('route-prev-node')) $('route-prev-node').addEventListener('click',()=>stepRouteNode(-1)); if($('route-next-node')) $('route-next-node').addEventListener('click',()=>stepRouteNode(1)); if($('export-route-state')) $('export-route-state').addEventListener('click', exportRouteState); if($('run-route-tests')) $('run-route-tests').addEventListener('click', runRouteTests); if($('rerun-runtime-contract')) $('rerun-runtime-contract').addEventListener('click', renderRuntimeContract); if($('rerun-secret-hygiene')) $('rerun-secret-hygiene').addEventListener('click', renderSecretHygiene); if($('run-mode-interaction-tests')) $('run-mode-interaction-tests').addEventListener('click', runModeInteractionTests); 
 }
 function populateCategories(){[...new Set(state.events.map(e=>e.timelineCategory).filter(Boolean))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;$('category-filter').appendChild(o);});}
 function renderMode(){
@@ -77,7 +80,7 @@ function saveCurrentReview(){if(!state.selectedId)return alert('Select an event 
 function exportReviewPatch(){const patch={exportedAt:new Date().toISOString(),status:'draft-review-patch',reviews:state.reviews};downloadJson(patch,`crimson-dunes-timeline-review-patch-${new Date().toISOString().slice(0,10)}.json`);}
 function tagBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><div class="tag-list">${values.map(v=>`<span class="tag">${esc(v)}</span>`).join('')}</div></section>`:'';}
 function listBlock(title,values=[]){return values?.length?`<section><h4>${esc(title)}</h4><ul>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></section>`:'';}
-function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,build:state.buildManifest?{version:state.buildManifest.version,name:state.buildManifest.name}:null,runtimeMissing:state.runtimeContractReport?state.runtimeContractReport.missing:[],modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
+function renderContextPreview(){const selected=state.events.find(e=>e.id===state.selectedId);$('context-preview').textContent=JSON.stringify({mode:state.mode,provider:'disabled/no-op',selectedEvent:selected?{id:selected.id,dateText:selected.dateText,title:selected.title,timelineLayer:selected.timelineLayer,timelineCategory:selected.timelineCategory,canonStatus:selected.canonStatus,australianImpactScope:selected.australianImpactScope,reviewStatus:reviewStatus(selected.id),validation:state.validation[selected.id]||null}:null,selectedProjectFile:state.selectedLibraryPath,activeSlice:state.slice1788?{id:state.slice1788.id,title:state.slice1788.title,canonStatus:state.slice1788.canonStatus}:null,playerRoute:state.mode==='player'&&state.playerRoute?{id:state.playerRoute.id,pov:state.playerRoute.pov}:null,devConfig:state.mode==='dev'&&state.devConfig?{id:state.devConfig.id,realAiProvider:state.devConfig.featureFlags.realAiProvider}:null,activeAuthorSection:state.mode==='author'?state.activeAuthorSection:null,build:state.buildManifest?{version:state.buildManifest.version,name:state.buildManifest.name}:null,secretScan:state.secretScanReport?{status:state.secretScanReport.status,findingCount:state.secretScanReport.findingCount}:null,modeInteraction:state.modeInteractionReport?{passed:state.modeInteractionReport.passed,failed:state.modeInteractionReport.failed}:null,runtimeMissing:state.runtimeContractReport?state.runtimeContractReport.missing:[],modeVisibilityPanels:state.workspaceConfig?.modePanels?.[state.mode]||[],decisionPatchCount:Object.keys(state.decisionSelections).length,currentRouteNodeId:state.currentRouteNodeId,routeStateMachine:state.routeStateMachine?{id:state.routeStateMachine.id,activeNode:state.currentRouteNodeId}:null,discoveredFactCount:(state.discoveredFacts||[]).length,playerCharacter:state.mode==='player'&&state.playerCharacter?{name:state.playerCharacter.name,currentLocation:state.playerCharacter.currentLocation,equipmentCount:(state.playerCharacter.equipment||[]).length}:null,visibleEventCount:visibleEvents().length,warning:state.mode==='player'?'Player Mode context must be visibility-filtered before any real AI call.':'No network AI call is made in this shell.'},null,2);}
 
 
 function validateEvent(event){
@@ -184,7 +187,7 @@ function applyWorkspaceVisibility(){
     'validation-dashboard','patch-actions','timeline-controls','timeline-split',
     'slice-1788-panel','decision-queue-panel','author-review-panel','project-library-panel',
     'player-preview-panel','player-knowledge-panel','player-route-state-panel',
-    'runtime-contract-panel','dev-preview-panel','dev-route-test-panel','ui-recommendations-panel'
+    'secret-hygiene-panel','runtime-contract-panel','dev-preview-panel','dev-route-test-panel','mode-interaction-test-panel','ui-recommendations-panel'
   ];
   for(const id of panelIds) setPanelVisibility(id, visible.has(id));
   if($('player-mode-diagnostic') && state.mode==='player'){
@@ -518,6 +521,69 @@ function exportCanonQueue(){
   downloadJson({exportedAt:new Date().toISOString(),canonQueue:state.canonQueue||{}},`crimson-dunes-canon-queue-${new Date().toISOString().slice(0,10)}.json`);
 }
 
+
+
+async function loadV16Data(){
+  try{
+    const [modeTestsRes, secretRes] = await Promise.all([
+      fetch('data/dev/mode-interaction-tests.v16.json'),
+      fetch('data/security/secret-scan-report.v16.json')
+    ]);
+    state.modeInteractionTests = await modeTestsRes.json();
+    state.secretScanReport = await secretRes.json();
+  }catch(err){
+    if(!state.modeInteractionTests) state.modeInteractionTests={id:'mode-interaction-tests-fallback',loadError:err.message,modes:{}};
+  }
+}
+function renderBuildLabel(){
+  const label=$('build-label');
+  if(!label || !state.buildManifest) return;
+  label.textContent=`Author / Player / Dev static app shell — ${state.buildManifest.version} ${state.buildManifest.name}`;
+  document.title=`Crimson Dunes — ${state.buildManifest.version}`;
+}
+function renderModeInteractionSummary(){
+  if(!$('mode-interaction-test-output') || !state.modeInteractionTests) return;
+  const modeCount=Object.keys(state.modeInteractionTests.modes||{}).length;
+  $('mode-interaction-test-output').textContent=`Loaded mode interaction fixture for ${modeCount} modes. Click Run mode interaction tests.`;
+}
+function runModeInteractionTests(){
+  if(!$('mode-interaction-test-output')) return;
+  const fixture=state.modeInteractionTests||{modes:{}};
+  const report={generatedAt:new Date().toISOString(),modeCount:Object.keys(fixture.modes||{}).length,results:[]};
+  const stateData={
+    events:state.events, authorWorldbuildingIndex:state.authorWorldbuildingIndex, workspaceConfig:state.workspaceConfig,
+    playerRoute:state.playerRoute, playerCharacter:state.playerCharacter, routeStateMachine:state.routeStateMachine,
+    devConfig:state.devConfig, structuredValidation:state.structuredValidation, routeTestFixture:state.routeTestFixture, secretScanReport:state.secretScanReport
+  };
+  for(const [mode, spec] of Object.entries(fixture.modes||{})){
+    const requiredPanels=(spec.requiredPanels||[]).map(id=>({id,exists:!!$(id),inWorkspace:(state.workspaceConfig?.modePanels?.[mode]||[]).includes(id)}));
+    const forbiddenPanels=(spec.forbiddenPanels||[]).map(id=>({id,exists:!!$(id),notInWorkspace:!(state.workspaceConfig?.modePanels?.[mode]||[]).includes(id)}));
+    const requiredData=(spec.requiredData||[]).map(key=>({key,loaded:!!stateData[key]}));
+    const interactionChecks=(spec.interactionChecks||[]).map(label=>({label,status:'manual-check'}));
+    const pass=requiredPanels.every(p=>p.exists&&p.inWorkspace)&&forbiddenPanels.every(p=>p.notInWorkspace)&&requiredData.every(d=>d.loaded);
+    report.results.push({mode,pass,requiredPanels,forbiddenPanels,requiredData,interactionChecks});
+  }
+  report.passed=report.results.filter(r=>r.pass).length;
+  report.failed=report.results.filter(r=>!r.pass).length;
+  state.modeInteractionReport=report;
+  $('mode-interaction-test-output').textContent=JSON.stringify(report,null,2);
+  renderContextPreview();
+}
+
+async function loadV15Data(){
+  try{
+    const res=await fetch('data/security/secret-scan-report.v15.json');
+    state.secretScanReport=await res.json();
+  }catch(err){
+    state.secretScanReport={id:'secret-scan-report-fallback',status:'unknown',findingCount:null,loadError:err.message};
+  }
+}
+function renderSecretHygiene(){
+  if(!$('secret-hygiene-output')) return;
+  const report=state.secretScanReport||{status:'unknown'};
+  $('secret-hygiene-output').textContent=JSON.stringify(report,null,2);
+}
+
 async function loadV14Data(){
   try{
     const res=await fetch('data/runtime-comparison.v14.json');
@@ -527,7 +593,7 @@ async function loadV14Data(){
   }
 }
 function runRuntimeContract(){
-  const required=['loadV6Data','loadV8Data','loadV9Data','loadV10Data','loadV12Data','loadV13Data','loadV14Data','renderAuthorDashboard','setAuthorSection','applyAuthorSectionVisibility','renderCanonQueue','exportCanonQueue','renderRouteState','renderRouteTestSummary'];
+  const required=['loadV6Data','loadV8Data','loadV9Data','loadV10Data','loadV12Data','loadV13Data','loadV14Data','loadV15Data','loadV16Data','renderAuthorDashboard','setAuthorSection','applyAuthorSectionVisibility','renderCanonQueue','exportCanonQueue','renderRouteState','renderRouteTestSummary','renderSecretHygiene','renderBuildLabel','renderModeInteractionSummary','runModeInteractionTests'];
   const checks=required.map(name=>({name,status:typeof window[name]==='function'||typeof eval(name)==='function'?'ok':'missing'}));
   const missing=checks.filter(c=>c.status!=='ok').map(c=>c.name);
   state.runtimeContractReport={generatedAt:new Date().toISOString(),missingCount:missing.length,missing,checks,comparison:state.runtimeComparison};
